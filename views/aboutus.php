@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Welcome to The Stoop</title>
+        <title>About Us</title>
         <!-- Bootstrap CSS -->
         <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
         <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
