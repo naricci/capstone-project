@@ -2,8 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5905f15-730d-4df7-a4e1-cce388fc5311" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/logos/logo-main-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/carousel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/holder.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/ie10-viewport-bug-workaround.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-3.2.1.slim.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/popper.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logos/logo-main-large.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logos/logo-brown.png" afterPath="$PROJECT_DIR$/public/img/logos/logo-brown.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logos/logo-deepgreen.png" afterPath="$PROJECT_DIR$/public/img/logos/logo-deepgreen.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logos/logo-grey.png" afterPath="$PROJECT_DIR$/public/img/logos/logo-grey.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logos/logo-lightgreen.png" afterPath="$PROJECT_DIR$/public/img/logos/logo-lightgreen.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logos/logo-main.png" afterPath="$PROJECT_DIR$/public/img/logos/logo-main.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/logos/logo-olivegreen.png" afterPath="$PROJECT_DIR$/public/img/logos/logo-olivegreen.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6530.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6530.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6537.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6537.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6545.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6545.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6552.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6552.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6556.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6556.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6564.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6564.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6566.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6566.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6568.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6568.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6571.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6571.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6586.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6586.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6597.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6597.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6603.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6603.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6607.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6607.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6619.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6619.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6625.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6625.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6631.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6631.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6649.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6649.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6670.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6670.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6675.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6675.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6726.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6726.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6730.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6730.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/IMG_6733.JPG" afterPath="$PROJECT_DIR$/public/img/products/IMG_6733.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/TS1.jpg" afterPath="$PROJECT_DIR$/public/img/products/TS1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/products/spoon.JPG" afterPath="$PROJECT_DIR$/public/img/products/spoon.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img/store/image2.JPG" afterPath="$PROJECT_DIR$/public/img/store/image2.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/aboutus.php" afterPath="$PROJECT_DIR$/public/views/aboutus.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/contact.php" afterPath="$PROJECT_DIR$/public/views/contactus.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/gallery.php" afterPath="$PROJECT_DIR$/public/views/gallery.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/news.php" afterPath="$PROJECT_DIR$/public/views/news.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/shop.php" afterPath="$PROJECT_DIR$/public/views/shop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/capstone-project.iml" afterPath="$PROJECT_DIR$/.idea/capstone-project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,17 +63,49 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE" />
+  <component name="ComposerSettings" synchronizationState="DONT_SYNCHRONIZE">
+    <executablePath>/usr/local/bin/composer</executablePath>
+  </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+      </list>
+    </option>
+  </component>
   <component name="JsBowerSettings">
-    <node-interpreter value="project" />
-    <exe-path>$USER_HOME$/AppData/Roaming/npm/bower.cmd</exe-path>
-    <config-path />
+    <node-interpreter value="/usr/local/bin/node" />
+    <exe-path>/usr/local/bin/bower</exe-path>
+    <config-path>$PROJECT_DIR$/bower.json</config-path>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -37,12 +120,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1.7" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1220" />
-    <option name="y" value="550" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="e2c27b1a-872d-4c30-8f81-4b75626b4e82" name="XAMPP Apache Server" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1.7 (XAMPP)" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -60,6 +146,9 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -75,8 +164,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,7 +175,49 @@
             </path>
             <path>
               <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="functions" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="products" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="capstone-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="capstone-project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -95,20 +226,30 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="C:\Users\naricci\AppData\Roaming\npm\node_modules\eslint" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.path.for.package.eslint" value="/usr/local/bin/node" />
+    <property name="node.js.selected.package.eslint" value="/usr/local/lib/node_modules/eslint" />
+    <property name="node.js.path.for.package.standard" value="/usr/local/bin/node" />
+    <property name="node.js.selected.package.standard" value="/usr/local/lib/node_modules/eslint" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.2.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -125,6 +266,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c5905f15-730d-4df7-a4e1-cce388fc5311" name="Default" comment="" />
@@ -133,32 +277,37 @@
       <option name="presentableId" value="Default" />
       <updated>1501121692113</updated>
       <workItem from="1501121694394" duration="742000" />
+      <workItem from="1503428796003" duration="331000" />
+      <workItem from="1503432175014" duration="7956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="742000" />
+    <option name="totallyTimeSpent" value="9029000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1220" y="550" width="1400" height="1000" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32914045" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18498169" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -173,6 +322,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_types_jquery_index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/contactus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -181,10 +356,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
