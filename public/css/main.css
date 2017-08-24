@@ -1,30 +1,46 @@
 /***** Main Stylesheet *****/
 
-nav {
+body {
     background-color: #EEF6ED;
-    padding-bottom: 0pxs;
+    /*background-color: black;*/
+}
+
+nav {
+    /*background-color: #EEF6ED;*/
+    padding-bottom: 0px;
+    height: 70px;
 }
 
 nav.navbar.navbar-default {
     margin-bottom: 0px;
 }
 
-/*!* Tablet and bigger *!*/
-/*@media ( min-width: 768px ) {*/
-    /*.grid-divider {*/
-        /*position: relative;*/
-        /*padding: 0;*/
-    /*}*/
-    /*.grid-divider>[class*='col-'] {*/
-        /*position: static;*/
-    /*}*/
-    /*.grid-divider>[class*='col-']:nth-child(n+2):before {*/
-        /*content: "";*/
-        /*border-left: 1px solid #DDD;*/
-        /*position: absolute;*/
-        /*top: 0;*/
-        /*bottom: 0;*/
-    /*}*/
-    /*.col-padding {*/
-        /*padding: 0 15px;*/
-    /*}*/
+.fa {
+    font-size: 36px;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    /*background: #3B5998;*/
+    color: white;
+}
+
+.fa-twitter {
+    /*background: #55ACEE;*/
+    color: white;
+}
+
+.fa-instagram {
+    /*background: #125688;*/
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#myCarousel {
+    margin-bottom: 20px;
+}
