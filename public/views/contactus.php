@@ -77,7 +77,7 @@
             <hr />
             <!-- Contact Form -->
             <div class="col-xs-6">
-                <form>
+                <form action="#">
                     <div class="form-group">
                         <label for="firstName">First Name</label>
                         <input type="text" class="form-control" id="firstName" placeholder="First Name" maxlength="50">
@@ -96,7 +96,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <input type="textarea" height="50px" class="form-control" id="message" maxlength="1000">
+                        <textarea type="text" height="10s0px" class="form-control" id="message"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-default">Submit</button>

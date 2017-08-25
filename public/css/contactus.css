@@ -3,3 +3,7 @@
 #mainContent {
     padding-top: 20px;
 }
+
+textarea.form-control {
+    height: 250px;
+}
