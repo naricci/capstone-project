@@ -13,7 +13,60 @@
     <link rel="stylesheet" href="css/carousel.css">
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
-</head>
+</head><!-- NAV BAR -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <!-- HOME BUTTON
+                <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+                -->
+                <li class="navbar-btn"><a href="views/aboutus.php">ABOUT US</a></li>
+                <li class="navbar-btn"><a href="views/gallery.php">GALLERY</a></li>
+                <li class="navbar-btn"><a href="views/news.php">NEWS</a></li>
+                <li class="navbar-btn"><a href="views/shop.php">SHOP</a></li>
+                <li class="navbar-btn"><a href="views/contactus.php">CONTACT US</a></li>
+            </ul>
+
+            <!-- Search Bar
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            -->
+            <a class="navbar-brand navbar-centered" href="index.html"><!-- The Stoop -->
+                <img alt="Brand" src="img/logos/logo-deepgreen2.png" width="100" height="100">
+            </a>
+
+            <!-- Navbar Right Side -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Add font awesome icons -->
+                <li><a href="https://www.facebook.com/thestoopri/" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="https://www.instagram.com/stoopglass/" class="fa fa-instagram"></a></li>
+                <!-- Login Button -->
+                <li><a href="views/users/login.php">Login</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
 <body>
     <!--&lt;!&ndash; Jumbotron &ndash;&gt;-->
     <!--<div class="jumbotron">-->
@@ -24,59 +77,6 @@
         <!--</div>-->
     <!--</div>-->
 
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
-        <div class="container">
-
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <!-- HOME BUTTON
-                    <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-                    -->
-                    <li class="navbar-btn"><a href="views/aboutus.php">ABOUT US</a></li>
-                    <li class="navbar-btn"><a href="views/gallery.php">GALLERY</a></li>
-                    <li class="navbar-btn"><a href="views/news.php">NEWS</a></li>
-                    <li class="navbar-btn"><a href="views/shop.php">SHOP</a></li>
-                    <li class="navbar-btn"><a href="views/contactus.php">CONTACT US</a></li>
-                </ul>
-
-                <!-- Search Bar
-                <form class="navbar-form navbar-left">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                -->
-                <a class="navbar-brand navbar-centered" href="index.html"><!-- The Stoop -->
-                    <img alt="Brand" src="img/logos/logo-main-large.png" width="100" height="100">
-                </a>
-
-                <!-- Navbar Right Side -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Add font awesome icons -->
-                    <li><a href="https://www.facebook.com/thestoopri/" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="https://www.instagram.com/stoopglass/" class="fa fa-instagram"></a></li>
-                    <!-- Login Button -->
-                    <li><a href="views/users/login.php">Login</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
 
     <!-- Carousel Div -->
     <div class="container">
@@ -93,7 +93,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="img/products/IMG_6607.JPG" alt="Glow in the dark pipe"><!--src="img/stairs/IMG_6597.JPG" alt="Bug Bowl"-->
+                    <img src="img/products/IMG_6607.JPG" alt="Glow in the dark pipe">
                     <div class="container">
                         <div class="carousel-caption d-none d-md-block text-left">
                             <h1>Welcome to The Stoop!</h1>
@@ -101,7 +101,7 @@
                                 We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.
                             </p>
                             <p>
-                                <a class="btn btn-lg btn-primary" href="./views/users/signup.php" role="button">Sign up today</a>
+                                <a class="btn btn-lg btn-primary" href="views/users/signup.php" role="button">Sign up today</a>
                             </p>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
-                <img class="rounded-circle" src="img/logos/logo-main-large.png" alt="Shop Logo" width="140" height="140">
+                <img class="rounded-circle" src="img/logos/logo-deepgreen2.png" alt="Shop Logo" width="140" height="140">
                 <h2>About Us</h2>
                 <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                 <p><a class="btn btn-secondary" href="views/aboutus.php" role="button">View details »</a></p>
@@ -167,7 +167,7 @@
                 <img class="rounded-circle" src="img/products/IMG_6607.JPG" alt="Glow in the dark pipe" width="140" height="140">
                 <h2>Shop</h2>
                 <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="views.php" role="button">View details »</a></p>
+                <p><a class="btn btn-secondary" href="views/shop.php" role="button">View details »</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img class="rounded-circle" src="img/map.png" alt="Map of Main Street" width="140" height="140">
@@ -187,16 +187,16 @@
     <!-- FOOTER -->
     <footer class="navbar-static-bottom navbar-inverse">
         <div class="container">
-            <ul class="nav navbar-nav">
-                <li><p style="color:white;">© 2017 The Stoop.</p></li>
-            </ul>
+            <p class="copyrightText">© 2017 The Stoop.</p>
             <ul class="nav navbar-nav navbar-right">
-                <li><p><a href="#">Back to top</a></p></li>
-                <li><p><a href="views/aboutus.php">About Us</a></p></li>
-                <li><p><a href="views/gallery.php">Gallery</a></p></li>
-                <li><p><a href="views/news.php">News</a></p></li>
-                <li><p><a href="views/shop.php">Shop</a></p></li>
-                <li><p><a href="views/contactus.php">Contact Us</a></p></li>
+                <!-- Page Links -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="views/aboutus.php">About Us</a></li>
+                <li><a href="views/gallery.php">Gallery</a></li>
+                <li><a href="views/news.php">News</a></li>
+                <li><a href="views/shop.php">Shop</a></li>
+                <li><a href="views/contactus.php">Contact Us</a></li>
+                <li><a href="#" class="backToTop">Back to top</a></li>
             </ul>
         </div><!-- /.container -->
     </footer>

@@ -64,8 +64,17 @@ nav.navbar.navbar-default {
     /*margin-bottom: 0px;*/
 }
 
-/****************** Pages Grid ******************/
+/****************** Grid of 3 ******************/
 .container.marketing {
     margin-bottom: 20px;
     /*background-color: #EEF6ED;*/
+}
+
+/****************** Footer ******************/
+.copyrightText {
+    color: white;
+}
+
+.backToTop:hover {
+    color: dodgerblue;
 }
