@@ -40,6 +40,17 @@
                     <li><a href="shop.php">SHOP</a></li>
                     <!-- Contact Us Button -->     
                     <li><a href="contact.php">CONTACT</a></li>
+                    <!-- Admin Button -->
+                    <li class="dropdown">
+                    <a href="admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Create New Admin</a></li>
+                        <li><a href="#">Manage About Us Page</a></li>
+                        <li><a href="#">Manage News Posts</a></li>
+                        <li><a href="#">Update Shop Products</a></li>
+                        <li><a href="#">View Product Requests</a></li>
+                    </ul>
+                    </li>
                 </ul>
                 <!--
                 <form class="navbar-form navbar-left">
@@ -83,28 +94,27 @@
     </div><!-- /.container -->
 
     <!-- FOOTER -->
-    <footer class="navbar-static-bottom navbar-inverse">
-        <div class="container-fluid">
+    <footer class="navbar-fixed-bottom navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
             <p class="copyrightText">© 2017 The Stoop.</p>
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Page Links -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="views/aboutus.php">About Us</a></li>
-                <li><a href="views/gallery.php">Gallery</a></li>
-                <li><a href="views/news.php">News</a></li>
-                <li><a href="views/shop.php">Shop</a></li>
-                <li><a href="views/contactus.php">Contact Us</a></li>
-                <li><a href="#" class="backToTop">Back to top</a></li>
-            </ul>
-        </div><!-- /.container-fluid -->
-    </footer>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <!-- Page Links -->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="aboutus.php">About Us</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="shop.php">Shop</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </div><!-- /.container -->
+</footer>
 
     <!-- jQuery -->
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap JavaScript Plugins -->
     <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../js/holder.min.js"></script>
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/popper.min.js"></script>
 </body>
 </html>
