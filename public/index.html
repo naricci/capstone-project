@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Welcome to The Stoop</title>
-    <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap JavaScript Plugins -->  
-    <script src="js/holder.min.js"></script>
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../bower_components/popper.js/dist/popper.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- NAVBAR -->
@@ -32,29 +28,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">THE STOOP</a>
+                <a class="navbar-brand page-title" href="index.html">THE STOOP</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <!-- About Us Button -->
-                    <li><a href="views/aboutus.php">ABOUT</a></li>
-                    <li role="separator" class="divider"></li>
+                    <li><a class="nav-btn" href="views/aboutus.php">ABOUT</a></li>
                     <!-- Gallery Button -->                  
                     <li><a href="views/gallery.php">GALLERY</a></li>
-                    <li role="separator" class="divider"></li>
                     <!-- News Button -->
                     <li><a href="views/news.php">NEWS</a></li>
-                    <li role="separator" class="divider"></li>
                     <!-- Shop Button -->
                     <li><a href="views/shop.php">SHOP</a></li>
-                    <li role="separator" class="divider"></li>
                     <!-- Contact Us Button -->     
                     <li><a href="views/contact.php">CONTACT</a></li>
                     <!-- Admin Button -->
                     <li class="dropdown">
-                        <a href="admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
+                        <a href="../admin/views/admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Create New Admin</a></li>
                             <li><a href="#">Manage About Us Page</a></li>
@@ -63,6 +55,10 @@
                             <li><a href="#">View Product Requests</a></li>
                         </ul>
                         </li>
+                    <!-- Social Media Icons -->
+                    <li><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
+
                 </ul>
                 <!-- 
                 <form class="navbar-form navbar-left">
@@ -74,16 +70,16 @@
                 -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up -->
-                    <li><a href="views/users/signup.php">Sign Up</a></li>
+                    <li><a class="login-btn" href="views/users/signup.php">Sign Up</a></li>
                     <!-- Login Button -->
-                    <li><a href="views/users/login.php">Login</a></li>
+                    <li><a class="login-btn" href="views/users/login.php">Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
 
     <!-- Carousel Div -->
-    <div class="container">
+    <div class="container mainContent">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -141,7 +137,7 @@
     </div><!-- /.container -->
 
     <!-- Main Content -->
-    <div class="container marketing">
+    <div class="container marketing mainContent">
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
@@ -161,7 +157,7 @@
                 <img class="rounded-circle" src="img/newspaper.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>News</h2>
                 <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="views/news.php" role="button">View details »</a></p>
+                <button><a class="btn btn-secondary" href="views/news.php" role="button">View details »</a></button>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -191,11 +187,12 @@
     <!-- FOOTER -->
     <footer class="navbar-fixed-bottom navbar-inverse">
         <div class="container-fluid">
+            <div class="row">
             <ul class="nav navbar-nav navbar-left">
                 <p class="copyrightText">© 2017 The Stoop.</p>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="padding-right: 10px;">
                 <!-- Page Links -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="views/aboutus.php">About Us</a></li>
@@ -204,7 +201,17 @@
                 <li><a href="views/shop.php">Shop</a></li>
                 <li><a href="views/contact.php">Contact</a></li>
             </ul>
+            </div>
         </div><!-- /.container -->
     </footer>
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script src="../bower_components/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

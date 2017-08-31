@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Welcome to The Stoop</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Custom CSS -->
-    <link href="../../public/css/main.css" rel="stylesheet" type="text/css">
+    <link href="../../public/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
         <!-- NAVBAR -->
@@ -101,11 +101,13 @@
                 <li><a href="../../public/views/contact.php">Contact</a></li>
             </ul>
         </div><!-- /.container -->
-    </footer>   
+    </footer>
 
-    <!-- jQuery -->
-    <script src="../../bower_components/jquery/dist/jquery.js"></script>
-    <!-- Bootstrap JavaScript Plugins -->
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- jQuery -->
+        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Popper.js -->
+        <script src="../../bower_components/popper.js/dist/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
