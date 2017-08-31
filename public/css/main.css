@@ -2,7 +2,7 @@
 body {
     background-color: #EEF6ED;
     /*background-color: black;*/
-    /* padding-top: 0px; */
+    padding-top: 70px;
     padding-bottom: 70px;
 }
 
@@ -18,9 +18,7 @@ body {
     text-align: center;
 } */
 
-.navbar-nav {
-    text-align: center;
-}
+
 .navbar .navbar-inverse {
     margin-bottom: 0px;
 }
@@ -54,10 +52,6 @@ body {
     margin-bottom: 0px;
 }*/
 
-/****************** Jumbotron ******************/
-/* .jumbotron {
-    margin-bottom: 0px;
-}*/
 
 /****************** Grid of 3 ******************/
 .container.marketing {

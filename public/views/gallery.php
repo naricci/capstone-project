@@ -32,7 +32,7 @@
                     <!-- About Us Button -->
                     <li><a href="aboutus.php">ABOUT</a></li>
                     <!-- Gallery Button -->                  
-                    <li class="active">><a href="gallery.php">GALLERY <span class="sr-only">(current)</span></a></li>
+                    <li class="active">><a href="gallery.php">GALLERY</a></li>
                     <!-- News Button -->
                     <li><a href="news.php">NEWS</a></li>
                     <!-- Shop Button -->

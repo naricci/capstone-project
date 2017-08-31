@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Contact Us</title>
+    <!-- Custom CSS -->
+    <link href="../css/contactus.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom CSS -->
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <link href="../css/contactus.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript Plugins -->
+    <script src="../../bower_components/popper.js/dist/popper.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -70,11 +75,9 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container" id="mainContent">
+    <div class="container mainContent">
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
-            <h1>Contact Us</h1>
-            <hr />
             <!-- Contact Form -->
             <div class="col-xs-12 col-lg-6">
                 <form action="#">
@@ -130,10 +133,5 @@
             </ul>
         </div><!-- /.container -->
     </footer>    
-
-    <!-- jQuery -->
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap JavaScript Plugins -->
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

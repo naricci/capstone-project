@@ -45,10 +45,11 @@
                     <li class="dropdown active">
                     <a href="admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Create New Admin</a></li>
+                        <li><a href="admin.php">Admin Home Page</a></li>
+                        <li><a href="create-new-admin.php">Create New Admin</a></li>
                         <li><a href="#">Manage About Us Page</a></li>
-                        <li><a href="#">Manage News Posts</a></li>
-                        <li><a href="#">Update Shop Products</a></li>
+                        <li><a href="manage-news-posts.php">Manage News Posts</a></li>
+                        <li><a href="update-shop-products.php">Update Shop Products</a></li>
                         <li><a href="#">View Product Requests</a></li>
                     </ul>
                     </li>        
@@ -65,7 +66,7 @@
                     <!-- Login Button -->
                     <li><a href="views/users/login.php">Login</a></li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div><!-- /.navbar-collapse --> 
         </div><!-- /.container -->
     </nav>
 

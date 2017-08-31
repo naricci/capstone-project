@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>About Us</title>
+    <!-- Custom CSS -->
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom CSS -->
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <!-- jQuery -->
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript Plugins -->
+    <script src="../../bower_components/popper.js/dist/popper.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -69,11 +74,11 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container" id="mainContent">
+    <div class="container mainContent">
         <!-- Breadcrumbs -->
         <ol class="breadcrumb">
-                <li><a href="../index.html">Home</a></li>
-                <li class="active">About Us</li>
+            <li><a href="../index.html">Home</a></li>
+            <li class="active">About Us</li>
         </ol>
         <h1>About Us</h1>
         <hr />    
@@ -81,6 +86,7 @@
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
             <div class="col-lg-4 col-xs-12">
+                <h3>Location</h3>
                 <!-- Google Maps Embed API -->
                 <iframe 
                     width="600" 
@@ -95,26 +101,21 @@
 
     <!-- FOOTER -->
     <footer class="navbar-fixed-bottom navbar-inverse">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-left">
-            <p class="copyrightText">© 2017 The Stoop.</p>
-        </ul>
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <p class="copyrightText">© 2017 The Stoop.</p>
+            </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-            <!-- Page Links -->
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="aboutus.php">About Us</a></li>
-            <li><a href="gallery.php">Gallery</a></li>
-            <li><a href="news.php">News</a></li>
-            <li><a href="shop.php">Shop</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
-    </div><!-- /.container -->
-</footer>
-
-    <!-- jQuery -->
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap JavaScript Plugins -->
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Page Links -->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="news.php">News</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </div><!-- /.container -->
+    </footer>
 </body>
 </html>
