@@ -7,7 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Welcome to The Stoop</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/carousel.css">
@@ -15,71 +14,59 @@
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-        <div class="container">
+    <header>
 
+    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
+                <a class="navbar-brand" href="index.html">THE STOOP</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <!-- HOME BUTTON
-                    <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-                    -->
-                    <li class="navbar-btn"><a href="views/aboutus.php">ABOUT US</a></li>
-                    <li class="navbar-btn"><a href="views/gallery.php">GALLERY</a></li>
-                    <li class="navbar-btn"><a href="views/news.php">NEWS</a></li>
-                    <li class="navbar-btn"><a href="views/shop.php">SHOP</a></li>
-                    <li class="navbar-btn"><a href="views/contactus.php">CONTACT US</a></li>
+                <ul class="nav navbar-nav">
+                    <!-- About Us Button -->
+                    <li><a href="views/aboutus.php">ABOUT</a></li>
+                    <li role="separator" class="divider"></li>
+                    <!-- Gallery Button -->                  
+                    <li><a href="views/gallery.php">GALLERY</a></li>
+                    <li role="separator" class="divider"></li>
+                    <!-- News Button -->
+                    <li><a href="views/news.php">NEWS</a></li>
+                    <li role="separator" class="divider"></li>
+                    <!-- Shop Button -->
+                    <li><a href="views/shop.php">SHOP</a></li>
+                    <li role="separator" class="divider"></li>
+                    <!-- Contact Us Button -->     
+                    <li><a href="views/contact.php">CONTACT</a></li>
                 </ul>
-
-                <!-- Search Bar
+                <!-- 
                 <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form> 
                 -->
-                <a class="navbar-brand navbar-centered" href="index.html"><!-- The Stoop -->
-                    <img alt="Brand" src="img/logos/logo-deepgreen2.png" width="100" height="100">
-                </a>
-
-                <!-- Navbar Right Side -->
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Add font awesome icons -->
-                    <li><a href="https://www.facebook.com/thestoopri/" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="https://www.instagram.com/stoopglass/" class="fa fa-instagram"></a></li>
                     <!-- Login Button -->
                     <li><a href="views/users/login.php">Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        </div><!-- /.container -->
     </nav>
 
-    <!--&lt;!&ndash; Jumbotron &ndash;&gt;-->
-    <!--<div class="jumbotron">-->
-        <!--<div class="container">-->
-            <!--<h1>Welcome to The Stoop!</h1>-->
-            <!--<p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>-->
-            <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>-->
-        <!--</div>-->
-    <!--</div>-->
-
     <!-- Carousel Div -->
-    <div class="container">
+    <div class="container-fluid">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -179,15 +166,18 @@
                 <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
                 <h2>Contact Us</h2>
                 <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="views/contactus.php" role="button">View details »</a></p>
+                <p><a class="btn btn-secondary" href="views/contact.php" role="button">View details »</a></p>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
 
     <!-- FOOTER -->
     <footer class="navbar-static-bottom navbar-inverse">
-        <div class="container">
-            <p class="copyrightText">© 2017 The Stoop.</p>
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <p class="copyrightText">© 2017 The Stoop.</p>
+            </ul>
+
             <ul class="nav navbar-nav navbar-right">
                 <!-- Page Links -->
                 <li><a href="index.html">Home</a></li>
@@ -195,19 +185,17 @@
                 <li><a href="views/gallery.php">Gallery</a></li>
                 <li><a href="views/news.php">News</a></li>
                 <li><a href="views/shop.php">Shop</a></li>
-                <li><a href="views/contactus.php">Contact Us</a></li>
-                <li><a href="#" class="backToTop">Back to top</a></li>
+                <li><a href="views/contact.php">Contact</a></li>
             </ul>
         </div><!-- /.container -->
     </footer>
 
     <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap JavaScript Plugins -->
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/holder.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/popper.min.js"></script>
-
 </body>
 </html>

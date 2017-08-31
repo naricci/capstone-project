@@ -2,33 +2,28 @@
 body {
     background-color: #EEF6ED;
     /*background-color: black;*/
-    padding-top: 0px;
-    padding-bottom: 0px;
+    /* padding-top: 0px; */
+    padding-bottom: 70px;
 }
 
 /****************** Navigation Bar ******************/
-nav {
-    /*background-color: #EEF6ED;*/
-    padding-bottom: 0px;
-    height: 120px;
-}
 
-nav.navbar.navbar-default {
+/* .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+  
+.navbar .navbar-collapse {
+    text-align: center;
+} */
+
+.navbar-nav {
+    text-align: center;
+}
+.navbar .navbar-inverse {
     margin-bottom: 0px;
 }
-
-/*.brand-centered {*/
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*position: absolute;*/
-    /*width: 100%;*/
-    /*left: 0;*/
-    /*top: 0;*/
-/*}*/
-/*.navbar-brand {*/
-    /*display: flex;*/
-    /*align-items: center;*/
-/*}*/
 
 /****************** Social Media Icons ******************/
 .fa {
@@ -71,10 +66,12 @@ nav.navbar.navbar-default {
 }
 
 /****************** Footer ******************/
-.copyrightText {
+p.copyrightText {
     color: white;
+    margin: 10 0 10px;
+    padding-top:20px;
 }
 
-.backToTop:hover {
-    color: dodgerblue;
+a.backToTop:hover {
+    color: rgb(51, 122, 183);;
 }
