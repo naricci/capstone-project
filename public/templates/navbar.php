@@ -9,22 +9,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-title" href="../index.html">THE STOOP</a>
+            <a class="navbar-brand page-title" href="../../src/index.html">THE STOOP</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <!-- About Us Button -->
-                <li><a href="../views/aboutus.php">ABOUT</a></li>
+                <li><a href="../../src/views/aboutus.php">ABOUT</a></li>
                 <!-- Gallery Button -->
-                <li><a href="../views/gallery.php">GALLERY</a></li>
+                <li><a href="../../src/views/gallery.php">GALLERY</a></li>
                 <!-- News Button -->
-                <li><a href="../views/news.php">NEWS</a></li>
+                <li><a href="../../src/views/news.php">NEWS</a></li>
                 <!-- Shop Button -->
-                <li><a href="../views/shop.php">SHOP</a></li>
+                <li><a href="../../src/views/shop.php">SHOP</a></li>
                 <!-- Contact Us Button -->
-                <li><a href="../views/contact.php">CONTACT</a></li>
+                <li><a href="../../src/views/contact.php">CONTACT</a></li>
                 <!-- Admin Button -->
                 <li class="dropdown">
                     <a href="../../admin/views/admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
@@ -51,9 +51,9 @@
             -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Sign Up Button -->
-                <li><a href="../views/users/signup.php">Sign Up</a></li>
+                <li><a href="../../src/views/signup.php">Sign Up</a></li>
                 <!-- Login Button -->
-                <li><a href="../views/users/login.php">Login</a></li>
+                <li><a href="../../src/views/login.php">Login</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

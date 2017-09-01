@@ -14,6 +14,7 @@ nav {
 
 .page-title {
     font-size: 36px;
+    color: #34AFA8;
 }
 
 .nav-btn {
@@ -59,7 +60,7 @@ nav {
 }
 
 /****************** Carousel ******************/
-/#myCarousel {
+#myCarousel {
      margin: 0px 0px 0px 0px;
      padding-left: 0px;
      padding-right: 0px;
