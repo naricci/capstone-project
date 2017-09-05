@@ -3,12 +3,16 @@
     <words>
       <w>aboutus</w>
       <w>contactus</w>
+      <w>dbconfig</w>
+      <w>dbconnect</w>
       <w>glyphicon</w>
       <w>instagram</w>
       <w>jumbotron</w>
+      <w>keppel</w>
       <w>navbar</w>
       <w>rhode</w>
       <w>signup</w>
+      <w>thestoop</w>
     </words>
   </dictionary>
 </component>

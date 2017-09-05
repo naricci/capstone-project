@@ -21,7 +21,7 @@ function dbconnect() {
          * connection by setting the variable to null */
         $db = null;
         $message = $ex->getMessage();
-        include './templates/error-messages.php';
+        include '../templates/error-messages.php';
         exit();
     }
 

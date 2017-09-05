@@ -1,5 +1,5 @@
 <!-- NAVBAR -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -9,27 +9,27 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-title" href="../../src/index.html">THE STOOP</a>
+            <a class="navbar-brand page-title navbar-btn" href="index.php">THE STOOP</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <!-- About Us Button -->
-                <li><a href="../../src/views/aboutus.php">ABOUT</a></li>
+                <li class="navbar-btn"><a href="aboutus.php">ABOUT</a></li>
                 <!-- Gallery Button -->
-                <li><a href="../../src/views/gallery.php">GALLERY</a></li>
+                <li class="navbar-btn"><a href="gallery.php">GALLERY</a></li>
                 <!-- News Button -->
-                <li><a href="../../src/views/news.php">NEWS</a></li>
+                <li class="navbar-btn"><a href="news.php">NEWS</a></li>
                 <!-- Shop Button -->
-                <li><a href="../../src/views/shop.php">SHOP</a></li>
+                <li class="navbar-btn"><a href="shop.php">SHOP</a></li>
                 <!-- Contact Us Button -->
-                <li><a href="../../src/views/contact.php">CONTACT</a></li>
+                <li class="navbar-btn"><a href="contact.php">CONTACT</a></li>
                 <!-- Admin Button -->
-                <li class="dropdown">
-                    <a href="../../admin/views/admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
+                <li class="dropdown navbar-btn">
+                    <a href="../admin/admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../../admin/views/admin.php">Admin Home Page</a></li>
+                        <li><a href="../admin/admin.php">Admin Home Page</a></li>
                         <li><a href="#">Create New Admin</a></li>
                         <li><a href="#">Manage About Us Page</a></li>
                         <li><a href="#">Manage News Posts</a></li>
@@ -38,8 +38,8 @@
                     </ul>
                 </li>
                 <!-- Social Media Icons -->
-                <li><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
-                <li><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
+                <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
+                <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
             </ul>
             <!--
             <form class="navbar-form navbar-left">
@@ -51,9 +51,9 @@
             -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Sign Up Button -->
-                <li><a href="../../src/views/signup.php">Sign Up</a></li>
+                <li class="navbar-btn"><a href="customer_register.php">Sign Up</a></li>
                 <!-- Login Button -->
-                <li><a href="../../src/views/login.php">Login</a></li>
+                <li class="navbar-btn"><a href="login.php">Login</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

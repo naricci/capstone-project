@@ -2,7 +2,7 @@
 
 
 $db_host = "localhost";
-$db_name = "dbregistration";
+$db_name = "thestoop";
 $db_user = "root";
 $db_pass = "";
 

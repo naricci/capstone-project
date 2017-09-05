@@ -6,33 +6,33 @@ $('document').ready(function()
     $("#register-form").validate({
         rules:
             {
-                user_name: {
+                userName: {
                     required: true,
                     minlength: 3
                 },
-                password: {
+                userPassword: {
                     required: true,
                     minlength: 8,
                     maxlength: 15
                 },
-                cpassword: {
+                cUserPassword: {
                     required: true,
                     equalTo: '#password'
                 },
-                user_email: {
+                userEmail: {
                     required: true,
                     email: true
                 },
             },
         messages:
             {
-                user_name: "please enter user name",
-                password:{
+                userName: "please enter user name",
+                userPassword:{
                     required: "please provide a password",
                     minlength: "password at least have 8 characters"
                 },
-                user_email: "please enter a valid email address",
-                cpassword:{
+                userEmail: "please enter a valid email address",
+                cUserPassword:{
                     required: "please retype your password",
                     equalTo: "password doesn't match !"
                 }
@@ -49,7 +49,7 @@ $('document').ready(function()
         $.ajax({
 
             type : 'POST',
-            url  : 'register.php',
+            url  : '../../src/views/register.php',
             data : data,
             beforeSend: function()
             {

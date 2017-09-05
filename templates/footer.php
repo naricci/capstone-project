@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<footer class="navbar-fixed-bottom navbar-inverse">
+<footer class="navbar-static-bottom navbar-inverse">
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-left">
             <p class="copyrightText">© 2017 The Stoop.</p>

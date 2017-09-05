@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Welcome to The Stoop</title>
+    <title>Admin Home Page</title>
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../../public/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
         <!-- NAVBAR -->
@@ -25,27 +28,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">THE STOOP</a>
+                <a class="navbar-brand" href="../index.php">THE STOOP</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <!-- About Us Button -->
-                    <li><a href="views/aboutus.php">ABOUT</a></li>  
+                    <li><a href="../aboutus.php">ABOUT</a></li>
                     <!-- Gallery Button -->                  
-                    <li><a href="views/gallery.php">GALLERY</a></li>
+                    <li><a href="../gallery.php">GALLERY</a></li>
                     <!-- News Button -->
-                    <li><a href="views/news.php">NEWS</a></li>
+                    <li><a href="../news.php">NEWS</a></li>
                     <!-- Shop Button -->
-                    <li><a href="views/shop.php">SHOP</a></li>
+                    <li><a href="../shop.php">SHOP</a></li>
                     <!-- Contact Us Button -->     
-                    <li><a href="views/contact.php">CONTACT</a></li>
+                    <li><a href="../contact.php">CONTACT</a></li>
                     <!-- Admin Button -->
                     <li class="dropdown active">
-                    <a href="admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
+                    <a href="admin.php" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret sr-only">(current)</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="admin.php">Admin Home Page</a></li>
+                        <li><a href="admin.php" class="active">Admin Home Page <span class="sr-only">(current)</span> </a></li>
                         <li><a href="create-new-admin.php">Create New Admin</a></li>
                         <li><a href="#">Manage About Us Page</a></li>
                         <li><a href="manage-news-posts.php">Manage News Posts</a></li>
@@ -63,8 +66,10 @@
                 </form> 
                 -->
                 <ul class="nav navbar-nav navbar-right">
+                    <!-- Sign Up Button -->
+                    <li><a href="../customer_register.php">Sign Up</a></li>
                     <!-- Login Button -->
-                    <li><a href="views/users/login.php">Login</a></li>
+                    <li><a href="../login.php">Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse --> 
         </div><!-- /.container -->
@@ -72,15 +77,12 @@
 
     <!-- Main Content -->
     <div class="container" id="mainContent">
+        <h1>Admin Home</h1>
+        <hr />
+
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
-            <!-- Breadcrumbs -->
-            <ol class="breadcrumb">
-                <li><a href="../index.html">Home</a></li>
-                <li class="active">Admin Home</li>
-            </ol>
-            <h1>Admin Home</h1>
-            <hr />
+
         </div>
     </div>
 
@@ -93,21 +95,21 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <!-- Page Links -->
-                <li><a href="../../src/index.html">Home</a></li>
-                <li><a href="../../src/views/aboutus.php">About Us</a></li>
-                <li><a href="../../src/views/gallery.php">Gallery</a></li>
-                <li><a href="../../src/views/news.php">News</a></li>
-                <li><a href="../../src/views/shop.php">Shop</a></li>
-                <li><a href="../../src/views/contact.php">Contact</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../aboutus.php">About Us</a></li>
+                <li><a href="../gallery.php">Gallery</a></li>
+                <li><a href="../news.php">News</a></li>
+                <li><a href="../shop.php">Shop</a></li>
+                <li><a href="../contact.php">Contact</a></li>
             </ul>
         </div><!-- /.container -->
     </footer>
 
-        <!-- jQuery -->
-        <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Popper.js -->
-        <script src="../../bower_components/popper.js/dist/popper.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script src="../bower_components/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

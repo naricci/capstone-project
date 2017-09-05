@@ -1,9 +1,22 @@
 /****************** Main Stylesheet ******************/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
+    position: relative;
+    min-height: 100%;
     background-color: #E1ECBB;
-    /*background-color: black;*/
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /*padding-left: 10px;*/
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,24 +25,18 @@ nav {
     font-family: 'Droid Sans', sans-serif;
 }
 
+.navbar {
+    margin-bottom: 0px;
+}
+
 .page-title {
     font-size: 36px;
     color: #34AFA8;
 }
 
 .nav-btn {
-    color: red;
+    /*color: red;*/
 }
-
-/* .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-}
-  
-.navbar .navbar-collapse {
-    text-align: center;
-} */
 
 .navbar .navbar-inverse {
     margin-bottom: 0px;
@@ -43,7 +50,6 @@ nav {
 }
 
 .fa:hover {
-    /*opacity: 0.5;*/
     color: #34AFA8;
 }
 
@@ -59,33 +65,28 @@ nav {
     color: white;
 }
 
-/****************** Carousel ******************/
-#myCarousel {
-     margin: 0px 0px 0px 0px;
-     padding-left: 0px;
-     padding-right: 0px;
- }
-
-
-/****************** Grid of 3 ******************/
-.container.marketing {
-    margin-bottom: 20px;
-    /*background-color: #EEF6ED;*/
+/****************** Home Page Marketing Grid ******************/
+.container.marketing.mainContent {
+    margin-bottom: 0px;
 }
 
 .container.mainContent {
     background-color: white;
     height: 100%;
+    margin: 0 auto;
 }
+
 /****************** Footer ******************/
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
 p.copyrightText {
     color: white;
     margin: 10px 0px 10px;
     padding-top: 10px;
     padding-left: 10px;
-}
-
-.backToTop {
-    color: rgb(51, 122, 183);
-    padding-top: 10px;
 }

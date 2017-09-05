@@ -11,25 +11,25 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../../public/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- NAVBAR -->
-    <?php include "../../public/templates/navbar.php"; ?>
+    <?php include "templates/navbar.php"; ?>
 
 
 
     <!-- FOOTER -->
-    <?php include "../../public/templates/footer.php"; ?>
+    <?php include "templates/footer.php"; ?>
 
     <!-- jQuery -->
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Popper.js -->
-    <script src="../../bower_components/popper.js/dist/popper.min.js"></script>
+    <script src="bower_components/popper.js/dist/popper.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
