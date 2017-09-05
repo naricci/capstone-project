@@ -81,7 +81,7 @@
     <!-- Main Content -->
     <div class="container mainContent">
         <!-- Page Title -->
-        <h1>Shop</h1>
+        <h2>Shop</h2>
         <hr />    
     </div>
 

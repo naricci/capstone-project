@@ -83,7 +83,7 @@
     <div class="container mainContent">
 
         <!-- Page Title -->
-        <h1>News</h1>
+        <h2>News</h2>
         <hr />
 
         <!-- Columns are always 50% wide, on mobile and desktop -->

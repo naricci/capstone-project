@@ -85,82 +85,125 @@ include("includes/db.php");
         </div><!-- /.container-fluid -->
     </nav>
 
-    <form action="customer_register.php" method="post" enctype="multipart/form-data">
+    <!-- MAIN CONTENT -->
+    <div class="container mainContent">
+        <!-- Page Title -->
+        <h2>Create an Account</h2>
+        <hr />
 
-        <table align="center" width="750">
+        <!-- Registration Form -->
+        <form class="form-signin" action="customer_register.php" method="post" enctype="multipart/form-data">
 
-            <tr align="center">
-                <td colspan="6"><h2>Create an Account</h2></td>
-            </tr>
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" class="form-control" name="userName" required />
+            </div>
 
-            <tr>
-                <td align="right">Customer User Name:</td>
-                <td><input type="text" name="userName" required /></td>
-            </tr>
+            <div class="form-group">
+                <label>Email Address:</label>
+                <input type="text" class="form-control" name="userEmail" required />
+            </div>
 
-            <tr>
-                <td align="right">Customer Email:</td>
-                <td><input type="text" name="userEmail" required /></td>
-            </tr>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" class="form-control" name="userPassword" required />
+            </div>
 
-            <tr>
-                <td align="right">Customer Password:</td>
-                <td><input type="password" name="userPassword" required /></td>
-            </tr>
+            <div class="form-group">
+                <label>Street Address:</label>
+                <input type="text" class="form-control" name="userStreetAddress" required />
+                <br />
+                <input type="text" class="form-control" name="userStreetAddress2" />
+            </div>
 
-            <tr>
-                <td align="right">Customer Address:</td>
-                <td><input type="text" name="userStreetAddress" required /></td>
-            </tr>
+            <div class="form-group">
+                <label>City:</label>
+                <input type="text" class="form-control" name="userCity" required />
+            </div>
 
-            <tr>
-                <td align="right">Customer Address 2:</td>
-                <td><input type="text" name="userStreetAddress2" /></td>
-            </tr>
+            <div class="form-group">
+                <label>State:</label>
+                <select class="form-control" name="userState" required>
+                    <option>Select a State</option>
+                    <option value="AK">AK</option>
+                    <option value="AL">AL</option>
+                    <option value="AR">AR</option>
+                    <option value="AZ">AZ</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DC">DC</option>
+                    <option value="DE">DE</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="IA">IA</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="MA">MA</option>
+                    <option value="MD">MD</option>
+                    <option value="ME">ME</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MO">MO</option>
+                    <option value="MS">MS</option>
+                    <option value="MT">MT</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="NE">NE</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NV">NV</option>
+                    <option value="NY">NY</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="PR">PR</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VA">VA</option>
+                    <option value="VT">VT</option>
+                    <option value="WA">WA</option>
+                    <option value="WI">WI</option>
+                    <option value="WV">WV</option>
+                    <option value="WY">WY</option>
+                </select>
+            </div>
 
-            <tr>
-                <td align="right">Customer City:</td>
-                <td><input type="text" name="userCity" required /></td>
-            </tr>
+            <div class="form-group">
+                <label>Zip Code:</label>
+                <input type="text" class="form-control" name="userZip" required />
+            </div>
 
-            <tr>
-                <td align="right">Customer State:</td>
-                <td>
-                    <select name="userState" required>
-                        <option>Select a State</option>
-                        <option>CT</option>
-                        <option>MA</option>
-                        <option>ME</option>
-                        <option>NH</option>
-                        <option>NJ</option>
-                        <option>NY</option>
-                        <option>RI</option>
-                        <option>VT</option>
-                    </select>
-                </td>
-            </tr>
+            <div class="form-group">
+                <label>Country:</label>
+                <input type="text" class="form-control" name="userCountry" required />
+            </div>
 
-            <tr>
-                <td align="right">Customer Zip:</td>
-                <td><input type="text" name="userZip" required /></td>
-            </tr>
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="tel" class="form-control" name="userPhone" required />
+            </div>
 
-            <tr>
-                <td align="right">Customer Country:</td>
-                <td><input type="text" name="userCountry" required /></td>
-            </tr>
+            <div class="form-group">
+<!--            <input type="submit" class="form-control btn btn-default" name="register" value="Create Account" />-->
+                <button type="submit" class="btn btn-warning" name="register" id="btn-register">
+                    <span class="glyphicon glyphicon-log-in"></span> &nbsp; Create Account
+                </button>
+            </div>
 
-            <tr>
-                <td align="right">Customer Phone:</td>
-                <td><input type="tel" name="userPhone" required /></td>
-            </tr>
-
-            <tr align="center">
-                <td colspan="6"><input type="submit" name="register" value="Create Account"</td>
-            </tr>
-        </table>
-
-    </form>
+        </form>
+    </div>
 
     <?php include("templates/footer.php"); ?>
 

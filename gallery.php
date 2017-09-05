@@ -80,8 +80,9 @@
 
     <!-- Main Content -->
     <div class="container mainContent">
+
         <!-- Page Title -->
-        <h1>Gallery</h1>
+        <h2>Gallery</h2>
         <hr />
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">

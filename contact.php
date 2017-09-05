@@ -82,7 +82,8 @@
     <!-- Main Content -->
     <div class="container mainContent">
 
-        <h1>Contact</h1>
+        <!-- Page Title -->
+        <h2>Contact</h2>
         <hr />
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
