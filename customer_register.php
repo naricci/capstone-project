@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <?php
-
 //session_start();
 include 'functions/functions.php';
 include 'includes/dbconnect.php';
-
+include 'includes/db.php';
 ?>
 <html lang="en">
 <head>
@@ -272,8 +271,6 @@ include 'includes/dbconnect.php';
 </html>
 <?php
     if (isset($_POST['register'])) {
-
-        //$ip = getIPAddress();
 
         $userFirstName = $_POST['userFirstName'];
         $userLastName = $_POST['userLastName'];

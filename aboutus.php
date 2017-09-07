@@ -119,7 +119,7 @@
     </div><!-- /.container -->
 
     <!-- FOOTER -->
-    <?php include("templates/footer.php"); ?>
+    <?php include 'templates/footer.php'; ?>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

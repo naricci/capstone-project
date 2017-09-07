@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <?php
-
-include("functions/functions.php");
-include("includes/dbconnect.php");
-include("includes/db.php");
-
+include 'functions/functions.php';
+include 'includes/dbconnect.php';
+include 'includes/db.php';
 ?>
 <html lang="en">
 <head>
@@ -94,30 +92,46 @@ include("includes/db.php");
         <hr />
 
         <!-- Registration Form -->
-        <form class="form-signin" action="customer_register.php" method="post" enctype="multipart/form-data">
+        <form class="form-signin" method="post" action="#">
 
-            <div class="form-group">
-                <label>Username:</label>
-                <input type="text" class="form-control" name="userName" required />
+            <!-- Username Row-->
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4">
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" class="form-control" name="userName" required maxlength="50"/>
+                    </div>
+                </div>
+            </div>
+            <!-- Password Row-->
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4">
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" class="form-control" name="userPassword" required maxlength="100" />
+                    </div>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label>Password:</label>
-                <input type="password" class="form-control" name="userPassword" required />
-            </div>
-
-            <div class="form-group">
-                <!--<input type="submit" class="form-control btn btn-default" name="register" value="Create Account" />-->
-                <button type="submit" class="btn btn-warning" name="register" id="btn-register">
-                    <span class="glyphicon glyphicon-log-in"></span> &nbsp; Log In
-                </button>
+            <!-- Login Button-->
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="float:right; padding-right:20px;"><a href="customer_register.php" style="text-decoration:none; font-size: 16px;">New? Register Here</a></h2>
+                </div>
+                <div class="col-md-offset-7">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-warning" name="register" id="btn-register">
+                            <span class="glyphicon glyphicon-log-in"></span> &nbsp; Log In
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </form>
     </div><!-- /.container.mainContent -->
 
     <!-- FOOTER -->
-    <?php include("templates/footer.php"); ?>
+    <?php include 'templates/footer.php'; ?>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -127,3 +141,48 @@ include("includes/db.php");
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+if(isset($_POST['login'])){
+
+$userName = $_POST['userName'];
+$userPassword = $_POST['userPassword'];
+
+$sel_c = "SELECT * FROM users WHERE userPassword='$userPassword' AND userName='$userName'";
+
+$run_c = mysqli_query($con, $sel_c);
+
+$check_customer = mysqli_num_rows($run_c);
+
+if($check_customer==0){
+
+echo "<script>alert('Password or email is incorrect, plz try again!')</script>";
+exit();
+}
+$ip = getIp();
+
+$sel_cart = "select * from cart where ip_add='$ip'";
+
+$run_cart = mysqli_query($con, $sel_cart);
+
+$check_cart = mysqli_num_rows($run_cart);
+
+if($check_customer>0 AND $check_cart==0){
+
+$_SESSION['customer_email']=$c_email;
+
+echo "<script>alert('You logged in successfully, Thanks!')</script>";
+<!--echo "<script>window.open('customer/my_account.php','_self')</script>";-->
+echo "<script>window.open('index.php')</script>";
+
+}
+else {
+$_SESSION['customer_email']=$c_email;
+
+echo "<script>alert('You logged in successfully, Thanks!')</script>";
+echo "<script>window.open('checkout.php','_self')</script>";
+
+
+}
+}
+
+
+?>

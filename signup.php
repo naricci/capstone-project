@@ -20,12 +20,12 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    <?php include "templates/navbar.php"; ?>
+    <?php include 'templates/navbar.php'; ?>
 
 
 
     <!-- FOOTER -->
-    <?php include "templates/footer.php"; ?>
+    <?php include 'templates/footer.php'; ?>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
