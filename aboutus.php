@@ -103,17 +103,28 @@
             </div>
 
             <div class="col-md-3 col-sm-12">
-                <h4>Address</h4>
-                <p>58 Main Street</p>
-                <p>East Greenwich, RI, 02818</p>
-                <p></p>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Address</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>58 Main Street</p>
+                        <p>East Greenwich, RI, 02818</p>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-3 col-sm-12">
-                <h4>Hours of Operation</h4>
-                <p>Monday - Thursday 10am - 8pm</p>
-                <p>Friday - Saturday 10am - 10pm</p>
-                <p>Sunday 12am - 6pm</p>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Hours of Operation</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Monday - Thursday 10am - 8pm</p>
+                        <p>Friday - Saturday 10am - 10pm</p>
+                        <p>Sunday 12am - 6pm</p>
+                    </div>
+                </div>
             </div>
         </div><!-- /.row -->
     </div><!-- /.container -->

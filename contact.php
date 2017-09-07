@@ -90,8 +90,8 @@
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
             <!-- Contact Form -->
-            <div class="col-xs-12 col-lg-6">
-                <form action="#">
+            <div class="col-md-4">
+                <form action="#" id="contactus-form">
                     <div class="form-group">
                         <label for="firstName">First Name</label>
                         <input type="text" class="form-control" id="firstName" placeholder="First Name" maxlength="50">
@@ -118,10 +118,10 @@
             </div>
 
             <!-- Photo on the right -->
-            <div class="col-xs-12 col-lg-6">
-                <img src="images/store/IMG_6651.JPG" alt="Bong on stairs" class="img-responsive">
+            <div class="col-md-8">
+                <img src="images/store/IMG_6651.JPG" alt="Bong on stairs" class="img-responsive img-thumbnail">
                 <br />
-                <img src="images/store/IMG_6656.JPG" alt="Jars in a case" class="img-responsive">
+                <img src="images/store/IMG_6656.JPG" alt="Jars in a case" class="img-responsive img-thumbnail">
             </div>
         </div>
     </div>

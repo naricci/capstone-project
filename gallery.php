@@ -86,11 +86,122 @@
         <!-- Page Title -->
         <h2>Gallery</h2>
         <hr />
-        <!-- Columns are always 50% wide, on mobile and desktop -->
-        <div class="row">
 
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/store/IMG_6651.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/store/IMG_6656.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/categories/IMG_6602.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6597.JPG">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6620.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6625.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6628.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/spoon.JPG">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6530.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6537.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6545.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6552.JPG">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6556.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6564.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6566.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6568.JPG">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6571.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6586.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6597.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6603.JPG">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6607.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6619.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6625.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6631.JPG">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6649.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6670.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6675.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6726.JPG">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6730.JPG">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-thumbnail" src="images/products/IMG_6733.JPG">
+            </div>
         </div>
     </div>
+    <br />
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>

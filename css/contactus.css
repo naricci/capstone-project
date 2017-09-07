@@ -1,9 +1,14 @@
 /************************ Contact Us Page CSS ************************/
 
+
 #mainContent {
     padding-top: 20px;
 }
 
-textarea .form-control {
+textarea.form-control {
     height: 250px;
+}
+
+#contactus-form {
+    padding-bottom: 20px;
 }

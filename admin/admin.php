@@ -13,12 +13,14 @@
     <!-- Bootstrap CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Normalize CSS -->
+    <link href="../bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
         <!-- NAVBAR -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -52,6 +54,7 @@
                         <li><a href="create-new-admin.php">Create New Admin</a></li>
                         <li><a href="#">Manage About Us Page</a></li>
                         <li><a href="manage-news-posts.php">Manage News Posts</a></li>
+                        <li><a href="insert_product.php">Insert New Product</a></li>
                         <li><a href="update-shop-products.php">Update Shop Products</a></li>
                         <li><a href="#">View Product Requests</a></li>
                     </ul>
@@ -76,7 +79,7 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container" id="mainContent">
+    <div class="container mainContent">
         <h1>Admin Home</h1>
         <hr />
 
@@ -88,7 +91,7 @@
     <!-- End of Main Content -->
 
     <!-- FOOTER -->
-    <footer class="navbar-fixed-bottom navbar-inverse">
+    <footer class="navbar-static-bottom navbar-inverse">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
                 <p class="copyrightText">© 2017 The Stoop.</p>

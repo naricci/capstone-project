@@ -34,8 +34,9 @@ nav {
     color: #34AFA8;
 }
 
-.nav-btn {
-    /*color: red;*/
+.navbar-btn {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .navbar .navbar-inverse {
@@ -85,6 +86,17 @@ footer {
     left: 0;
     padding: 1rem;
 }
+
+footer.navbar-inverse {
+    border-radius: 0px;
+    color: #34AFA8;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+a.btn-footer:hover {
+    color: #34AFA8;
+}
+
 p.copyrightText {
     color: white;
     margin: 10px 0px 10px;

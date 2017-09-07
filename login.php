@@ -152,7 +152,7 @@ $run_c = mysqli_query($con, $sel_c);
 
 $check_customer = mysqli_num_rows($run_c);
 
-if($check_customer==0){
+if ($check_customer==0){
 
 echo "<script>alert('Password or email is incorrect, plz try again!')</script>";
 exit();
