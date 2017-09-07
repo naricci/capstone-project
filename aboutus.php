@@ -13,6 +13,8 @@
     <!-- Bootstrap CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Normalize CSS -->
+    <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
@@ -84,11 +86,10 @@
         <!-- Page Title -->
         <h2>About Us</h2>
         <hr />    
-        
-        <!-- Columns are always 50% wide, on mobile and desktop -->
+
         <div class="row">
-            <div class="col-lg-4 col-xs-4">
-                <h3>Location</h3>
+            <div class="col-md-6 col-sm-12">
+                <h4>Location</h4>
 
                 <!-- Google Maps Embed API -->
                 <iframe
@@ -101,8 +102,15 @@
                 </iframe>
             </div>
 
-            <div class="col-lg-2 col-xs-12">
-                <h3>Hours of Operation</h3>
+            <div class="col-md-3 col-sm-12">
+                <h4>Address</h4>
+                <p>58 Main Street</p>
+                <p>East Greenwich, RI, 02818</p>
+                <p></p>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <h4>Hours of Operation</h4>
                 <p>Monday - Thursday 10am - 8pm</p>
                 <p>Friday - Saturday 10am - 10pm</p>
                 <p>Sunday 12am - 6pm</p>
@@ -111,7 +119,7 @@
     </div><!-- /.container -->
 
     <!-- FOOTER -->
-    <?php include 'templates/footer.php'; ?>
+    <?php include("templates/footer.php"); ?>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

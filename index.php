@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+
+//session_start();
+include "functions/functions.php";
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +20,8 @@
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/carousel.css" rel="stylesheet" />
+    <!-- Normalize CSS -->
+    <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Sign Up!</title>
+    <title>Error!</title>
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
     <!-- Font Awesome -->
@@ -20,18 +20,18 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    <?php include "templates/navbar.php"; ?>
+    <?php include '../templates/navbar.php'; ?>
 
-
+    <h1>Sorry there was an issue...</h1>
+    <h2>
+        <?php
+        if ( isset($message) ) {
+            echo $message;
+        }
+        ?>
+    </h2>
 
     <!-- FOOTER -->
-    <?php include "templates/footer.php"; ?>
-
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Popper.js -->
-    <script src="bower_components/popper.js/dist/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <?php include '../templates/footer.php'; ?>
 </body>
 </html>

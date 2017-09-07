@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" serverName="XAMPP Apache">
     <serverData>
       <paths name="XAMPP Apache">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="http://localhost/capstone-project" local="$PROJECT_DIR$" web="/capstone-project" />
           </mappings>
         </serverdata>
       </paths>

@@ -5,5 +5,19 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jQuery " level="application" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$USER_HOME$/.composer/vendor/composer" />
+          <root url="file://$USER_HOME$/.composer/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$USER_HOME$/pear" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$USER_HOME$/.composer/vendor/composer" />
+          <root url="file://$USER_HOME$/.composer/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$USER_HOME$/pear" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

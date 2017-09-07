@@ -48,7 +48,7 @@
                     <li class="dropdown active">
                     <a href="admin.php" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret sr-only">(current)</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="admin.php" class="active">Admin Home Page <span class="sr-only">(current)</span> </a></li>
+                        <li><a href="admin.php" class="active">Admin Home Page</a></li>
                         <li><a href="create-new-admin.php">Create New Admin</a></li>
                         <li><a href="#">Manage About Us Page</a></li>
                         <li><a href="manage-news-posts.php">Manage News Posts</a></li>
@@ -85,6 +85,7 @@
 
         </div>
     </div>
+    <!-- End of Main Content -->
 
     <!-- FOOTER -->
     <footer class="navbar-fixed-bottom navbar-inverse">
