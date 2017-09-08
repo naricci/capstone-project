@@ -162,7 +162,7 @@ include 'includes/db.php';
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>State:</label>
-                        <select class="form-control" name="userState" required>
+                        <select class="form-control" name="userState" required maxlength="2">
                             <option>Select a State</option>
                             <option value="AK">AK</option>
                             <option value="AL">AL</option>
