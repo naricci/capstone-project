@@ -5,6 +5,8 @@
       <path value="$USER_HOME$/.composer/vendor/squizlabs/php_codesniffer" />
       <path value="$USER_HOME$/.composer/vendor/composer" />
       <path value="$USER_HOME$/pear" />
+      <path value="$USER_HOME$/AppData/Roaming/Composer/vendor/composer" />
+      <path value="$USER_HOME$/AppData/Roaming/Composer/vendor/squizlabs/php_codesniffer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

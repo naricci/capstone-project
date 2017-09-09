@@ -1,3 +1,36 @@
+<?php
+
+$to = 'nicholasaricci@gmail.com';
+$subject = 'this came from your mother';
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+//$header = 'Message from...';
+
+$body = <<<EMAIL
+
+Hi ! My name is $name.
+
+$message
+
+From $name
+Email:  $email
+
+EMAIL;
+
+$header = "From: $email";
+
+if ($_POST) {
+    if ($name == '' || $email == '' || $message == '') {
+        $feedback = 'Please fill out ALL fields.';
+    } else {
+        mail($to, $subject, $body, $header);
+        $feedback = 'Your message has been sent.';
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +51,6 @@
     <!-- Custom CSS -->
     <link href="css/contactus.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-	<!-- Contact Form JS Validation -->
-	<script src="contactform_free/freecontactformvalidation.js"></script>
-	<script>
-	required.add('fullName','NOT_EMPTY','Full Name');
-	required.add('email','EMAIL','Email Address');
-	required.add('message','NOT_EMPTY','Your Message');
-	required.add('antiSpam','NOT_EMPTY','Anti-Spam Question');
-	</script>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -104,36 +129,38 @@
 	  
 	 			<div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
 				<br />
-				
+                <p id="feedback"><?php echo $feedback; ?></p>
 				<!-- Contact Form -->
-                <form name="freecontactform" method="post" action="contactform_free/freecontactformprocess.php" id="contactus-form" onsubmit="return validate.check(this)">
+                <form action="?" method="post"> <!-- id="contactus-form" onsubmit="return validate.check(this)" -->
                     <div class="form-group">
-                        <label for="fullName" class="required">Full Name<span class="required_star"> * </span></label>
-                        <input type="text" class="form-control" id="fullName"  name="fullName" placeholder="Please enter your Full Name" maxlength="100">
+                        <label for="name" class="required">Full Name<span class="required_star"> * </span></label>
+                        <input type="text" class="form-control" id="name"  name="name" placeholder="Please enter your Full Name" maxlength="100" required />
                     </div>
-                    <div class="form-group">
-                        <label for="phone" class="required">Phone Number<span class="required_star"> * </span></label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Please enter your Phone Number" maxlength="10">
-                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <label for="phone">Phone Number</label>-->
+<!--                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Please enter your Phone Number" maxlength="10" />-->
+<!--                    </div>-->
                     <div class="form-group">
                         <label for="email" class="required">Email Address<span class="required_star"> * </span></label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your Email Address" maxlength="100">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your Email Address" maxlength="100" required />
                     </div>
                     <div class="form-group">
                         <label for="message" class="required">Message<span class="required_star"> * </span></label>
-                        <textarea type="text" style="height: 100px;" class="form-control" id="message" name="message" placeholder="Please enter your message here..."></textarea>
+                        <textarea type="text" style="height: 100px;" class="form-control" id="message" name="message" placeholder="Please enter your comments here..." required></textarea>
                     </div>
-					<div class="form-group antispammessage">
-	  					To help prevent automated spam, please answer this question
-	  					<br /><br />
-				  		<div class="antispamquestion">
-				   			<span class="required_star"> * </span>
-				   			Using only numbers, what is 13 plus 7? &nbsp; 
-				   			<input type="text" name="AntiSpam" id="antiSpam" maxlength="100" style="width:30px">
-				  		</div>
-					</div>
+<!--					<div class="form-group antispammessage">-->
+<!--	  					To help prevent automated spam, please answer this question-->
+<!--	  					<br /><br />-->
+<!--				  		<div class="antispamquestion">-->
+<!--				   			<span class="required_star"> * </span>-->
+<!--				   			Using only numbers, what is 13 plus 7? &nbsp; -->
+<!--				   			<input type="text" name="antispam" id="antispam" maxlength="2000" style="width:30px" required />-->
+<!--				  		</div>-->
+<!--					</div>-->
 					<br />
-                    <button type="submit" class="btn btn-danger">Send Message</button>
+<!--                    <button type="submit" class="btn btn-danger">Send Message</button>-->
+<!--                        <input type="hidden" name="submit" />-->
+                        <input class="btn btn-danger" type="submit" name="submit" value="Send Message" />
                 </form>
             </div>
 

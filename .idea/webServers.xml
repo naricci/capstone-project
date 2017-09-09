@@ -2,16 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="23197d1b-c14f-4bfb-bbf5-8ff912c8600a" name="ict.neit.edu" url="http://ict.neit.edu">
-        <fileTransfer host="ict.neit.edu" port="2222" rootFolder="/001405200" accessType="SFTP">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" />
-          </advancedOptions>
-          <option name="port" value="2222" />
-        </fileTransfer>
-      </webServer>
-      <webServer id="735f4238-6451-48d8-afc3-67a574cd583e" name="XAMPP Apache" url="http://localhost">
-        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/../../../htdocs" accessType="MOUNT" />
+      <webServer id="735f4238-6451-48d8-afc3-67a574cd583e" name="XAMPP Apache (project level)" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="J:\xampp\htdocs" accessType="MOUNT" />
       </webServer>
     </option>
   </component>

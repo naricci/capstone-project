@@ -2,9 +2,15 @@
   <dictionary name="naricci">
     <words>
       <w>aboutus</w>
+      <w>antispam</w>
+      <w>contactform</w>
+      <w>contactformsettings</w>
       <w>contactus</w>
       <w>dbconfig</w>
       <w>dbconnect</w>
+      <w>freecontactformheader</w>
+      <w>freecontactformmessage</w>
+      <w>freecontactformvalidation</w>
       <w>glyphicon</w>
       <w>instagram</w>
       <w>jumbotron</w>
@@ -12,6 +18,7 @@
       <w>navbar</w>
       <w>rhode</w>
       <w>signup</w>
+      <w>thankyou</w>
       <w>thestoop</w>
     </words>
   </dictionary>

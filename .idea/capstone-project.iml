@@ -6,14 +6,17 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jQuery " level="application" />
     <orderEntry type="module-library">
-      <library name="PHP Runtime" type="php">
+      <library name="PHP" type="php">
         <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/composer" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/squizlabs/php_codesniffer" />
         </CLASSES>
         <SOURCES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/composer" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/squizlabs/php_codesniffer" />
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="bootstrap-DefinitelyTyped" level="application" />
   </component>
 </module>
