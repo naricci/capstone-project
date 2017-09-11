@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
 
-include '../includes/dbconnect.php';
-include '../includes/db.php';
+//include 'includes/dbconnect.php';
+include 'includes/db.php';
 
 ?>
 <html lang="en">
@@ -92,21 +92,31 @@ include '../includes/db.php';
 
         <form action="insert_product.php" method="post" enctype="multipart/form-data">
 
-            <table align="center" width="1000">
+            <table align="center" width="1000" class="table table-responsive">
 
                 <tr align="center">
                     <td colspan="7"><h2>Insert New Post Here</h2></td>
                 </tr>
 
+                <tr class="form-group">
+                    <td align="left"><b>Product Name:</b></td>
+                    <td><input type="text" name="productName" size="60" required class="form-control" /></td>
+                </tr>
+
                 <tr>
-                    <td align="left"><b>Product Title:</b></td>
-                    <td><input type="text" name="productName" size="60" required/></td>
+                    <td align="left"><b>Product Price:  </b></td>
+                    <td><input type="number" name="productPrice" required class="form-control" /></td>
+                </tr>
+
+                <tr>
+                    <td align="left"><b>Product Quantity:  </b></td>
+                    <td><input type="number" name="productQuantity" class="form-control" /></td>
                 </tr>
 
                 <tr>
                     <td align="left"><b>Product Category:</b></td>
                     <td>
-                        <select name="productCategoryID">
+                        <select name="productCategoryID" required class="form-control">
                             <option>Select a Category</option>
                             <?php
                             $get_category = "SELECT * FROM categories";
@@ -126,21 +136,6 @@ include '../includes/db.php';
                 </tr>
 
                 <tr>
-                    <td align="left"><b>Product Image:  </b></td>
-                    <td><input type="file" name="productImage" /></td>
-                </tr>
-
-                <tr>
-                    <td align="left"><b>Product Price:  </b></td>
-                    <td><input type="text" name="productPrice" required/></td>
-                </tr>
-
-                <tr>
-                    <td align="left"><b>Product Artist:  </b></td>
-                    <td><input type="text" name="productArtistID" required/></td>
-                </tr>
-
-                <tr>
                     <td align="left"><b>Product Short Description:  </b></td>
                     <td><textarea name="productShortDescription" cols="20" rows="10"></textarea></td>
                 </tr>
@@ -150,8 +145,18 @@ include '../includes/db.php';
                     <td><textarea name="productLongDescription" cols="20" rows="10"></textarea></td>
                 </tr>
 
+                <tr>
+                    <td align="left"><b>Product Artist:  </b></td>
+                    <td><input type="text" name="productArtist" class="form-control" /></td>
+                </tr>
+
+                <tr>
+                    <td align="left"><b>Product Image:  </b></td>
+                    <td><input type="file" name="productImage" /></td>
+                </tr>
+
                 <tr align="right">
-                    <td colspan="7"><input type="submit" name="insert_post" value="Insert Product Now"/></td>
+                    <td colspan="7"><input class="btn btn-danger" type="submit" name="insert_post" value="Add New Product" class="form-control" /></td>
                 </tr>
 
             </table>
@@ -188,29 +193,67 @@ include '../includes/db.php';
 </html>
 <?php
 
+//$db = 'dbconnect.php';
+
 if (isset($_POST['insert_post'])){
+    try
+    {
+        // Getting the text data from the fields
+        $productName = $_POST['productName'];
+        $productPrice = $_POST['productPrice'];
+        $productQuantity = $_POST['productQuantity'];
+        $productCategoryID = $_POST['productCategoryID'];
+        $productShortDescription = $_POST['productShortDescription'];
+        $productLongDescription = $_POST['productLongDescription'];
+        $productArtist = $_POST['productArtist'];
 
-    // Getting the text data from the fields
-    $productName = $_POST['productName'];
-    $productPrice = $_POST['productPrice'];
-    $productCategoryID = $_POST['productCategoryID'];
-    $productShortDescription = $_POST['productShortDescription'];
-    $productLongDescription = $_POST['productLongDescription'];
-    $productArtistID = $_POST['productArtistID'];
+        if (empty($productName)) throw new Exception("Product name cannot be empty");
+        if (empty($productPrice)) throw new Exception("Product price cannot be empty");
+        if (empty($productCategoryID)) throw new Exception("Product category cannot be empty");
+        if (empty($productShortDescription)) throw new Exception("Product short description cannot be empty");
 
-    //getting the image from the field
-    $productImage = $_FILES['productImage']['name'];
-    $productImageTemp = $_FILES['productImage']['tempName'];
+        //getting the image from the field
+        //$productImage = $_FILES['productImage']['name'];
+        //$productImageTemp = $_FILES['productImage']['tempName'];
 
-    move_uploaded_file($productImageTemp,"product_images/$productImage");
+        //move_uploaded_file($productImageTemp,"product_images/$productImage");
 
-    $insert_product = "INSERT INTO products (productName, productPrice, productCategoryID, productShortDescription, productLongDescription, productImage, productArtistID,) values ('$productName', '$productPrice', '$productCategoryID', '$productShortDescription', '$productLongDescription', '$productImage', '$productArtistID')";
+        //$insert_product = "INSERT INTO products (productName, productPrice, productQuantity, productCategoryID, productShortDescription, productLongDescription, productArtist, productImage) VALUES ('$productName', '$productPrice', '$productQuantity', '$productCategoryID', '$productShortDescription', '$productLongDescription', '$productArtist', '$productImage')";
 
-    $insert_pro = mysqli_query($con, $insert_product);
+        $statement = $db->prepare("show table status like 'products'");
+        $statement->execute();
+        $result = $statement->fetchAll();
+        foreach ($result as $row);
+        $new_id = $row[10];
 
-    if ($insert_pro){
-        echo "<script>alert('Product Has been inserted!')</script>";
-        echo "<script>window.open('index.php?insert_product','_self')</script>";
+        $up_file = $_FILES["image"]["name"];
+
+        $file_basename = substr($up_file, 0, strripos($up_file, "."));
+        $file_ext = substr($up_file, strripos($up_file, "."));
+        $f1 = "$new_id" . $file_ext;
+
+        if (($file_ext != ".png") && ($file_ext != ".jpg") && ($file_ext != ".jpeg") && ($file_ext!=".gif"))
+        {
+            throw new Exception("Only jpg, png, jpeg or gif image files allowed.");
+        }
+        move_uploaded_file($_FILES["image"]["tmp_name"], "product_images/" . $f1);
+
+        $statement = $db->prepare("INSERT INTO products (productName, productPrice, productQuantity, productCategoryID, productShortDescription, productLongDescription, productArtist, productImage) VALUES ('$productName', '$productPrice', '$productQuantity', '$productCategoryID', '$productShortDescription', '$productLongDescription', '$productArtist', '$productImage')");
+
+        $statement->execute(array($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productArtist, $productImage));
+        $success = "Product successfully added.";
+
+        echo $success;
+        //$insert_pro = mysqli_query($con, $insert_product);
+
+        //if ($insert_pro) {
+           // echo "<script>alert('Product Has been inserted!')</script>";
+            //echo "<script>window.open('index.php?insert_product','_self')</script>";
+        //}
+    }
+    catch (Exception $e)
+    {
+        $msg=$e->getMessage();
     }
 }
 ?>

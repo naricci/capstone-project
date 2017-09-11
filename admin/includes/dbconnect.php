@@ -1,6 +1,6 @@
 <?php
 /**
- * Function to extablish a databse connection
+ * Function to establish a database connection
  * 
  * @return PDO Object
  */  
@@ -20,8 +20,8 @@ function dbconnect() {
         /* If the connection fails we will close the 
          * connection by setting the variable to null */
         $db = null;
-        $message = $ex->getMessage();
-        include './templates/error-messages.php';
+        $error_msg = $ex->getMessage();
+        include 'error.php';
         exit();
     }
 

@@ -11,27 +11,27 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
-    <link href="../bower_components/normalize-css/normalize.css" rel="stylesheet" />
+    <link href="../../bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <!-- NAVBAR -->
-    <?php include '../templates/navbar.php'; ?>
+<!-- NAVBAR -->
+<?php include '../../templates/navbar.php'; ?>
 
-    <h1>Sorry there was an issue...</h1>
-    <h2>
-        <?php
-        if ( isset($error_msg) ) {
-            echo $error_msg;
-        }
-        ?>
-    </h2>
+<h1>Sorry there was an issue...</h1>
+<h2>
+    <?php
+    if ( isset($error_msg) ) {
+        echo $error_msg;
+    }
+    ?>
+</h2>
 
-    <!-- FOOTER -->
-    <?php include '../templates/footer.php'; ?>
+<!-- FOOTER -->
+<?php include '../../templates/footer.php'; ?>
 </body>
 </html>
