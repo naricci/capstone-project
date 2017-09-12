@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-//include 'includes/dbconnect.php';
-include 'includes/db.php';
-
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -84,12 +78,38 @@ include 'includes/db.php';
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
+    <?php
 
+    include 'includes/dbconnect.php';
+    include 'functions/functions.php';
+
+    $results = '';
+
+    if (isPostRequest()) {
+
+        $productName = filter_input(INPUT_POST, 'productName');
+        $productPrice = filter_input(INPUT_POST, 'productPrice');
+        $productQuantity = filter_input(INPUT_POST, 'productQuantity');
+        $productCategoryID = filter_input(INPUT_POST, 'productCategoryID');
+        $productShortDescription = filter_input(INPUT_POST, 'productShortDescription');
+        $productLongDescription = filter_input(INPUT_POST, 'productLongDescription');
+        $productImage = filter_input(INPUT_POST, 'productImage');
+        $productArtist = filter_input(INPUT_POST, 'productArtist');
+        $confirm = addProduct($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productImage, $productArtist);
+
+        if ( $confirm === false ) {
+            $results = 'Product Added Successfully.';
+        } else {
+            $results = 'Product NOT Added!';
+        }
+    }
+    ?>
     <!-- Main Content -->
     <div class="container mainContent">
         <h1>Admin Area</h1>
         <hr />
-
+        <!-- Confirm whether product data was added or not -->
+        <h3><?php echo $results; ?></h3>
         <form action="insert_product.php" method="post" enctype="multipart/form-data">
 
             <table align="center" width="1000" class="table table-responsive">
@@ -119,6 +139,9 @@ include 'includes/db.php';
                         <select name="productCategoryID" required class="form-control">
                             <option>Select a Category</option>
                             <?php
+
+                            include 'includes/db.php';
+
                             $get_category = "SELECT * FROM categories";
 
                             $run_category = mysqli_query($con, $get_category);
@@ -156,7 +179,7 @@ include 'includes/db.php';
                 </tr>
 
                 <tr align="right">
-                    <td colspan="7"><input class="btn btn-danger" type="submit" name="insert_post" value="Add New Product" class="form-control" /></td>
+                    <td colspan="7"><input class="btn btn-danger" type="submit" name="add_product" value="Add New Product" /></td>
                 </tr>
 
             </table>
@@ -192,68 +215,68 @@ include 'includes/db.php';
 </body>
 </html>
 <?php
-
-//$db = 'dbconnect.php';
-
-if (isset($_POST['insert_post'])){
-    try
-    {
-        // Getting the text data from the fields
-        $productName = $_POST['productName'];
-        $productPrice = $_POST['productPrice'];
-        $productQuantity = $_POST['productQuantity'];
-        $productCategoryID = $_POST['productCategoryID'];
-        $productShortDescription = $_POST['productShortDescription'];
-        $productLongDescription = $_POST['productLongDescription'];
-        $productArtist = $_POST['productArtist'];
-
-        if (empty($productName)) throw new Exception("Product name cannot be empty");
-        if (empty($productPrice)) throw new Exception("Product price cannot be empty");
-        if (empty($productCategoryID)) throw new Exception("Product category cannot be empty");
-        if (empty($productShortDescription)) throw new Exception("Product short description cannot be empty");
-
-        //getting the image from the field
-        //$productImage = $_FILES['productImage']['name'];
-        //$productImageTemp = $_FILES['productImage']['tempName'];
-
-        //move_uploaded_file($productImageTemp,"product_images/$productImage");
-
-        //$insert_product = "INSERT INTO products (productName, productPrice, productQuantity, productCategoryID, productShortDescription, productLongDescription, productArtist, productImage) VALUES ('$productName', '$productPrice', '$productQuantity', '$productCategoryID', '$productShortDescription', '$productLongDescription', '$productArtist', '$productImage')";
-
-        $statement = $db->prepare("show table status like 'products'");
-        $statement->execute();
-        $result = $statement->fetchAll();
-        foreach ($result as $row);
-        $new_id = $row[10];
-
-        $up_file = $_FILES["image"]["name"];
-
-        $file_basename = substr($up_file, 0, strripos($up_file, "."));
-        $file_ext = substr($up_file, strripos($up_file, "."));
-        $f1 = "$new_id" . $file_ext;
-
-        if (($file_ext != ".png") && ($file_ext != ".jpg") && ($file_ext != ".jpeg") && ($file_ext!=".gif"))
-        {
-            throw new Exception("Only jpg, png, jpeg or gif image files allowed.");
-        }
-        move_uploaded_file($_FILES["image"]["tmp_name"], "product_images/" . $f1);
-
-        $statement = $db->prepare("INSERT INTO products (productName, productPrice, productQuantity, productCategoryID, productShortDescription, productLongDescription, productArtist, productImage) VALUES ('$productName', '$productPrice', '$productQuantity', '$productCategoryID', '$productShortDescription', '$productLongDescription', '$productArtist', '$productImage')");
-
-        $statement->execute(array($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productArtist, $productImage));
-        $success = "Product successfully added.";
-
-        echo $success;
-        //$insert_pro = mysqli_query($con, $insert_product);
-
-        //if ($insert_pro) {
-           // echo "<script>alert('Product Has been inserted!')</script>";
-            //echo "<script>window.open('index.php?insert_product','_self')</script>";
-        //}
-    }
-    catch (Exception $e)
-    {
-        $msg=$e->getMessage();
-    }
-}
+//
+////$db = 'dbconnect.php';
+//
+//if (isset($_POST['add_product'])){
+//    try
+//    {
+//        // Getting the text data from the fields
+//        $productName = $_POST['productName'];
+//        $productPrice = $_POST['productPrice'];
+//        $productQuantity = $_POST['productQuantity'];
+//        $productCategoryID = $_POST['productCategoryID'];
+//        $productShortDescription = $_POST['productShortDescription'];
+//        $productLongDescription = $_POST['productLongDescription'];
+//        $productArtist = $_POST['productArtist'];
+//
+//        if (empty($productName)) throw new Exception("Product name cannot be empty");
+//        if (empty($productPrice)) throw new Exception("Product price cannot be empty");
+//        if (empty($productCategoryID)) throw new Exception("Product category cannot be empty");
+//        if (empty($productShortDescription)) throw new Exception("Product short description cannot be empty");
+//
+//        //getting the image from the field
+//        //$productImage = $_FILES['productImage']['name'];
+//        //$productImageTemp = $_FILES['productImage']['tempName'];
+//
+//        //move_uploaded_file($productImageTemp,"product_images/$productImage");
+//
+//        //$insert_product = "INSERT INTO products (productName, productPrice, productQuantity, productCategoryID, productShortDescription, productLongDescription, productArtist, productImage) VALUES ('$productName', '$productPrice', '$productQuantity', '$productCategoryID', '$productShortDescription', '$productLongDescription', '$productArtist', '$productImage')";
+//
+//        $statement = $db->prepare("show table status like 'products'");
+//        $statement->execute();
+//        $result = $statement->fetchAll();
+//        foreach ($result as $row);
+//        $new_id = $row[10];
+//
+//        $up_file = $_FILES["image"]["name"];
+//
+//        $file_basename = substr($up_file, 0, strripos($up_file, "."));
+//        $file_ext = substr($up_file, strripos($up_file, "."));
+//        $f1 = "$new_id" . $file_ext;
+//
+//        if (($file_ext != ".png") && ($file_ext != ".jpg") && ($file_ext != ".jpeg") && ($file_ext!=".gif"))
+//        {
+//            throw new Exception("Only jpg, png, jpeg or gif image files allowed.");
+//        }
+//        move_uploaded_file($_FILES["image"]["tmp_name"], "product_images/" . $f1);
+//
+//        $statement = $db->prepare("INSERT INTO products (productName, productPrice, productQuantity, productCategoryID, productShortDescription, productLongDescription, productArtist, productImage) VALUES ('$productName', '$productPrice', '$productQuantity', '$productCategoryID', '$productShortDescription', '$productLongDescription', '$productArtist', '$productImage')");
+//
+//        $statement->execute(array($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productArtist, $productImage));
+//        $success = "Product successfully added.";
+//
+//        echo $success;
+//        //$insert_pro = mysqli_query($con, $insert_product);
+//
+//        //if ($insert_pro) {
+//           // echo "<script>alert('Product Has been inserted!')</script>";
+//            //echo "<script>window.open('index.php?insert_product','_self')</script>";
+//        //}
+//    }
+//    catch (Exception $e)
+//    {
+//        $msg=$e->getMessage();
+//    }
+//}
 ?>
