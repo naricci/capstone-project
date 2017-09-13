@@ -1,0 +1,12 @@
+/************** ADMIN AREA STYLESHEET ***************/
+
+.panel-success {
+    border-color: #222;
+}
+
+.panel-success .panel-heading {
+    background-color: #222;
+    background-image: linear-gradient(to bottom,#777 0,#333 100%);
+    border-color: #222;
+    color: #ffffff;
+}

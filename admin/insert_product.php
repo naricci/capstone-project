@@ -15,6 +15,7 @@
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/admin.css" rel="stylesheet" type="text/css" />
     <script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>
     <script>
         tinymce.init({selector:'textarea'});
@@ -78,6 +79,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
+
     <?php
 
     include 'includes/dbconnect.php';
@@ -104,107 +106,105 @@
         }
     }
     ?>
-    <!-- Main Content -->
+
+    <!-- MAIN -->
     <div class="container mainContent">
-        <h1>Admin Area</h1>
-        <hr />
-        <!-- Confirm whether product data was added or not -->
-        <h3><?php echo $results; ?></h3>
-        <form action="insert_product.php" method="post" enctype="multipart/form-data">
+        <div class="row">
 
-            <table align="center" width="1000" class="table table-responsive">
+            <!-- ADMIN PANEL -->
+            <?php include 'templates/admin_panel.php'; ?>
 
-                <tr align="center">
-                    <td colspan="7"><h2>Insert New Post Here</h2></td>
-                </tr>
+            <!-- Main Content Area -->
+            <div class="col-md-9">
+                <h1 align="center">Insert New Product</h1>
+                <hr />
 
-                <tr class="form-group">
-                    <td align="left"><b>Product Name:</b></td>
-                    <td><input type="text" name="productName" size="60" required class="form-control" /></td>
-                </tr>
+                <!-- Dismissible Alert -->
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
 
-                <tr>
-                    <td align="left"><b>Product Price:  </b></td>
-                    <td><input type="number" name="productPrice" required class="form-control" /></td>
-                </tr>
+                    <!-- Confirm whether product data was added or not -->
+                    <h3><?php echo $results; ?></h3>
+                </div>
 
-                <tr>
-                    <td align="left"><b>Product Quantity:  </b></td>
-                    <td><input type="number" name="productQuantity" class="form-control" /></td>
-                </tr>
+                <form action="insert_product.php" method="post" enctype="multipart/form-data">
+                    <table align="center" width="1000" class="table table-responsive">
+                        <tr class="form-group">
+                            <td align="left"><b>Product Name:</b></td>
+                            <td><input type="text" name="productName" size="60" required class="form-control" /></td>
+                        </tr>
 
-                <tr>
-                    <td align="left"><b>Product Category:</b></td>
-                    <td>
-                        <select name="productCategoryID" required class="form-control">
-                            <option>Select a Category</option>
-                            <?php
+                        <tr>
+                            <td align="left"><b>Product Price:  </b></td>
+                            <td><input type="number" name="productPrice" required class="form-control" /></td>
+                        </tr>
 
-                            include 'includes/db.php';
+                        <tr>
+                            <td align="left"><b>Product Quantity:  </b></td>
+                            <td><input type="number" name="productQuantity" class="form-control" /></td>
+                        </tr>
 
-                            $get_category = "SELECT * FROM categories";
+                        <tr>
+                            <td align="left"><b>Product Category:</b></td>
+                            <td>
+                                <select name="productCategoryID" required class="form-control">
+                                    <option>Select a Category</option>
+                                    <?php
 
-                            $run_category = mysqli_query($con, $get_category);
+                                    include 'includes/db.php';
 
-                            while ($row_category=mysqli_fetch_array($run_category)) {
-                                $categoryID = $row_category['categoryID'];
-                                $categoryName = $row_category['categoryName'];
-                                $categoryDescription = $row_category['categoryDescription'];
+                                    $get_category = "SELECT * FROM categories";
 
-                                echo "<option value='$categoryID'>$categoryName</option>";
-                            }
-                            ?>
-                        </select>
-                    </td>
-                </tr>
+                                    $run_category = mysqli_query($con, $get_category);
 
-                <tr>
-                    <td align="left"><b>Product Short Description:  </b></td>
-                    <td><textarea name="productShortDescription" cols="20" rows="10"></textarea></td>
-                </tr>
+                                    while ($row_category=mysqli_fetch_array($run_category)) {
+                                        $categoryID = $row_category['categoryID'];
+                                        $categoryName = $row_category['categoryName'];
+                                        $categoryDescription = $row_category['categoryDescription'];
 
-                <tr>
-                    <td align="left"><b>Product Long Description:  </b></td>
-                    <td><textarea name="productLongDescription" cols="20" rows="10"></textarea></td>
-                </tr>
+                                        echo "<option value='$categoryID'>$categoryName</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </td>
+                        </tr>
 
-                <tr>
-                    <td align="left"><b>Product Artist:  </b></td>
-                    <td><input type="text" name="productArtist" class="form-control" /></td>
-                </tr>
+                        <tr>
+                            <td align="left"><b>Product Short Description:  </b></td>
+                            <td><textarea name="productShortDescription" cols="20" rows="10"></textarea></td>
+                        </tr>
 
-                <tr>
-                    <td align="left"><b>Product Image:  </b></td>
-                    <td><input type="file" name="productImage" /></td>
-                </tr>
+                        <tr>
+                            <td align="left"><b>Product Long Description:  </b></td>
+                            <td><textarea name="productLongDescription" cols="20" rows="10"></textarea></td>
+                        </tr>
 
-                <tr align="right">
-                    <td colspan="7"><input class="btn btn-danger" type="submit" name="add_product" value="Add New Product" /></td>
-                </tr>
+                        <tr>
+                            <td align="left"><b>Product Artist:  </b></td>
+                            <td><input type="text" name="productArtist" class="form-control" /></td>
+                        </tr>
 
-            </table>
+                        <tr>
+                            <td align="left"><b>Product Image:  </b></td>
+                            <td><input type="file" name="productImage" /></td>
+                        </tr>
 
-        </form>
-    </div>
+                        <tr align="right">
+                            <td colspan="7"><input class="btn btn-danger" type="submit" name="add_product" value="Add New Product" /></td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div><!-- /.col-md-9 -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container .mainContent -->
+    <!-- END OF MAIN -->
 
     <!-- FOOTER -->
-    <footer class="navbar-static-bottom navbar-inverse">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav navbar-left">
-                <p class="copyrightText">© 2017 The Stoop.</p>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Page Links -->
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../aboutus.php">About Us</a></li>
-                <li><a href="../gallery.php">Gallery</a></li>
-                <li><a href="../news.php">News</a></li>
-                <li><a href="../shop.php">Shop</a></li>
-                <li><a href="../contact.php">Contact</a></li>
-            </ul>
-        </div><!-- /.container -->
-    </footer>
+    <?php include 'templates/footer.php'; ?>
 
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
