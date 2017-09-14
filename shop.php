@@ -79,13 +79,47 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <?php
 
-    <!-- Main Content -->
+    include 'includes/dbconnect.php';
+    include 'functions/functions.php';
+
+    $results = viewAllProducts();
+    ?>
+    <!-- MAIN -->
     <div class="container mainContent">
-        <!-- Page Title -->
-        <h2>Shop</h2>
-        <hr />    
-    </div>
+        <div class="row">
+
+            <?php include 'shop_panel.php'; ?>
+
+            <!-- Page Title -->
+            <h2>Shop</h2>
+            <hr />
+
+            <!-- Main Content Area -->
+            <div class="col-md-9">
+                <div class="row">
+
+                <?php foreach ($results as $row): ?>
+                    <div class="col-xs-6 col-md-3">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="<?php echo $row['productImage']; ?>">
+                            </a>
+                            <div class="caption">
+                                <h3><?php echo $row['productName']; ?></h3>
+                                <p><?php echo $row['productShortDescription']; ?></p>
+                                <p><a href="#" class="btn btn-primary" role="button">View</a></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+                </div><!-- /.row -->
+
+            </div><!-- /.col-md-9 -->
+        </div><!-- /.row -->
+    </</div><!--/.container-->
+    <!-- END OF MAIN -->
 
     <!-- FOOTER -->
     <?php include "templates/footer.php"; ?>

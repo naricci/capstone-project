@@ -32,7 +32,7 @@ function addProduct($productName, $productPrice, $productQuantity, $productCateg
     );
 
     if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
-        $results = true;    // was $result = true;
+        $result = true;    // was $result = true;
     }
 
     return $result;
@@ -59,7 +59,7 @@ function viewAllProducts() {
 /**
  * Retrieves a SINGLE ROW from products Table
  *
- * @return String
+ * @return array
  */
 function viewOneProduct($productID) {
     $db = getDatabase();

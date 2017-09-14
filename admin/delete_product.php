@@ -15,10 +15,7 @@
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
-    <script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-    <script>
-        tinymce.init({selector:'textarea'});
-    </script>
+    <link href="css/admin.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- NAVBAR -->
@@ -43,12 +40,15 @@
 
             <!-- Main Content Area -->
             <div class="col-md-9">
+                <div class="page-header">
+                    <h1>Admin Area <small>Delete Product</small></h1>
+                </div>
 
-                <h1 align="center">Product <?php echo $productID; ?>
+                <h3 align="center">Product <?php echo $productID; ?>
                     <?php if ( !$isDeleted ): ?>
                         NOT
                     <?php endif; ?>
-                    Deleted.</h1>
+                    Deleted.</h3>
             </div><!-- /.col-md-9 -->
 
         </div><!-- /.row -->

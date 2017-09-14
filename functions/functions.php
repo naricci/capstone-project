@@ -9,7 +9,29 @@ function isPostRequest() {
     return ( filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'POST' );
 }
 
-/* MySQL DB Connection String */
+/**
+ * Retrieves ALL ROWS from products Table
+ *
+ * @return array
+ */
+function viewAllProducts() {
+    $db = getDatabase();
+
+    $stmt = $db->prepare("SELECT * FROM products");
+
+    $results = array();
+    if ($stmt->execute() && $stmt->rowCount() > 0) {
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    return $results;
+}
+
+/**
+ * MySQL DB Connection String
+ *
+ * @return String
+ */
 $con = mysqli_connect("localhost", "root", "", "thestoop");
 
 if (mysqli_connect_errno()) {

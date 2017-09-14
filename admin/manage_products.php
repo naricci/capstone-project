@@ -41,26 +41,19 @@
 
             <!-- Main Content Area -->
             <div class="col-md-9">
-                <h1 align="center">Manage Shop Products</h1>
-                <hr />
+                <div class="page-header">
+                    <h1>Admin Area <small>Manage Products</small></h1>
+                </div>
 
                 <!-- Products Table -->
-                <table border="1" class="table table-bordered table-condensed table-responsive">
+                <table border="1" class="table table-bordered table-hover table-responsive">
                     <thead>
                         <tr>
-                            <th align="center">ID</th>
-                            <th align="center">Name</th>
+                            <th>ID</th>
+                            <th>Name</th>
                             <th></th>
                             <th></th>
                             <th></th>
-<!--                            <th>Price</th>-->
-<!--                            <th>Quantity</th>-->
-<!--                            <th>Category ID</th>-->
-<!--                            <th>Short Description</th>-->
-<!--                            <th>Long Description</th>-->
-<!--                            <th>Image</th>-->
-<!--                            <th>Artist</th>-->
-
                         </tr>
                     </thead>
 
@@ -71,9 +64,9 @@
                             <td align="center"><?php echo $row['productName']; ?></td>
 
                             <!-- Read, Update, Delete Buttons -->
-                            <td align="center"><a href="view_product.php?id=<?php echo $row['productID']; ?>" class="btn btn-primary">Read</a></td>
-                            <td align="center"><a href="update_product.php?id=<?php echo $row['productID']; ?>" class="btn btn-warning">Update</a></td>
-                            <td align="center"><a href="delete_product.php?id=<?php echo $row['productID']; ?>" class="btn btn-danger">Delete</a></td>
+                            <td align="center"><a href="view_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-primary">View</a></td>
+                            <td align="center"><a href="update_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-success">Update</a></td>
+                            <td align="center"><a href="delete_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-danger">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>
