@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Manage Products</title>
+    <title>View Product</title>
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
     <!-- Font Awesome -->
@@ -26,7 +26,8 @@
     <?php
 
     include 'includes/dbconnect.php';
-    include 'functions/functions.php';
+    include 'functions/utilities.php';
+    include 'functions/product_functions.php';
 
     $productID = filter_input(INPUT_GET, 'productID');
 
@@ -39,7 +40,7 @@
         <div class="row">
 
             <!-- ADMIN PANEL -->
-            <?php include 'templates/admin_panel.php'; ?>
+            <?php include 'admin_panel.php'; ?>
 
             <!-- Main Content Area -->
             <div class="col-md-9">
@@ -78,8 +79,8 @@
                             <td><?php echo $result['productArtist']; ?></td>
 
                             <!-- Update & Delete Buttons -->
-                            <td><a href="update_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-success" role="button">Update</a></td>
-                            <td><a href="delete_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-danger" role="button">Delete</a></td>
+                            <td><a href="update_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-success" role="button">Update Product</a></td>
+                            <td><a href="delete_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-danger" role="button">Delete Product</a></td>
                         </tr>
                     </tbody>
                 </table>

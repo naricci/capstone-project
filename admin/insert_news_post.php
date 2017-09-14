@@ -30,27 +30,25 @@
 
     include 'includes/dbconnect.php';
     include 'functions/utilities.php';
-    include 'functions/product_functions.php';
-    include 'functions/upload_image.php';
+    include 'functions/news_post_functions.php';
 
     $results = '';
 
     if (isPostRequest()) {
 
-        $productName = filter_input(INPUT_POST, 'productName');
-        $productPrice = filter_input(INPUT_POST, 'productPrice');
-        $productQuantity = filter_input(INPUT_POST, 'productQuantity');
-        $productCategoryID = filter_input(INPUT_POST, 'productCategoryID');
-        $productShortDescription = filter_input(INPUT_POST, 'productShortDescription');
-        $productLongDescription = filter_input(INPUT_POST, 'productLongDescription');
-        $productImage = filter_input(INPUT_POST, 'productImage');
-        $productArtist = filter_input(INPUT_POST, 'productArtist');
-        $confirm = addProduct($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productImage, $productArtist);
+        $postTitle = filter_input(INPUT_POST, 'postTitle');
+        $postWriter = filter_input(INPUT_POST, 'postWriter');
+        $postDate = filter_input(INPUT_POST, 'postDate');
+        $postContent = filter_input(INPUT_POST, 'postContent');
+        $postImageName = filter_input(INPUT_POST, 'postImageName');
+        $postAdminID = filter_input(INPUT_POST, 'postAdminID');
+
+        $confirm = addNewsPost($postTitle, $postWriter, $postContent, $postImageName, $postAdminID);
 
         if ( $confirm === false ) {
-            $results = 'Product Added Successfully.';
+            $results = 'News Post Added Successfully.';
         } else {
-            $results = 'Product NOT Added!';
+            $results = 'News Post NOT Added!';
         }
     }
     ?>
@@ -65,7 +63,7 @@
             <!-- Main Content Area -->
             <div class="col-md-9">
                 <div class="page-header">
-                    <h1>Admin Area <small>Insert New Product</small></h1>
+                    <h1>Admin Area <small>Insert News Post</small></h1>
                 </div>
 
                 <!-- Dismissible Alert -->
@@ -78,86 +76,33 @@
                     <h3><?php echo $results; ?></h3>
                 </div>
 
-                <form action="insert_product.php" method="post" enctype="multipart/form-data">
+                <form action="#" method="post">
                     <table align="center" width="1000" class="table table-responsive">
+
                         <tr class="form-group">
-                            <td align="left"><b>Product Name:</b></td>
-                            <td><input type="text" name="productName" size="60" required class="form-control" /></td>
+                            <td align="left"><b>Post Title:</b></td>
+                            <td><input type="text" name="postTitle" maxlength="100" required class="form-control" /></td>
                         </tr>
 
                         <tr>
-                            <td align="left"><b>Product Price:  </b></td>
-                            <td><input type="number" name="productPrice" required class="form-control" /></td>
+                            <td align="left"><b>Post Writer:</b></td>
+                            <td><input type="text" name="postWriter" maxlength="100" required class="form-control" /></td>
                         </tr>
 
                         <tr>
-                            <td align="left"><b>Product Quantity:  </b></td>
-                            <td><input type="number" name="productQuantity" class="form-control" /></td>
+                            <td align="left"><b>Post Content:</b></td>
+                            <td><textarea name="postContent" class="form-control" cols="20" rows="10"  maxlength="2000"></textarea></td>
                         </tr>
 
                         <tr>
-                            <td align="left"><b>Product Category:</b></td>
-                            <td>
-                                <select name="productCategoryID" required class="form-control">
-                                    <option>Select a Category</option>
-                                    <?php
-
-                                    include 'includes/db.php';
-
-                                    $get_category = "SELECT * FROM categories";
-
-                                    $run_category = mysqli_query($con, $get_category);
-
-                                    while ($row_category=mysqli_fetch_array($run_category)) {
-                                        $categoryID = $row_category['categoryID'];
-                                        $categoryName = $row_category['categoryName'];
-                                        $categoryDescription = $row_category['categoryDescription'];
-
-                                        echo "<option value='$categoryID'>$categoryName</option>";
-                                    }
-                                    ?>
-                                </select>
-
-                                <!-- OR, TRY THIS -->
-                                <select name="productCategoryID">
-                                    <?php foreach($results as $row): ?>
-                                    <option
-                                        value="<?php echo $row['categoryID']; ?>"
-                                        <?php if (intval($categoryID) === $row['categoryID']): ?>
-                                        selected="selected"
-                                        <?php endif; ?>
-                                    >
-                                        <?php echo $row['categoryName']; ?>
-                                    </option>
-                                    <?php endforeach; ?>
-                                </select>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td align="left"><b>Product Short Description:  </b></td>
-                            <td><textarea name="productShortDescription" cols="20" rows="10"></textarea></td>
-                        </tr>
-
-                        <tr>
-                            <td align="left"><b>Product Long Description:  </b></td>
-                            <td><textarea name="productLongDescription" cols="20" rows="10"></textarea></td>
-                        </tr>
-
-                        <tr>
-                            <td align="left"><b>Product Artist:  </b></td>
-                            <td><input type="text" name="productArtist" class="form-control" /></td>
-                        </tr>
-
-                        <tr>
-                            <td align="left"><b>Product Image:  </b></td>
-                            <td><input type="file" name="productImage" /></td>
+                            <td align="left"><b>Post Image:</b></td>
+                            <td><input type="file" name="postImageName" maxlength="100"></td>
                         </tr>
 
                         <tr align="right">
-                            <td colspan="7"><input class="btn btn-danger" type="submit" name="add_product" value="Add New Product" /></td>
+                            <td colspan="7"><input class="btn btn-danger" type="submit" name="add_news_post" value="Add News Post" /></td>
                         </tr>
+
                     </table>
                 </form>
 

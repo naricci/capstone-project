@@ -1,14 +1,5 @@
 <?php
 /**
- * A method to check if a Post request has been made.
- *
- * @return Boolean
- */
-function isPostRequest() {
-    return ( filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'POST' );
-}
-
-/**
  * Creates a new row at bottom of the products Table.
  *
  * @return Boolean

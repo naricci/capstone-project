@@ -29,12 +29,13 @@
                     <a href="../admin.php" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret sr-only">(current)</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="../admin.php" class="active">Admin Home Page</a></li>
-                        <li><a href="../create-new-admin.php">Create New Admin</a></li>
-                        <li><a href="#">Manage About Us Page</a></li>
-                        <li><a href="../manage-news-posts.php">Manage News Posts</a></li>
-                        <li><a href="../insert_product.php">Insert New Product</a></li>
-                        <li><a href="../update-shop-products.php">Update Shop Products</a></li>
-                        <li><a href="#">View Product Requests</a></li>
+                        <li><a href="../create_new_admin.php">Create New Admin</a></li>
+                        <li><a href="../manage_aboutus.php">Manage About Us Page</a></li>
+                        <li><a href="../insert_product.php">Add News Post</a></li>
+                        <li><a href="../manage_news_posts.php">Manage News Posts</a></li>
+                        <li><a href="../insert_product.php">Add Shop Product</a></li>
+                        <li><a href="../manage_products.php">Manage Current Products</a></li>
+                        <li><a href="../manage_requests.php">View Product Requests</a></li>
                     </ul>
                 </li>
             </ul>

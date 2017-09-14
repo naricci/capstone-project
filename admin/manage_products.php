@@ -26,7 +26,8 @@
     <?php
 
     include 'includes/dbconnect.php';
-    include 'functions/functions.php';
+    include 'functions/utilities.php';
+    include 'functions/product_functions.php';
 
     $results = viewAllProducts();
 
@@ -37,7 +38,7 @@
         <div class="row">
 
             <!-- ADMIN PANEL -->
-            <?php include 'templates/admin_panel.php'; ?>
+            <?php include 'admin_panel.php'; ?>
 
             <!-- Main Content Area -->
             <div class="col-md-9">
@@ -64,9 +65,9 @@
                             <td align="center"><?php echo $row['productName']; ?></td>
 
                             <!-- Read, Update, Delete Buttons -->
-                            <td align="center"><a href="view_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-primary">View</a></td>
-                            <td align="center"><a href="update_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-success">Update</a></td>
-                            <td align="center"><a href="delete_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-danger">Delete</a></td>
+                            <td align="center"><a href="view_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-primary">View Product</a></td>
+                            <td align="center"><a href="update_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-success">Update Product</a></td>
+                            <td align="center"><a href="delete_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-danger">Delete Product</a></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

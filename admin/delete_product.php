@@ -24,7 +24,7 @@
     <?php
 
     include 'includes/dbconnect.php';
-    include 'functions/functions.php';
+    include 'functions/product_functions.php';
 
     $productID = filter_input(INPUT_GET, 'productID');
 
@@ -36,7 +36,7 @@
         <div class="row">
 
             <!-- ADMIN PANEL -->
-            <?php include 'templates/admin_panel.php'; ?>
+            <?php include 'admin_panel.php'; ?>
 
             <!-- Main Content Area -->
             <div class="col-md-9">

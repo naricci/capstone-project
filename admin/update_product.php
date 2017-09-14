@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Manage Products</title>
+    <title>Update Product</title>
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
     <!-- Font Awesome -->
@@ -31,7 +31,8 @@
     <?php
 
     include 'includes/dbconnect.php';
-    include 'functions/functions.php';
+    include 'functions/utilities.php';
+    include 'functions/product_functions.php';
 
     $result = '';
 
@@ -78,7 +79,7 @@
         <div class="row">
 
             <!-- ADMIN PANEL -->
-            <?php include 'templates/admin_panel.php'; ?>
+            <?php include 'admin_panel.php'; ?>
 
             <!-- Main Content Area -->
             <div class="col-md-9">
@@ -135,7 +136,7 @@
                     </div><br />
                     <div class="form-group">
                         <input type="hidden" value="<?php echo $productID; ?>" name="productID" />
-                        <input type="submit" value="Update" class="btn btn-primary form-control" />
+                        <input type="submit" value="Update Product" class="btn btn-primary form-control" />
                     </div>
                 </form>
 
