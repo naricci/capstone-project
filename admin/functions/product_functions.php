@@ -9,7 +9,7 @@ function addProduct($productName, $productPrice, $productQuantity, $productCateg
 
     $db = getDatabase();
 
-    $stmt = $db->prepare("INSERT INTO products SET productName = :productName, productPrice = :productPrice, productQuantity = :productQuantity, productShortDescription = :productShortDescription, productLongDescription = :productLongDescription, productImage = :productImage, productArtist = :productArtist");
+    $stmt = $db->prepare("INSERT INTO products SET productName = :productName, productPrice = :productPrice, productQuantity = :productQuantity, productCategoryID = :productCategoryID, productShortDescription = :productShortDescription, productLongDescription = :productLongDescription, productImage = :productImage, productArtist = :productArtist");
 
     $binds = array(
         ":productName" => $productName,

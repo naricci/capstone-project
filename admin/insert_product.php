@@ -45,6 +45,7 @@
         $productLongDescription = filter_input(INPUT_POST, 'productLongDescription');
         $productImage = filter_input(INPUT_POST, 'productImage');
         $productArtist = filter_input(INPUT_POST, 'productArtist');
+
         $confirm = addProduct($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productImage, $productArtist);
 
         if ( $confirm === false ) {
@@ -68,17 +69,17 @@
                     <h1>Admin Area <small>Insert New Product</small></h1>
                 </div>
 
-                <!-- Dismissible Alert -->
-                <div class="alert alert-warning alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+<!--                <!-- Dismissible Alert -->
+<!--                <div class="alert alert-warning alert-dismissible" role="alert">-->
+<!--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!---->
+<!--                    <!-- Confirm whether product data was added or not -->
+<!--                    <h5>--><?php //echo $results; ?><!--</h5>-->
+<!--                </div>-->
 
-                    <!-- Confirm whether product data was added or not -->
-                    <h3><?php echo $results; ?></h3>
-                </div>
-
-                <form action="insert_product.php" method="post" enctype="multipart/form-data">
+                <form action="#" method="post" enctype="multipart/form-data">
                     <table align="center" width="1000" class="table table-responsive">
                         <tr class="form-group">
                             <td align="left"><b>Product Name:</b></td>
@@ -117,21 +118,6 @@
                                     }
                                     ?>
                                 </select>
-
-                                <!-- OR, TRY THIS -->
-                                <select name="productCategoryID">
-                                    <?php foreach($results as $row): ?>
-                                    <option
-                                        value="<?php echo $row['categoryID']; ?>"
-                                        <?php if (intval($categoryID) === $row['categoryID']): ?>
-                                        selected="selected"
-                                        <?php endif; ?>
-                                    >
-                                        <?php echo $row['categoryName']; ?>
-                                    </option>
-                                    <?php endforeach; ?>
-                                </select>
-
                             </td>
                         </tr>
 
@@ -150,13 +136,27 @@
                             <td><input type="text" name="productArtist" class="form-control" /></td>
                         </tr>
 
+                        <?php
+                        if ( count($_FILES) ) {
+                            try {
+                                $fileName = uploadImage('productImage');
+                            } catch (RuntimeException $e) {
+                                // $fileName = filter_input(INPUT_POST, 'oldimage');
+                                $fileName = '';
+                            }
+
+                            echo '<p>Image ' . $fileName . ' Uploaded</p>';
+                        }
+                        ?>
+
                         <tr>
-                            <td align="left"><b>Product Image:  </b></td>
+                            <td align="left"><b>Product Image:  </b><input type="hidden" name="MAX_FILE_SIZE" value="10000000" /></td>
                             <td><input type="file" name="productImage" /></td>
                         </tr>
 
                         <tr align="right">
-                            <td colspan="7"><input class="btn btn-danger" type="submit" name="add_product" value="Add New Product" /></td>
+                            <td><input type="hidden" name="submit-product" name="oldimage" /></td>
+                            <td colspan="7"><input class="btn btn-danger" type="submit" value="Add New Product" /></td>
                         </tr>
                     </table>
                 </form>

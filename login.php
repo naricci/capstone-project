@@ -67,14 +67,7 @@ include 'includes/db.php';
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
                     <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
                 </ul>
-                <!--
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                -->
+
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up Button -->
                     <li class="navbar-btn"><a href="customer_register.php">Sign Up</a></li>
@@ -141,48 +134,48 @@ include 'includes/db.php';
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php
+
 if(isset($_POST['login'])){
 
-$userName = $_POST['userName'];
-$userPassword = $_POST['userPassword'];
+    $userName = $_POST['userName'];
+    $userPassword = $_POST['userPassword'];
 
-$sel_c = "SELECT * FROM users WHERE userPassword='$userPassword' AND userName='$userName'";
+    $sel_c = "SELECT * FROM users WHERE userPassword='$userPassword' AND userName='$userName'";
 
-$run_c = mysqli_query($con, $sel_c);
+    $run_c = mysqli_query($con, $sel_c);
 
-$check_customer = mysqli_num_rows($run_c);
+    $check_customer = mysqli_num_rows($run_c);
 
-if ($check_customer==0){
+    if ($check_customer == 0){
 
-echo "<script>alert('Password or email is incorrect, plz try again!')</script>";
-exit();
+        echo "<script>alert('Password or email is incorrect, plz try again!')</script>";
+        exit();
+    }
+
+    $ip = getIp();
+
+    $sel_cart = "select * from cart where ip_add='$ip'";
+
+    $run_cart = mysqli_query($con, $sel_cart);
+
+    $check_cart = mysqli_num_rows($run_cart);
+
+    if($check_customer>0 AND $check_cart==0){
+
+    $_SESSION['customer_email']=$c_email;
+
+    echo "<script>alert('You logged in successfully, Thanks!')</script>";
+    <!--echo "<script>window.open('customer/my_account.php','_self')</script>";-->
+    echo "<script>window.open('index.php')</script>";
+
+    }
+    else {
+        $_SESSION['customer_email']=$c_email;
+
+        echo "<script>alert('You logged in successfully, Thanks!')</script>";
+        echo "<script>window.open('checkout.php','_self')</script>";
+    }
 }
-$ip = getIp();
-
-$sel_cart = "select * from cart where ip_add='$ip'";
-
-$run_cart = mysqli_query($con, $sel_cart);
-
-$check_cart = mysqli_num_rows($run_cart);
-
-if($check_customer>0 AND $check_cart==0){
-
-$_SESSION['customer_email']=$c_email;
-
-echo "<script>alert('You logged in successfully, Thanks!')</script>";
-<!--echo "<script>window.open('customer/my_account.php','_self')</script>";-->
-echo "<script>window.open('index.php')</script>";
-
-}
-else {
-$_SESSION['customer_email']=$c_email;
-
-echo "<script>alert('You logged in successfully, Thanks!')</script>";
-echo "<script>window.open('checkout.php','_self')</script>";
-
-
-}
-}
-
 
 ?>

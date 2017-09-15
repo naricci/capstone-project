@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<?php
-//session_start();
-include 'functions/functions.php';
-include 'includes/dbconnect.php';
-include 'includes/db.php';
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -86,6 +80,36 @@ include 'includes/db.php';
         </div><!-- /.container-fluid -->
     </nav>
 
+    <?php
+    //session_start();
+    include 'functions/functions.php';
+    include 'includes/dbconnect.php';
+    include 'includes/db.php';
+
+//    if ( isPostRequest() ) {
+//        $userName = filter_input(INPUT_POST, 'userName');
+//        $userPassword = filter_input(INPUT_POST, 'userPassword');
+//
+//        $userExist = userExist($userName);
+//        $errors = [];
+//
+//        if ( $userExist ) {
+//            $errors[] = 'Email already exists.';
+//        }
+//        //todo: Validation
+//
+//        if ( count($errors) === 0 ) {
+//            $result = signup($userName, $userPassword);
+//
+//            if ($result === true) {
+//                header('Location: login.php');
+//            } else {
+//                //todo: show error messages
+//            }
+//        }
+//    }
+
+    ?>
     <!-- MAIN CONTENT -->
     <div class="container mainContent">
         <!-- Page Title -->
@@ -93,7 +117,7 @@ include 'includes/db.php';
         <hr />
 
         <!-- Registration Form -->
-        <form action="customer_register.php" method="POST" enctype="multipart/form-data">
+        <form action="customer_register.php" method="post" enctype="multipart/form-data">
             <!-- First & Last Name Row-->
             <div class="row">
                 <div class="col-md-4">
