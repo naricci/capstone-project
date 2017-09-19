@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <?php
-include 'functions/functions.php';
-include 'includes/dbconnect.php';
-include 'includes/db.php';
+
+session_start();
+
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,13 +70,50 @@ include 'includes/db.php';
 
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="customer_register.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a href="user_registration.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn active"><a href="login.php">Login <span class="sr-only">(current)</span></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <?php
+
+    include 'functions/functions.php';
+    include 'includes/dbconnect.php';
+    include 'includes/db.php';
+
+    if ( isset($_POST['login']) ) {
+
+        $userEmail = $_POST['userEmail'];
+        $userPassword = $_POST['userPassword'];
+
+        if ($userEmail != '' && $userPassword != '') {
+
+            $con = mysqli_connect("localhost", "root", "", "thestoop");
+
+            $select_user = "SELECT * FROM users WHERE userPassword = '$userPassword' AND userEmail = '$userEmail'";
+
+            $query = mysqli_query($con, $select_user);
+            var_dump($userPassword);
+            if (mysqli_num_rows($query) == 0) {
+                echo "Sorry, the email you provided does not match any user accounts in our database.";
+            } else {
+                $data = mysqli_fetch_array($query);
+                $_SESSION['userEmail'] = $data['userEmail'];
+                $_SESSION['userID'] = $data['userID'];
+                $_SESSION['userFirstName'] = $data['userFirstName'];
+
+
+                header("Location: index.php");
+            }
+
+            echo "User has logged in successfully.";
+        } else {
+            echo "Error:  Please fill in correct email and password in order to log in.";
+        }
+    }
+    ?>
 
     <!-- MAIN CONTENT -->
     <div class="container mainContent">
@@ -84,15 +121,15 @@ include 'includes/db.php';
         <h2>User Login</h2>
         <hr />
 
-        <!-- Registration Form -->
-        <form class="form-signin" method="post" action="#">
+        <!-- Login Form -->
+        <form class="form-signin" action="#" method="post">
 
             <!-- Username Row-->
             <div class="row">
                 <div class="col-md-offset-4 col-md-4">
                     <div class="form-group">
-                        <label>Username:</label>
-                        <input type="text" class="form-control" name="userName" required maxlength="50"/>
+                        <label>Email Address:</label>
+                        <input type="email" class="form-control" name="userEmail" required maxlength="50" autofocus />
                     </div>
                 </div>
             </div>
@@ -109,11 +146,11 @@ include 'includes/db.php';
             <!-- Login Button-->
             <div class="row">
                 <div class="col-md-6">
-                    <h2 style="float:right; padding-right:20px;"><a href="customer_register.php" style="text-decoration:none; font-size: 16px;">New? Register Here</a></h2>
+                    <h3 style="float:right; padding-right:20px;"><a href="user_registration.php" style="text-decoration:none; font-size: 16px;">New? Register Here</a></h3>
                 </div>
                 <div class="col-md-offset-7">
                     <div class="form-group">
-                        <button type="submit" class="btn btn-warning" name="register" id="btn-register">
+                        <button type="submit" class="btn btn-primary" name="login" id="btn-register">
                             <span class="glyphicon glyphicon-log-in"></span> &nbsp; Log In
                         </button>
                     </div>
@@ -122,6 +159,7 @@ include 'includes/db.php';
 
         </form>
     </div><!-- /.container.mainContent -->
+    <!-- END OF MAIN CONTENT -->
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>
@@ -134,48 +172,3 @@ include 'includes/db.php';
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-<?php
-
-if(isset($_POST['login'])){
-
-    $userName = $_POST['userName'];
-    $userPassword = $_POST['userPassword'];
-
-    $sel_c = "SELECT * FROM users WHERE userPassword='$userPassword' AND userName='$userName'";
-
-    $run_c = mysqli_query($con, $sel_c);
-
-    $check_customer = mysqli_num_rows($run_c);
-
-    if ($check_customer == 0){
-
-        echo "<script>alert('Password or email is incorrect, plz try again!')</script>";
-        exit();
-    }
-
-    $ip = getIp();
-
-    $sel_cart = "select * from cart where ip_add='$ip'";
-
-    $run_cart = mysqli_query($con, $sel_cart);
-
-    $check_cart = mysqli_num_rows($run_cart);
-
-    if($check_customer>0 AND $check_cart==0){
-
-    $_SESSION['customer_email']=$c_email;
-
-    echo "<script>alert('You logged in successfully, Thanks!')</script>";
-    <!--echo "<script>window.open('customer/my_account.php','_self')</script>";-->
-    echo "<script>window.open('index.php')</script>";
-
-    }
-    else {
-        $_SESSION['customer_email']=$c_email;
-
-        echo "<script>alert('You logged in successfully, Thanks!')</script>";
-        echo "<script>window.open('checkout.php','_self')</script>";
-    }
-}
-
-?>

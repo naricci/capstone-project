@@ -8,20 +8,14 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
-          <root url="file://C:/xampp/php/pear" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/composer" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$MODULE_DIR$/../../php/pear" />
         </CLASSES>
         <SOURCES>
-          <root url="file://C:/xampp/php/pear" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="PHP Runtime" type="php">
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
-        </CLASSES>
-        <SOURCES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/composer" />
+          <root url="file://$USER_HOME$/AppData/Roaming/Composer/vendor/squizlabs/php_codesniffer" />
+          <root url="file://$MODULE_DIR$/../../php/pear" />
         </SOURCES>
       </library>
     </orderEntry>

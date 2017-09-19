@@ -137,16 +137,20 @@
                         </tr>
 
                         <?php
-                        if ( count($_FILES) ) {
-                            try {
-                                $fileName = uploadImage('productImage');
-                            } catch (RuntimeException $e) {
-                                // $fileName = filter_input(INPUT_POST, 'oldimage');
-                                $fileName = '';
-                            }
+//                        if ( count($_FILES) ) {
+//                            try {
+//                                $fileName = uploadImage('productImage');
+//                            } catch (RuntimeException $e) {
+//                                // $fileName = filter_input(INPUT_POST, 'oldimage');
+//                                $fileName = '';
+//                            }
+//
+//                            echo '<p>Image ' . $fileName . ' Uploaded</p>';
+//                        }
+                        $filename = $_FILES['productImage']['name'];
+                        $tmp_location = $_FILES['productImage']['temp_name'];
+                        move_uploaded_file($tmp_location, 'product_images/'.$filename);
 
-                            echo '<p>Image ' . $fileName . ' Uploaded</p>';
-                        }
                         ?>
 
                         <tr>
@@ -155,7 +159,7 @@
                         </tr>
 
                         <tr align="right">
-                            <td><input type="hidden" name="submit-product" name="oldimage" /></td>
+                            <td><input type="hidden" name="submit-product" /></td>
                             <td colspan="7"><input class="btn btn-danger" type="submit" value="Add New Product" /></td>
                         </tr>
                     </table>

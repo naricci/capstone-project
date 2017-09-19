@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +27,7 @@
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container-fluid">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -59,21 +64,15 @@
                             <li><a href="#">View Product Requests</a></li>
                         </ul>
                     </li>
+
                     <!-- Social Media Icons -->
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
                     <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
                 </ul>
-                <!--
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                -->
+
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="customer_register.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a href="user_registration.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn"><a href="login.php">Login</a></li>
                 </ul>
@@ -154,7 +153,7 @@
 <?php
 
 $to = 'mr.naricci13@yahoo.com';
-$subject = 'this came from your mother';
+$subject = 'The Stoop Contact Us Request';
 
 $name = $_POST['name'];
 //$name = filter_input($_POST, 'name');

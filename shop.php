@@ -72,7 +72,7 @@
                 -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="customer_register.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a href="user_registration.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn"><a href="login.php">Login</a></li>
                 </ul>

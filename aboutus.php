@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +103,8 @@
                     height="300"
                     frameborder="0"
                     style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?q=the%20stoop%2058%20main%20street%20east%20greenwich%20&key=AIzaSyD4Lnsz0jS8TCwXjnv2vuAK0LlFkv-gvu0"            allowfullscreen>
+                    src="https://www.google.com/maps/embed/v1/place?q=the%20stoop%2058%20main%20street%20east%20greenwich%20&key=AIzaSyD4Lnsz0jS8TCwXjnv2vuAK0LlFkv-gvu0"
+                    allowfullscreen>
                 </iframe>
             </div>
 

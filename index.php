@@ -1,8 +1,9 @@
-<!DOCTYPE html>
 <?php
-//session_start();
-include 'functions/functions.php';
+
+session_start();
+
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +27,7 @@ include 'functions/functions.php';
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container-fluid">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -64,22 +65,16 @@ include 'functions/functions.php';
                             <li><a href="admin/update-shop-products.php">Update Shop Products</a></li>
                             <li><a href="#">View Product Requests</a></li>
                         </ul>
-                        </li>
+                    </li>
+
                     <!-- Social Media Icons -->
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
                     <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
                 </ul>
-                <!-- 
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form> 
-                -->
+
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up -->
-                    <li class="navbar-btn"><a class="login-btn" href="customer_register.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a class="login-btn" href="user_registration.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn"><a class="login-btn" href="login.php">Login</a></li>
                 </ul>
@@ -87,7 +82,15 @@ include 'functions/functions.php';
         </div><!-- /.container -->
     </nav>
 
-    <!-- Carousel Div -->
+    <?php
+
+    include 'functions/functions.php';
+
+    echo "Welcome " . $_SESSION['userEmail'];
+
+    ?>
+
+    <!-- CAROUSEL AREA -->
     <div class="container mainContent">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -144,8 +147,10 @@ include 'functions/functions.php';
             </a>
         </div>
     </div><!-- /.container -->
+    <!-- END OF CAROUSEL -->
 
-    <!-- Main Content -->
+
+    <!-- MARKETING AREA -->
     <div class="container marketing mainContent">
 
         <!-- Three columns of text below the carousel -->
@@ -192,10 +197,11 @@ include 'functions/functions.php';
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
     </div><!-- /.container -->
+    <!-- END OF MARKETING AREA -->
 
     <!-- FOOTER -->
     <footer class="navbar-static-bottom navbar-inverse">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <ul class="nav navbar-nav navbar-left">
                     <p class="copyrightText">© 2017 The Stoop.</p>
@@ -209,11 +215,12 @@ include 'functions/functions.php';
                     <li><a href="news.php">News</a></li>
                     <li><a href="shop.php">Shop</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="customer_register.php">Sign Up</a></li>
+                    <li><a href="user_registration.php">Sign Up</a></li>
                 </ul>
             </div><!-- /.row -->
         </div><!-- /.container -->
     </footer>
+    <!-- END OF FOOTER -->
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container-fluid">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -50,7 +50,7 @@
             -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Sign Up Button -->
-                <li class="navbar-btn"><a href="../customer_register.php">Sign Up</a></li>
+                <li class="navbar-btn"><a href="../user_registration.php">Sign Up</a></li>
                 <!-- Login Button -->
                 <li class="navbar-btn"><a href="../login.php">Login</a></li>
             </ul>

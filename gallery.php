@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,21 +63,15 @@
                             <li><a href="#">View Product Requests</a></li>
                         </ul>
                     </li>
+
                     <!-- Social Media Icons -->
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
                     <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
                 </ul>
-                <!--
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                -->
+
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="customer_register.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a href="user_registration.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn"><a href="login.php">Login</a></li>
                 </ul>
