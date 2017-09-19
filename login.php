@@ -159,12 +159,12 @@ if ( isset($_POST['login']) ) {
         <!-- Login Form -->
         <form action="" method="post">
 
-            <!-- Username Row-->
+            <!-- Email Row-->
             <div class="row">
                 <div class="col-md-offset-4 col-md-4">
                     <div class="form-group">
                         <label>Email Address:</label>
-                        <input type="email" class="form-control" name="userEmail" required maxlength="50" autofocus />
+                        <input type="email" class="form-control" name="userEmail" value="<?=((isset($userEmail))?$userEmail:'')?>" required maxlength="50" autofocus />
                     </div>
                 </div>
             </div>
@@ -173,7 +173,7 @@ if ( isset($_POST['login']) ) {
                 <div class="col-md-offset-4 col-md-4">
                     <div class="form-group">
                         <label>Password:</label>
-                        <input type="password" class="form-control" name="userPassword" required maxlength="100" />
+                        <input type="password" class="form-control" name="userPassword" value="<?=((isset($userPassword))?$userPassword:'')?>" required maxlength="100" />
                     </div>
                 </div>
             </div>
