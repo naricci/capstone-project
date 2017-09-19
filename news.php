@@ -3,16 +3,16 @@
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>News from The Stoop</title>
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto|Lato" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
@@ -23,10 +23,12 @@ session_start();
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container-fluid">
+        <div class="container">
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -63,29 +65,25 @@ session_start();
                             <li><a href="#">View Product Requests</a></li>
                         </ul>
                     </li>
+
                     <!-- Social Media Icons -->
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
                     <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
                 </ul>
-                <!--
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                -->
+
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="user_registration.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn"><a href="login.php">Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        </div><!-- /.container -->
     </nav>
+    <!-- END OF NAVBAR -->
 
-    <!-- Main Content -->
+
+    <!-- MAIN CONTENT -->
     <div class="container mainContent">
 
         <!-- Page Title -->
@@ -95,17 +93,17 @@ session_start();
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
 
-        </div>
-    </div>
+        </div><!-- /.row -->
+
+    </div><!-- /.container.mainContent -->
+    <!-- END OF MAIN CONTENT -->
+
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Popper.js -->
-    <script src="bower_components/popper.js/dist/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- JS LINKS -->
+    <?php include 'templates/js_links.php'; ?>
+
 </body>
 </html>

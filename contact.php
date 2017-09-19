@@ -2,17 +2,19 @@
 
 session_start();
 
+$feedback = '';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Contact Us</title>
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto|Lato" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
@@ -22,12 +24,15 @@ session_start();
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="css/contactus.css" rel="stylesheet" type="text/css" />
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -72,30 +77,35 @@ session_start();
 
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="user_registration.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn"><a href="login.php">Login</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        </div><!-- /.container -->
     </nav>
+    <!-- END OF NAVBAR -->
 
-    <!-- Main Content -->
+
+    <!-- MAIN CONTENT -->
     <div class="container mainContent">
 
         <!-- Page Title -->
         <h2>Contact</h2>
         <hr />
+
         <!-- Columns are always 50% wide, on mobile and desktop -->
         <div class="row">
             <!-- Contact Form Div-->
             <div class="col-md-4">
 				
-				<h4 class="freecontactformheader"><b>Contact Us Form</b></h4>
+				<h4><b>Contact Us Form</b></h4>
 	  
-	 			<div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
+	 			<div>Fields marked with <span class="required_star"> * </span> are mandatory.</div>
 				<br />
+
                 <p id="feedback"><?php echo $feedback; ?></p>
+
 				<!-- Contact Form -->
                 <form action="?" method="post"> <!-- id="contactus-form" onsubmit="return validate.check(this)" -->
                     <div class="form-group">
@@ -128,28 +138,29 @@ session_start();
 <!--                        <input type="hidden" name="submit" />-->
                         <input class="btn btn-danger" type="submit" name="submit" value="Send Message" />
                 </form>
-            </div>
+            </div><!-- /.col-md-4 -->
 
             <!-- Photo on the right -->
             <div class="col-md-8">
                 <img src="images/store/IMG_6651.JPG" alt="Bong on stairs" class="img-responsive img-thumbnail">
                 <br />
                 <img src="images/store/IMG_6656.JPG" alt="Jars in a case" class="img-responsive img-thumbnail">
-            </div>
-        </div>
-    </div>
+            </div><!-- /.col-md-8 -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container.mainContent -->
+    <!-- END OF MAIN CONTENT -->
+
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Popper.js -->
-    <script src="bower_components/popper.js/dist/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- JS LINKS -->
+    <?php include "templates/js_links.php"; ?>
+
 </body>
 </html>
+
 <?php
 
 $to = 'mr.naricci13@yahoo.com';
@@ -176,8 +187,8 @@ EMAIL;
 
 $header = "From: $email";
 
-if (isset($_POST['submit'])) {
-    if ($name == '' || $email == '' || $message == '') {
+if ( isset($_POST['submit']) ) {
+    if ( $name == '' || $email == '' || $message == '' ) {
         $feedback = 'Please fill out ALL fields.';
     } else {
         mail($to, $subject, $body, $header);

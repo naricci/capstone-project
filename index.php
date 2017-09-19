@@ -2,7 +2,16 @@
 
 session_start();
 
+include 'functions/functions.php';
+
+//if ( !isset($_SESSION['userEmail']) ) {
+//    header("Location: login.php");
+//}
+//
+//echo "Welcome " . $_SESSION['userFirstName'] . "!";
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +21,7 @@ session_start();
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Welcome to The Stoop</title>
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto|Lato" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
@@ -24,10 +33,12 @@ session_start();
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -36,9 +47,7 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-title navbar-btn" href="index.php">THE STOOP
-                    <!--<img alt="Brand" src="../public/img/logo-main-large.png" style="height: 50px; width: 50px;">-->
-                </a>
+                <a class="navbar-brand page-title navbar-btn" href="index.php">THE STOOP</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,18 +63,6 @@ session_start();
                     <li class="navbar-btn"><a href="shop.php">SHOP</a></li>
                     <!-- Contact Us Button -->     
                     <li class="navbar-btn"><a href="contact.php">CONTACT</a></li>
-                    <!-- Admin Button -->
-                    <li class="dropdown navbar-btn">
-                        <a href="admin/admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="admin/admin.php">Admin Home</a></li>
-                            <li><a href="admin/create-new-admin.php">Create New Admin</a></li>
-                            <li><a href="#">Manage About Us Page</a></li>
-                            <li><a href="admin/manage-news-posts.php">Manage News Posts</a></li>
-                            <li><a href="admin/update-shop-products.php">Update Shop Products</a></li>
-                            <li><a href="#">View Product Requests</a></li>
-                        </ul>
-                    </li>
 
                     <!-- Social Media Icons -->
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
@@ -74,23 +71,18 @@ session_start();
 
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Sign Up -->
-                    <li class="navbar-btn"><a class="login-btn" href="user_registration.php">Sign Up</a></li>
+                    <li class="navbar-btn"><a class="login-btn" href="signup.php">Sign Up</a></li>
                     <!-- Login Button -->
                     <li class="navbar-btn"><a class="login-btn" href="login.php">Login</a></li>
                 </ul>
+
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
+    <!-- END OF NAVBAR -->
 
-    <?php
 
-    include 'functions/functions.php';
-
-    echo "Welcome " . $_SESSION['userEmail'];
-
-    ?>
-
-    <!-- CAROUSEL AREA -->
+    <!-- CAROUSEL -->
     <div class="container mainContent">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -104,6 +96,7 @@ session_start();
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
+
                 <div class="item active">
                     <img class="img-responsive" src="images/products/IMG_6566.JPG" alt="Glow in the dark pipe">
                     <div class="container">
@@ -121,6 +114,14 @@ session_start();
 
                 <div class="item">
                     <img class="img-responsive" src="images/categories/IMG_6602.JPG" alt="Water Pipes on Steps">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-md-block text-left">
+                            <h1>Check out our newest products on the Shop Page!</h1>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="item">
@@ -199,6 +200,7 @@ session_start();
     </div><!-- /.container -->
     <!-- END OF MARKETING AREA -->
 
+
     <!-- FOOTER -->
     <footer class="navbar-static-bottom navbar-inverse">
         <div class="container">
@@ -215,7 +217,7 @@ session_start();
                     <li><a href="news.php">News</a></li>
                     <li><a href="shop.php">Shop</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="user_registration.php">Sign Up</a></li>
+                    <li><a href="signup.php">Sign Up</a></li>
                 </ul>
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -230,5 +232,6 @@ session_start();
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/holder.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 </html>

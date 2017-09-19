@@ -13,8 +13,9 @@
                 <li><a class="btn-footer" href="../news.php">News</a></li>
                 <li><a class="btn-footer" href="../shop.php">Shop</a></li>
                 <li><a class="btn-footer" href="../contact.php">Contact</a></li>
-                <li><a class="btn-footer" href="../user_registration.php">Sign Up</a></li>
+                <li><a class="btn-footer" href="../signup.php">Sign Up</a></li>
             </ul>
         </div><!-- /.row -->
     </div><!-- /.container -->
 </footer>
+<!-- END OF FOOTER -->

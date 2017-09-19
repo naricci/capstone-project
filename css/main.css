@@ -1,7 +1,8 @@
 /****************** Main Stylesheet ******************/
-html {
-    height: 100%;
-    box-sizing: border-box;
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -10,14 +11,18 @@ html {
     box-sizing: inherit;
 }
 
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
 body {
-    position: relative;
-    min-height: 100%;
     background-color: #E1ECBB;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    /*padding-left: 10px;*/
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    min-height: 100%;
+    padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
 }
 
 /****************** Navigation Bar ******************/
@@ -26,22 +31,23 @@ nav {
 }
 
 .navbar {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .page-title {
-    font-size: 36px;
     color: #34AFA8;
+    font-size: 36px;
 }
 
 .navbar-btn {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .navbar .navbar-inverse {
-    margin-bottom: 0px;
     color: #EEF6ED;
+    margin-bottom: 0;
+
 }
 
 /****************** Social Media Icons ******************/
@@ -68,7 +74,7 @@ nav {
 
 /****************** Home Page Marketing Grid ******************/
 .container.marketing.mainContent {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .container.mainContent {
@@ -80,15 +86,15 @@ nav {
 
 /****************** Footer ******************/
 footer {
-    position: absolute;
-    right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
+    position: absolute;
+    right: 0;
 }
 
 footer.navbar-inverse {
-    border-radius: 0px;
+    border-radius: 0;
     color: #34AFA8;
     font-family: 'Droid Sans', sans-serif;
 }
@@ -99,7 +105,7 @@ a.btn-footer:hover {
 
 p.copyrightText {
     color: white;
-    margin: 10px 0px 10px;
-    padding-top: 10px;
+    margin: 10px 0 10px;
     padding-left: 10px;
+    padding-top: 10px;
 }

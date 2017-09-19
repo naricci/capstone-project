@@ -3,7 +3,7 @@
     <div class="panel panel-success">
 
         <div class="panel-heading">
-            <h2 class="panel-title">Admin Functions</h2>
+            <h2 class="panel-title">Manage Content</h2>
         </div>
 
         <!-- List group -->

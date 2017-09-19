@@ -7,34 +7,34 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" media="screen" />
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <!-- Normalize CSS -->
-    <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
+    <link href="../bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet" media="screen" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../css/style.css" rel="stylesheet" media="screen" />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- jQuery -->
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
     <!-- JavaScript -->
-    <script type="text/javascript" src="js/validation.min.js"></script>
+    <script type="text/javascript" src="../js/validation.min.js"></script>
     <script type="text/javascript">
         $('document').ready(function()
         {
             window.setTimeout(function(){
 
-                window.location.href = "index.php";
+                window.location.href = "../index.php";
 
             }, 6000);
 
 
             $("#back").click(function(){
-                window.location.href = "index.php";
+                window.location.href = "../index.php";
             });
         });
     </script>
     <!-- Bootstrap JS -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>

@@ -6,7 +6,7 @@
             <h2 align="center" class="panel-title">Product Categories</h2>
         </div>
 
-        <!-- List group -->
+        <!-- Category List Group -->
         <ul class="list-group">
             <li class="list-group-item"><a href="#">Example</a></li>
             <li class="list-group-item"><a href="#">Example</a></li>
@@ -18,7 +18,7 @@
             <li class="list-group-item"><a href="#">Example</a></li>
         </ul>
 
-    </div><!-- /.panel .panel-success -->
+    </div><!-- /.panel.panel-success -->
     <br />
 
     <div class="panel panel-success">
@@ -27,7 +27,7 @@
             <h2 align="center" class="panel-title">Shop by Artist</h2>
         </div>
 
-        <!-- List group -->
+        <!-- Artist List Group -->
         <ul class="list-group">
             <li class="list-group-item"><a href="#">Example</a></li>
             <li class="list-group-item"><a href="#">Example</a></li>
@@ -39,6 +39,6 @@
             <li class="list-group-item"><a href="#">Example</a></li>
         </ul>
 
-    </div><!-- /.panel .panel-success -->
+    </div><!-- /.panel.panel-success -->
 </div><!-- /.col-md-3 -->
 <!-- END OF SHOP PANEL -->
