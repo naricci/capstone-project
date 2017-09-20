@@ -34,49 +34,51 @@
     ?>
 
     <!-- MAIN -->
-    <div class="container mainContent">
-        <div class="row">
+    <div class="mainContent">
+        <div class="container main">
+            <div class="row">
 
-            <!-- ADMIN PANEL -->
-            <?php include 'admin_panel.php'; ?>
+                <!-- ADMIN PANEL -->
+                <?php include 'admin_panel.php'; ?>
 
-            <!-- Main Content Area -->
-            <div class="col-md-9">
-                <div class="page-header">
-                    <h1>Admin Area <small>Manage Products</small></h1>
-                </div>
+                <!-- Main Content Area -->
+                <div class="col-md-9">
+                    <div class="page-header">
+                        <h1>Admin Area <small class="text-primary">Manage Products</small></h1>
+                    </div>
 
-                <!-- Products Table -->
-                <table border="1" class="table table-bordered table-hover table-responsive">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
+                    <!-- Products Table -->
+                    <table border="1" class="table table-bordered table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                    <?php foreach ($results as $row): ?>
-                        <tr>
-                            <td align="center"><?php echo $row['productID']; ?></td>
-                            <td align="center"><?php echo $row['productName']; ?></td>
+                        <tbody>
+                        <?php foreach ($results as $row): ?>
+                            <tr>
+                                <td align="center"><?php echo $row['productID']; ?></td>
+                                <td align="center"><?php echo $row['productName']; ?></td>
 
-                            <!-- Read, Update, Delete Buttons -->
-                            <td align="center"><a href="view_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-primary">View Product</a></td>
-                            <td align="center"><a href="update_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-success">Update Product</a></td>
-                            <td align="center"><a href="delete_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-danger">Delete Product</a></td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
+                                <!-- Read, Update, Delete Buttons -->
+                                <td align="center"><a href="view_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-primary">View Product</a></td>
+                                <td align="center"><a href="update_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-success">Update Product</a></td>
+                                <td align="center"><a href="delete_product.php?productID=<?php echo $row['productID']; ?>" class="btn btn-danger">Delete Product</a></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
 
-            </div><!-- /.col-md-9 -->
+                </div><!-- /.col-md-9 -->
 
-        </div><!-- /.row -->
-    </div><!-- /.container .mainContent -->
+            </div><!-- /.row -->
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN -->
 
     <!-- FOOTER -->

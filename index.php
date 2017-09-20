@@ -160,8 +160,8 @@ include 'functions/functions.php';
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
-        </div><!-- /.container -->
+            </div><!-- /.carousel.slide -->
+        </div><!-- /.container.main -->
         <!-- END OF CAROUSEL -->
 
 
@@ -185,7 +185,7 @@ include 'functions/functions.php';
                     <a class="btn btn-primary btn-lg" href="aboutus.php" role="button">Learn more</a>
                 </p>
             </div><!-- /.jumbotron -->
-        </div><!-- /.container -->
+        </div><!-- /.container.main -->
         <!-- END OF JUMBOTRON -->
 
 
@@ -249,7 +249,7 @@ include 'functions/functions.php';
 
             </div><!-- /.row -->
 
-        </div><!-- /.container -->
+        </div><!-- /.container.marketing -->
         <!-- END OF MARKETING AREA -->
 
     </div><!-- /.mainContent -->
@@ -261,10 +261,10 @@ include 'functions/functions.php';
         <div class="container">
             <div class="row">
                 <ul class="nav navbar-nav navbar-left">
-                    <p class="copyrightText">© 2017 The Stoop.</p>
+                    <p class="copyrightText"><i>© 2017 The Stoop.</i></p>
                 </ul>
 
-                <ul class="nav navbar-nav navbar-right" style="padding-right: 10px;">
+                <ul class="nav navbar-nav navbar-right"><!--style="padding-right: 10px;"-->
                     <!-- Page Links -->
                     <li><a href="index.php">Home</a></li>
                     <li><a href="aboutus.php">About Us</a></li>

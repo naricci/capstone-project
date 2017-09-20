@@ -1,4 +1,6 @@
-/****************** Main Stylesheet ******************/
+/****************** MAIN STYLESHEET ******************/
+
+/****************** Basic Styling *****************/
 * {
     font-family: 'Lato', sans-serif;
     margin: 0;
@@ -37,9 +39,9 @@ nav {
     margin-bottom: 0;
 }
 
-.navbar-header>a:hover {
-    color: purple;
-}
+/*.navbar-header>a:hover {*/
+    /*color: purple;*/
+/*}*/
 
 .page-title {
     color: #34AFA8;
@@ -97,6 +99,8 @@ nav {
 
 .container.main {
     background-color: #FFFFFF;
+    /*border-left: 5px solid #000000;*/
+    /*border-right: 5px solid #000000;*/
     border-radius: 0;
     height: 100%;
     margin: 0 auto;
@@ -106,7 +110,7 @@ nav {
 
 /****************** Home Page Carousel ******************/
 #myCarousel {
-    margin-bottom: 0;
+    margin-bottom: 1em;
 }
 
 
@@ -139,15 +143,22 @@ nav {
 /****************** Home Page Marketing Grid ******************/
 .container.marketing {
     background-color: #FFFFFF;
+    /*border-left: 5px solid #000000;*/
+    /*border-right: 5px solid #000000;*/
     margin-bottom: 20px;
     padding-top: 2em;
+}
+
+.img-circle {
+    border: 4px solid #800080;
 }
 
 
 /****************** Footer ******************/
 footer {
-    border-top: 5px solid #800080;
+    border-top: 5px solid #000000;
     bottom: 0;
+    font-family: 'Roboto', sans-serif;
     left: 0;
     padding: 1rem;
     position: absolute;
@@ -157,16 +168,9 @@ footer {
 footer.navbar-inverse {
     border-radius: 0;
     color: #34AFA8;
-    font-family: 'Droid Sans', sans-serif;
-}
 
-a.btn-footer:hover {
-    color: #34AFA8;
 }
 
 p.copyrightText {
-    color: white;
-    margin: 10px 0 10px;
-    padding-left: 10px;
-    padding-top: 10px;
+    color: whitesmoke;
 }

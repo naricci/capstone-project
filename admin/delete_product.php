@@ -31,29 +31,32 @@
     $isDeleted = deleteProduct($productID);
     ?>
 
-    <!-- MAIN -->
-    <div class="container mainContent">
-        <div class="row">
+    <!-- MAIN CONTENT -->
+    <div class="mainContent">
+        <div class="container main">
+            <div class="row">
 
-            <!-- ADMIN PANEL -->
-            <?php include 'admin_panel.php'; ?>
+                <!-- ADMIN PANEL -->
+                <?php include 'admin_panel.php'; ?>
 
-            <!-- Main Content Area -->
-            <div class="col-md-9">
-                <div class="page-header">
-                    <h1>Admin Area <small>Delete Product</small></h1>
-                </div>
+                <!-- Main Content Area -->
+                <div class="col-md-9">
+                    <div class="page-header">
+                        <h1>Admin Area <small class="text-primary">Delete Product</small></h1>
+                    </div>
 
-                <h3 align="center">Product <?php echo $productID; ?>
-                    <?php if ( !$isDeleted ): ?>
-                        NOT
-                    <?php endif; ?>
-                    Deleted.</h3>
-            </div><!-- /.col-md-9 -->
+                    <h3 align="center" class="text-danger">Product <?php echo $productID; ?>
+                        <?php if ( !$isDeleted ): ?>
+                            NOT
+                        <?php endif; ?>
+                        Deleted.</h3>
+                </div><!-- /.col-md-9 -->
 
-        </div><!-- /.row -->
-    </div> <!-- /.container .mainContent -->
-    <!-- END OF MAIN -->
+            </div><!-- /.row -->
+        </div> <!-- /.container.main -->
+    </div><!-- /.mainContent -->
+    <!-- END OF MAIN CONTENT -->
+
 
     <!-- FOOTER -->
     <?php include '../templates/footer.php' ?>

@@ -36,59 +36,61 @@
     ?>
 
     <!-- MAIN -->
-    <div class="container mainContent">
-        <div class="row">
+    <div class="mainContent">
+        <div class="container main">
+            <div class="row">
 
-            <!-- ADMIN PANEL -->
-            <?php include 'admin_panel.php'; ?>
+                <!-- ADMIN PANEL -->
+                <?php include 'admin_panel.php'; ?>
 
-            <!-- Main Content Area -->
-            <div class="col-md-9">
-                <div class="page-header">
-                    <h1>Admin Area <small>View & Manage Product</small></h1>
-                </div>
+                <!-- Main Content Area -->
+                <div class="col-md-9">
+                    <div class="page-header">
+                        <h1>Admin Area <small class="text-primary">View & Manage Product</small></h1>
+                    </div>
 
-                <!-- Table to display specific product from list -->
-                <table class="table table-bordered table-hover table-responsive">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Category ID</th>
-                            <th>Short Description</th>
-                            <th>Long Description</th>
-                            <th>Image</th>
-                            <th>Artist</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
+                    <!-- Table to display specific product from list -->
+                    <table class="table table-bordered table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Cat ID</th>
+                                <th>Short Description</th>
+                                <th>Long Description</th>
+                                <th>Image</th>
+                                <th>Artist</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr>
-                            <td><?php echo $result['productID']; ?></td>
-                            <td><?php echo $result['productName']; ?></td>
-                            <td><?php echo $result['productPrice']; ?></td>
-                            <td><?php echo $result['productQuantity']; ?></td>
-                            <td><?php echo $result['productCategoryID']; ?></td>
-                            <td><?php echo $result['productShortDescription']; ?></td>
-                            <td><?php echo $result['productLongDescription']; ?></td>
-                            <td><?php echo $result['productImage']; ?></td>
-                            <td><?php echo $result['productArtist']; ?></td>
+                        <tbody>
+                            <tr>
+                                <td><?php echo $result['productID']; ?></td>
+                                <td><?php echo $result['productName']; ?></td>
+                                <td><?php echo $result['productPrice']; ?></td>
+                                <td><?php echo $result['productQuantity']; ?></td>
+                                <td><?php echo $result['productCategoryID']; ?></td>
+                                <td><?php echo $result['productShortDescription']; ?></td>
+                                <td><?php echo $result['productLongDescription']; ?></td>
+                                <td><?php echo $result['productImage']; ?></td>
+                                <td><?php echo $result['productArtist']; ?></td>
 
-                            <!-- Update & Delete Buttons -->
-                            <td><a href="update_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-success" role="button">Update Product</a></td>
-                            <td><a href="delete_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-danger" role="button">Delete Product</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <!-- Update & Delete Buttons -->
+                                <td><a href="update_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-success" role="button">Update</a></td>
+                                <td><a href="delete_product.php?productID=<?php echo $result['productID']; ?>" class="btn btn-danger" role="button">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-            </div><!-- /.col-md-9 -->
+                </div><!-- /.col-md-9 -->
 
-        </div><!-- /.row -->
-    </div><!-- /.container .mainContent -->
+            </div><!-- /.row -->
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN -->
 
     <!-- FOOTER -->

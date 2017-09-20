@@ -9,6 +9,7 @@ function isPostRequest() {
     return ( filter_input(INPUT_SERVER, 'REQUEST_METHOD') === 'POST' );
 }
 
+
 /**
  * Retrieves ALL ROWS from products Table
  *
@@ -27,6 +28,22 @@ function viewAllProducts() {
     return $results;
 }
 
+
+/**
+ * Function that checks if a user is currently logged in
+ *
+ * @return bool
+ */
+function isLoggedIn() {
+
+    if ( !isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === false ) {
+        return false;
+    }
+
+    return true;
+}
+
+
 /**
  * MySQL DB Connection String
  *
@@ -37,6 +54,7 @@ $con = mysqli_connect("localhost", "root", "", "thestoop");
 if (mysqli_connect_errno()) {
     echo "The connection could not be established: " . mysqli_connect_error();
 }
+
 
 /**
  *  function for getting User IP Address
@@ -52,6 +70,7 @@ function getIPAddress() {
 
     return $ip;
 }
+
 
 /**
  *  function for getting Product Categories
@@ -73,6 +92,7 @@ function getCategory() {
         echo "<li><a href='#'>$categoryName</a></li>";
     }
 }
+
 
 /**
  *  function for getting Products
@@ -119,13 +139,4 @@ function getProduct(){
         }
     }
 
-}
-
-function isLoggedIn() {
-
-    if ( !isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === false
-    ) {
-        return false;
-    }
-    return true;
 }

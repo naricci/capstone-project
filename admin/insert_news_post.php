@@ -1,3 +1,59 @@
+<?php
+
+// session_start();    // uncomment once admin sign in is finished...
+
+include 'includes/dbconnect.php';
+include 'functions/utilities.php';
+include 'functions/news_post_functions.php';
+
+$errors = '';
+$results = '';
+$success = '';
+
+if ( isPostRequest() ) {
+
+    $postTitle = filter_input(INPUT_POST, 'postTitle');
+    $postWriter = filter_input(INPUT_POST, 'postWriter');
+    //$postDate = filter_input(INPUT_POST, 'postDate');
+    $postContent = filter_input(INPUT_POST, 'postContent');
+    $postImageName = filter_input(INPUT_POST, 'postImageName');
+    //$postAdminID = filter_input(INPUT_POST, 'postAdminID');
+
+    // Simple form validation
+    if ( empty($postTitle) ) {
+        $errors .= "Please fill in a Title for the news post.<br />";
+    }
+    if ( empty($postWriter) ) {
+        $errors .= "Please add a Writer for the news post.<br />";
+    }
+    if ( empty($postContent) ) {
+        $errors .= "Please add some Content to the news post.<br />";
+    }
+    if ( empty($postImageName) ) {
+        $errors .= "Please add an Image to the news post.<br />";
+    }
+    // Image Upload
+    $file_name = date("Y-m-d-H-i-s").sha1($_FILES['postImageName']['name']);
+    $destination = "product_images/" . $file_name;
+    $postImageName = $_FILES['postImageName']['image_tmp_name'];
+
+    if ( move_uploaded_file($postImageName, $destination) ) {
+
+        $confirm = addNewsPost($postTitle, $postWriter, $postContent, $postImageName/*, $postAdminID*/);
+
+        if ( $confirm === false ) {
+
+            $results = 'News Post Added Successfully.';
+
+        } else {
+
+            $results = 'News Post NOT Added!';
+        }
+    }
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +67,7 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
@@ -26,91 +82,75 @@
     <!-- NAVBAR -->
     <?php include 'templates/navbar.php'; ?>
 
-    <?php
 
-    include 'includes/dbconnect.php';
-    include 'functions/utilities.php';
-    include 'functions/news_post_functions.php';
+    <!-- MAIN CONTENT -->
+    <div class="mainContent">
+        <div class="container main">
+            <div class="row">
 
-    $results = '';
+                <!-- ADMIN PANEL -->
+                <?php include 'admin_panel.php'; ?>
 
-    if (isPostRequest()) {
+                <!-- Main Content Area -->
+                <div class="col-md-9">
+                    <div class="page-header">
+                        <h1>Admin Area <small class="text-primary">Insert News Post</small></h1>
+                    </div>
 
-        $postTitle = filter_input(INPUT_POST, 'postTitle');
-        $postWriter = filter_input(INPUT_POST, 'postWriter');
-        $postDate = filter_input(INPUT_POST, 'postDate');
-        $postContent = filter_input(INPUT_POST, 'postContent');
-        $postImageName = filter_input(INPUT_POST, 'postImageName');
-        $postAdminID = filter_input(INPUT_POST, 'postAdminID');
+                    <!-- Dismissible Alert -->
+    <!--                <div class="alert alert-warning alert-dismissible" role="alert">-->
+    <!--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+    <!--                        <span aria-hidden="true">&times;</span>-->
+    <!--                    </button>-->
+    <!--                </div>-->
 
-        $confirm = addNewsPost($postTitle, $postWriter, $postContent, $postImageName, $postAdminID);
+                    <fieldset>
 
-        if ( $confirm === false ) {
-            $results = 'News Post Added Successfully.';
-        } else {
-            $results = 'News Post NOT Added!';
-        }
-    }
-    ?>
+                        <!-- Display errors if there are any -->
+                        <p class="text-warning"><?php echo $errors; ?></p>
 
-    <!-- MAIN -->
-    <div class="container mainContent">
-        <div class="row">
+                        <!-- Confirm whether product data was added or not -->
+                        <h3><?php echo $results; ?></h3>
 
-            <!-- ADMIN PANEL -->
-            <?php include 'admin_panel.php'; ?>
+                        <form action="#" method="post">
+                            <table align="center" width="1000" class="table table-responsive">
 
-            <!-- Main Content Area -->
-            <div class="col-md-9">
-                <div class="page-header">
-                    <h1>Admin Area <small>Insert News Post</small></h1>
-                </div>
+                                <tr class="form-group">
+                                    <td align="left"><b>Post Title:</b></td>
+                                    <td><input type="text" name="postTitle"  maxlength="100" required class="form-control" autofocus /></td>
+                                </tr>
 
-                <!-- Dismissible Alert -->
-                <div class="alert alert-warning alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                                <tr>
+                                    <td align="left"><b>Post Writer:</b></td>
+                                    <td><input type="text" name="postWriter" maxlength="100" required class="form-control" /></td>
+                                </tr>
 
-                    <!-- Confirm whether product data was added or not -->
-                    <h3><?php echo $results; ?></h3>
-                </div>
+                                <tr>
+                                    <td align="left"><b>Post Content:</b></td>
+                                    <td><textarea name="postContent" class="form-control" cols="20" rows="10"  maxlength="2000"></textarea></td>
+                                </tr>
 
-                <form action="#" method="post">
-                    <table align="center" width="1000" class="table table-responsive">
+                                <tr>
+                                    <td align="left"><b>Post Image:</b></td>
+                                    <td><input type="file" name="postImageName" maxlength="100"></td>
+                                </tr>
 
-                        <tr class="form-group">
-                            <td align="left"><b>Post Title:</b></td>
-                            <td><input type="text" name="postTitle" maxlength="100" required class="form-control" /></td>
-                        </tr>
+                                <tr align="right">
+                                    <td colspan="7"><input class="btn btn-primary" type="submit" name="add_news_post" value="Add News Post" /></td>
+                                </tr>
 
-                        <tr>
-                            <td align="left"><b>Post Writer:</b></td>
-                            <td><input type="text" name="postWriter" maxlength="100" required class="form-control" /></td>
-                        </tr>
+                            </table>
+                        </form>
 
-                        <tr>
-                            <td align="left"><b>Post Content:</b></td>
-                            <td><textarea name="postContent" class="form-control" cols="20" rows="10"  maxlength="2000"></textarea></td>
-                        </tr>
+                    </fieldset>
 
-                        <tr>
-                            <td align="left"><b>Post Image:</b></td>
-                            <td><input type="file" name="postImageName" maxlength="100"></td>
-                        </tr>
+                </div><!-- /.col-md-9 -->
 
-                        <tr align="right">
-                            <td colspan="7"><input class="btn btn-danger" type="submit" name="add_news_post" value="Add News Post" /></td>
-                        </tr>
+            </div><!-- /.row -->
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
+    <!-- END OF MAIN CONTENT -->
 
-                    </table>
-                </form>
-
-            </div><!-- /.col-md-9 -->
-
-        </div><!-- /.row -->
-    </div><!-- /.container .mainContent -->
-    <!-- END OF MAIN -->
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>

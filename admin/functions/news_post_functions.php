@@ -1,35 +1,40 @@
 <?php
-/* *
+/**
  * Creates a new row at bottom of the newsposts Table.
+ *
+ * @param $postTitle
+ * @param $postWriter
+ * @param $postContent
+ * @param $postImageName
  *
  * @return Boolean
  */
-function addNewsPost($postTitle, $postWriter, $postContent, $postImageName, $postAdminID) {
+function addNewsPost($postTitle, $postWriter, $postContent, $postImageName/*, $postAdminID*/) {
     $result = false;
 
     $db = getDatabase();
 
-    $stmt = $db->prepare("INSERT INTO newsposts SET postTitle = :postTitle, postWriter = :postWriter, postDate = now(), postContent = :postContent, postImageName = :postImageName, postAdminID = :postAdminID");
+    $stmt = $db->prepare("INSERT INTO newsposts SET postTitle = :postTitle, postWriter = :postWriter, postDate = NOW(), postContent = :postContent, postImageName = :postImageName/*, postAdminID = :postAdminID*/");
 
     $binds = array(
         ":postTitle" => $postTitle,
         ":postWriter" => $postWriter,
         ":postContent" => $postContent,
-        ":postImageName" => $postImageName,
-        ":postAdminID" => $postAdminID
+        ":postImageName" => $postImageName/*,
+        ":postAdminID" => $postAdminID*/
     );
 
     if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
-        $results = true;
+        $result = true;    // Look into this!
     }
 
     return $result;
 }
 
 /**
- * Retreives ALL ROWS from newsposts Table
+ * Retrieves ALL ROWS from newsposts Table
  *
- * @return String
+ * @return array
  */
 function viewAllNewsPosts() {
     $db = getDatabase();
@@ -46,6 +51,8 @@ function viewAllNewsPosts() {
 
 /**
  * Retrieves a SINGLE ROW from newsposts Table
+ *
+ * @param $postID
  *
  * @return array
  */
@@ -69,6 +76,8 @@ function viewOneNewsPost($postID) {
 /**
  * Deletes a new row from the newsposts Table.
  *
+ * @param $postID
+ *
  * @return Boolean
  */
 function deleteProduct($postID) {
@@ -91,6 +100,13 @@ function deleteProduct($postID) {
 
 /**
  * Updates a specified row from newsposts table
+ *
+ * @param $postID
+ * @param $postTitle
+ * @param $postWriter
+ * @param $postContent
+ * @param $postImageName
+ * @param $postAdminID
  *
  * @return Boolean
  */

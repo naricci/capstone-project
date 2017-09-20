@@ -74,76 +74,78 @@
     }
     ?>
 
-    <!-- MAIN -->
-    <div class="container mainContent">
-        <div class="row">
+    <!-- MAIN CONTENT -->
+    <div class="mainContent">
+        <div class="container main">
+            <div class="row">
 
-            <!-- ADMIN PANEL -->
-            <?php include 'admin_panel.php'; ?>
+                <!-- ADMIN PANEL -->
+                <?php include 'admin_panel.php'; ?>
 
-            <!-- Main Content Area -->
-            <div class="col-md-9">
-                <div class="page-header">
-                    <h1>Admin Area <small>Update Product</small></h1>
-                </div>
-
-                <h3><?php echo $result; ?></h3>
-
-                <form method="post" action="#">
-                    <div class="form-group">
-                        Product Name <input type="text" value="<?php echo $productName; ?>" name="productName" class="form-control" required />
-                    </div><br />
-                    <div class="form-group">
-                        Product Price <input type="number" value="<?php echo $productPrice; ?>" name="productPrice" class="form-control" required />
-                    </div><br />
-                    <div class="form-group">
-                        Product Quantity <input type="number" value="<?php echo $productQuantity; ?>" name="productQuantity" class="form-control" />
-                    </div><br />
-                    <div class="form-group">
-                        <select name="productCategoryID" required class="form-control">
-                            <option>Select a Category</option>
-                            <?php
-
-                            include 'includes/db.php';
-
-                            $get_category = "SELECT * FROM categories";
-
-                            $run_category = mysqli_query($con, $get_category);
-
-                            while ($row_category=mysqli_fetch_array($run_category)) {
-                                $categoryID = $row_category['categoryID'];
-                                $categoryName = $row_category['categoryName'];
-                                $categoryDescription = $row_category['categoryDescription'];
-
-                                echo "<option value='$categoryID'>$categoryName</option>";
-                            }
-                            ?>
-                        </select>
-                    </div><br />
-                    <div class="form-group">
-                        <label>Short Description</label>
-                        <textarea value="<?php echo $productLongDescription; ?>" name="productLongDescription" class="form-control" cols="20" rows="10"></textarea>
-                    </div><br />
-                    <div class="form-group">
-                        <label>Long Description</label>
-                        <textarea value="<?php echo $productLongDescription; ?>" name="productLongDescription" class="form-control" cols="20" rows="10"></textarea>
-                    </div><br />
-                    <div class="form-group">
-                        Image <input type="file" value="<?php echo $productImage; ?>" name="productImage" class="form-control" />
-                    </div><br />
-                    <div class="form-group">
-                        Artist Name <input type="text" value="<?php echo $productArtist; ?>" name="productArtist" class="form-control" />
-                    </div><br />
-                    <div class="form-group">
-                        <input type="hidden" value="<?php echo $productID; ?>" name="productID" />
-                        <input type="submit" value="Update Product" class="btn btn-primary form-control" />
+                <!-- Main Content Area -->
+                <div class="col-md-9">
+                    <div class="page-header">
+                        <h1>Admin Area <small class="text-primary">Update Product</small></h1>
                     </div>
-                </form>
 
-            </div><!-- /.col-md-9 -->
+                    <h3><?php echo $result; ?></h3>
 
-        </div><!-- /.row -->
-    </div><!-- /.container .mainContent -->
+                    <form method="post" action="#">
+                        <div class="form-group">
+                            Product Name <input type="text" value="<?php echo $productName; ?>" name="productName" class="form-control" required  autofocus />
+                        </div><br />
+                        <div class="form-group">
+                            Product Price <input type="number" value="<?php echo $productPrice; ?>" name="productPrice" class="form-control" required />
+                        </div><br />
+                        <div class="form-group">
+                            Product Quantity <input type="number" value="<?php echo $productQuantity; ?>" name="productQuantity" class="form-control" />
+                        </div><br />
+                        <div class="form-group">
+                            <select name="productCategoryID" required class="form-control">
+                                <option>Select a Category</option>
+                                <?php
+
+                                include 'includes/db.php';
+
+                                $get_category = "SELECT * FROM categories";
+
+                                $run_category = mysqli_query($con, $get_category);
+
+                                while ($row_category=mysqli_fetch_array($run_category)) {
+                                    $categoryID = $row_category['categoryID'];
+                                    $categoryName = $row_category['categoryName'];
+                                    $categoryDescription = $row_category['categoryDescription'];
+
+                                    echo "<option value='$categoryID'>$categoryName</option>";
+                                }
+                                ?>
+                            </select>
+                        </div><br />
+                        <div class="form-group">
+                            <label>Short Description</label>
+                            <textarea value="<?php echo $productShortDescription; ?>" name="productShortDescription" class="form-control" cols="20" rows="5"><?php echo $productShortDescription; ?></textarea>
+                        </div><br />
+                        <div class="form-group">
+                            <label>Long Description</label>
+                            <textarea value="<?php echo $productLongDescription; ?>" name="productLongDescription" class="form-control" cols="20" rows="10"><?php echo $productLongDescription; ?></textarea>
+                        </div><br />
+                        <div class="form-group">
+                            Image <input type="file" value="<?php echo $productImage; ?>" name="productImage" class="form-control" />
+                        </div><br />
+                        <div class="form-group">
+                            Artist Name <input type="text" value="<?php echo $productArtist; ?>" name="productArtist" class="form-control" />
+                        </div><br />
+                        <div class="form-group">
+                            <input type="hidden" value="<?php echo $productID; ?>" name="productID" />
+                            <input type="submit" value="Update Product" class="btn btn-primary form-control" />
+                        </div>
+                    </form>
+
+                </div><!-- /.col-md-9 -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN -->
 
     <!-- FOOTER -->

@@ -57,119 +57,122 @@
     ?>
 
     <!-- MAIN -->
-    <div class="container mainContent">
-        <div class="row">
+    <div class="mainContent">
+        <div class="container main">
+            <div class="row">
 
-            <!-- ADMIN PANEL -->
-            <?php include 'admin_panel.php'; ?>
+                <!-- ADMIN PANEL -->
+                <?php include 'admin_panel.php'; ?>
 
-            <!-- Main Content Area -->
-            <div class="col-md-9">
-                <div class="page-header">
-                    <h1>Admin Area <small>Insert New Product</small></h1>
-                </div>
+                <!-- Main Content Area -->
+                <div class="col-md-9">
+                    <div class="page-header">
+                        <h1>Admin Area <small class="text-primary">Insert New Product</small></h1>
+                    </div>
 
-<!--                <!-- Dismissible Alert -->
-<!--                <div class="alert alert-warning alert-dismissible" role="alert">-->
-<!--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
-<!--                        <span aria-hidden="true">&times;</span>-->
-<!--                    </button>-->
-<!---->
-<!--                    <!-- Confirm whether product data was added or not -->
-<!--                    <h5>--><?php //echo $results; ?><!--</h5>-->
-<!--                </div>-->
+    <!--                <!-- Dismissible Alert -->
+    <!--                <div class="alert alert-warning alert-dismissible" role="alert">-->
+    <!--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+    <!--                        <span aria-hidden="true">&times;</span>-->
+    <!--                    </button>-->
+    <!---->
+    <!--                    <!-- Confirm whether product data was added or not -->
+    <!--                    <h5>--><?php //echo $results; ?><!--</h5>-->
+    <!--                </div>-->
 
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <table align="center" width="1000" class="table table-responsive">
-                        <tr class="form-group">
-                            <td align="left"><b>Product Name:</b></td>
-                            <td><input type="text" name="productName" size="60" required class="form-control" /></td>
-                        </tr>
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <table align="center" width="1000" class="table table-responsive">
+                            <tr class="form-group">
+                                <td align="left"><b>Product Name:</b></td>
+                                <td><input type="text" name="productName" size="60" required class="form-control" autofocus /></td>
+                            </tr>
 
-                        <tr>
-                            <td align="left"><b>Product Price:  </b></td>
-                            <td><input type="number" name="productPrice" required class="form-control" /></td>
-                        </tr>
+                            <tr>
+                                <td align="left"><b>Product Price:  </b></td>
+                                <td><input type="number" name="productPrice" required class="form-control" /></td>
+                            </tr>
 
-                        <tr>
-                            <td align="left"><b>Product Quantity:  </b></td>
-                            <td><input type="number" name="productQuantity" class="form-control" /></td>
-                        </tr>
+                            <tr>
+                                <td align="left"><b>Product Quantity:  </b></td>
+                                <td><input type="number" name="productQuantity" class="form-control" /></td>
+                            </tr>
 
-                        <tr>
-                            <td align="left"><b>Product Category:</b></td>
-                            <td>
-                                <select name="productCategoryID" required class="form-control">
-                                    <option>Select a Category</option>
-                                    <?php
+                            <tr>
+                                <td align="left"><b>Product Category:</b></td>
+                                <td>
+                                    <select name="productCategoryID" required class="form-control">
+                                        <option>Select a Category</option>
+                                        <?php
 
-                                    include 'includes/db.php';
+                                        include 'includes/db.php';
 
-                                    $get_category = "SELECT * FROM categories";
+                                        $get_category = "SELECT * FROM categories";
 
-                                    $run_category = mysqli_query($con, $get_category);
+                                        $run_category = mysqli_query($con, $get_category);
 
-                                    while ($row_category=mysqli_fetch_array($run_category)) {
-                                        $categoryID = $row_category['categoryID'];
-                                        $categoryName = $row_category['categoryName'];
-                                        $categoryDescription = $row_category['categoryDescription'];
+                                        while ($row_category=mysqli_fetch_array($run_category)) {
+                                            $categoryID = $row_category['categoryID'];
+                                            $categoryName = $row_category['categoryName'];
+                                            $categoryDescription = $row_category['categoryDescription'];
 
-                                        echo "<option value='$categoryID'>$categoryName</option>";
-                                    }
-                                    ?>
-                                </select>
-                            </td>
-                        </tr>
+                                            echo "<option value='$categoryID'>$categoryName</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td align="left"><b>Product Short Description:  </b></td>
-                            <td><textarea name="productShortDescription" cols="20" rows="10"></textarea></td>
-                        </tr>
+                            <tr>
+                                <td align="left"><b>Product Short Description:  </b></td>
+                                <td><textarea name="productShortDescription" cols="20" rows="10"></textarea></td>
+                            </tr>
 
-                        <tr>
-                            <td align="left"><b>Product Long Description:  </b></td>
-                            <td><textarea name="productLongDescription" cols="20" rows="10"></textarea></td>
-                        </tr>
+                            <tr>
+                                <td align="left"><b>Product Long Description:  </b></td>
+                                <td><textarea name="productLongDescription" cols="20" rows="10"></textarea></td>
+                            </tr>
 
-                        <tr>
-                            <td align="left"><b>Product Artist:  </b></td>
-                            <td><input type="text" name="productArtist" class="form-control" /></td>
-                        </tr>
+                            <tr>
+                                <td align="left"><b>Product Artist:  </b></td>
+                                <td><input type="text" name="productArtist" class="form-control" /></td>
+                            </tr>
 
-                        <?php
-//                        if ( count($_FILES) ) {
-//                            try {
-//                                $fileName = uploadImage('productImage');
-//                            } catch (RuntimeException $e) {
-//                                // $fileName = filter_input(INPUT_POST, 'oldimage');
-//                                $fileName = '';
-//                            }
-//
-//                            echo '<p>Image ' . $fileName . ' Uploaded</p>';
-//                        }
-                        $filename = $_FILES['productImage']['name'];
-                        $tmp_location = $_FILES['productImage']['temp_name'];
-                        move_uploaded_file($tmp_location, 'product_images/'.$filename);
+                            <?php
+    //                        if ( count($_FILES) ) {
+    //                            try {
+    //                                $fileName = uploadImage('productImage');
+    //                            } catch (RuntimeException $e) {
+    //                                // $fileName = filter_input(INPUT_POST, 'oldimage');
+    //                                $fileName = '';
+    //                            }
+    //
+    //                            echo '<p>Image ' . $fileName . ' Uploaded</p>';
+    //                        }
+                            $filename = $_FILES['productImage']['name'];
+                            $tmp_location = $_FILES['productImage']['temp_name'];
+                            move_uploaded_file($tmp_location, 'product_images/'.$filename);
 
-                        ?>
+                            ?>
 
-                        <tr>
-                            <td align="left"><b>Product Image:  </b><input type="hidden" name="MAX_FILE_SIZE" value="10000000" /></td>
-                            <td><input type="file" name="productImage" /></td>
-                        </tr>
+                            <tr>
+                                <td align="left"><b>Product Image:  </b><input type="hidden" name="MAX_FILE_SIZE" value="10000000" /></td>
+                                <td><input type="file" name="productImage" /></td>
+                            </tr>
 
-                        <tr align="right">
-                            <td><input type="hidden" name="submit-product" /></td>
-                            <td colspan="7"><input class="btn btn-danger" type="submit" value="Add New Product" /></td>
-                        </tr>
-                    </table>
-                </form>
+                            <tr align="right">
+                                <td><input type="hidden" name="submit-product" /></td>
+                                <td colspan="7"><input class="btn btn-primary" type="submit" value="Add New Product" /></td>
+                            </tr>
+                        </table>
+                    </form>
 
-            </div><!-- /.col-md-9 -->
+                </div><!-- /.col-md-9 -->
 
-        </div><!-- /.row -->
-    </div><!-- /.container .mainContent -->
-    <!-- END OF MAIN -->
+            </div><!-- /.row -->
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
+    <!-- END OF MAIN CONTENT -->
+
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>
