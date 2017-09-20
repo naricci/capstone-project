@@ -17,26 +17,37 @@ html {
 }
 
 body {
-    background-color: #E1ECBB;
-    /*font-family: 'Roboto', sans-serif;*/
+    background-color: #EEE;
+    font-family: 'Lato', sans-serif;
     min-height: 100%;
-    padding-bottom: 0;
+    padding-bottom: 4em;
     padding-top: 0;
     position: relative;
 }
 
+
 /****************** Navigation Bar ******************/
 nav {
-    font-family: 'Droid Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
+    border-bottom: 5px solid purple;
+    /*border-bottom-color: purple;*/
     margin-bottom: 0;
+}
+
+.navbar-header>a:hover {
+    color: purple;
 }
 
 .page-title {
     color: #34AFA8;
     font-size: 36px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #34AFA8;
 }
 
 .navbar-btn {
@@ -45,47 +56,97 @@ nav {
 }
 
 .navbar .navbar-inverse {
-    color: #EEF6ED;
     margin-bottom: 0;
-
 }
+
+
+/****************** Sign Up/Login Buttons *****************/
+.navbar-btn>a {
+    color: #FFFFFF;
+}
+
+.navbar-btn>a:hover {
+    color: #FFFFFF;
+}
+
 
 /****************** Social Media Icons ******************/
 .fa {
-    font-size: 22px;
-    padding: 0 0 0 0px;
+    font-size: 20px;
+    padding: 0 0 0 0;
 }
 
 .fa:hover {
-    color: #34AFA8;
+    color: #FFFFFF;
 }
 
 .fa-facebook {
-    color: white;
-}
-
-.fa-twitter {
-    color: white;
+    color: #800080;
 }
 
 .fa-instagram {
-    color: white;
+    color: #800080;
 }
 
-/****************** Home Page Marketing Grid ******************/
-.container.marketing.mainContent {
+
+/****************** Main Content ******************/
+.mainContent {
+    background-color: #CCC;
+    height: 100%;
+}
+
+.container.main {
+    background-color: #FFFFFF;
+    border-radius: 0;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+
+
+/****************** Home Page Carousel ******************/
+#myCarousel {
     margin-bottom: 0;
 }
 
-.container.mainContent {
-    background-color: white;
-    height: 100%;
-    margin: 0 auto;
-    padding-bottom: 45px;
+
+/****************** Home Page Jumbotron ******************/
+.jumbotron {
+    /*background-image: url("../images/Capture.PNG");*/
+    background-color: #34AFA8;
+    border-radius: 0;
+    color: whitesmoke;
 }
+
+.jumbotron>h1 {
+    color: #0f0f0f;
+}
+
+.jumbotron>button {
+    background-color: #800080;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+}
+
+
+/****************** Home Page Marketing Grid ******************/
+.container.marketing {
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    padding-top: 2em;
+}
+
 
 /****************** Footer ******************/
 footer {
+    border-top: 5px solid #800080;
     bottom: 0;
     left: 0;
     padding: 1rem;

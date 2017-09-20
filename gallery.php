@@ -16,7 +16,7 @@ session_start();
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
@@ -72,10 +72,21 @@ session_start();
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
-                    <!-- Login Button -->
-                    <li class="navbar-btn"><a href="login.php">Login</a></li>
+
+                    <?php
+
+                    if ( !isset($_SESSION['userEmail']) ) {
+                        echo "<!-- Sign Up Button -->
+<li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
+<!-- Log In Button -->
+<li class='navbar-btn'><a class='login-btn' href='login.php'>Log In</a></li>";
+                    } else {
+                        echo "<!-- Log Out Button -->
+<li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
+                    }
+
+                    ?>
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
@@ -84,131 +95,134 @@ session_start();
 
 
     <!-- MAIN CONTENT -->
-    <div class="container mainContent">
+    <div class="mainContent">
+        <div class="container main">
 
-        <!-- Page Title -->
-        <h2>Gallery</h2>
-        <hr />
+            <!-- Page Title -->
+            <h2>Gallery</h2>
+            <hr />
 
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/store/IMG_6651.JPG">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/store/IMG_6651.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/store/IMG_6656.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/categories/IMG_6602.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6597.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/store/IMG_6656.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/categories/IMG_6602.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6597.JPG">
-            </div>
-        </div>
-        <br />
+            <br />
 
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6620.JPG">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6620.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6625.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6628.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/spoon.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6625.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6628.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/spoon.JPG">
-            </div>
-        </div>
-        <br />
+            <br />
 
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6530.JPG">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6530.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6537.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6545.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6552.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6537.JPG">
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6556.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6564.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6566.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6568.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6545.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6552.JPG">
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6556.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6564.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6566.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6568.JPG">
-            </div>
-        </div>
-        <br />
+            <br />
 
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6571.JPG">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6571.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6586.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6597.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6603.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6586.JPG">
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6607.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6619.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6625.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6631.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6597.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6603.JPG">
-            </div>
-        </div>
-        <br />
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6607.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6619.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6625.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6631.JPG">
-            </div>
-        </div>
-        <br />
+            <br />
 
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6649.JPG">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6649.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6670.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6675.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6726.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6670.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6675.JPG">
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6726.JPG">
-            </div>
-        </div>
-        <br />
+            <br />
 
-        <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6730.JPG">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6730.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6733.JPG">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-responsive img-thumbnail" src="images/products/IMG_6733.JPG">
-            </div>
-        </div>
-    </div><!-- /.container.mainContent -->
+
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
     <br />
     <!-- END OF MAIN CONTENT -->
 

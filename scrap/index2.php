@@ -14,7 +14,7 @@
     <link href="../bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 
 <body>
@@ -165,8 +165,8 @@
 <!-- jQuery -->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- JavaScript -->
-<script type="text/javascript" src="../js/validation.min.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="validation.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 <!-- Bootstrap JS -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 

@@ -23,14 +23,15 @@
     <!-- NAVBAR -->
     <?php include 'templates/navbar.php'; ?>
 
-    <!-- Main Content -->
+
+    <!-- MAIN CONTENT -->
     <div class="container mainContent">
         <div class="row">
 
-            <!-- Admin Panel -->
+            <!-- ADMIN PANEL -->
             <?php include 'admin_panel.php'; ?>
 
-            <!-- Main Content Area -->
+            <!-- Main Admin Area -->
             <div class="col-md-9">
                 <h1 align="center">Admin Home</h1>
                 <hr />
@@ -39,8 +40,9 @@
             </div><!-- /.col-md-9 -->
 
         </div><!-- /.row -->
-    </div><!-- /.container .mainContent -->
-    <!-- End of Main Content -->
+    </div><!-- /.container.mainContent -->
+    <!-- END OF MAIN CONTENT -->
+
 
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>

@@ -12,12 +12,12 @@
     <!-- Normalize CSS -->
     <link href="../bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../css/style.css" rel="stylesheet" media="screen" />
+    <link href="style.css" rel="stylesheet" media="screen" />
     <link href="../css/main.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- jQuery -->
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
     <!-- JavaScript -->
-    <script type="text/javascript" src="../js/validation.min.js"></script>
+    <script type="text/javascript" src="validation.min.js"></script>
     <script type="text/javascript">
         $('document').ready(function()
         {

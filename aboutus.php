@@ -16,7 +16,7 @@ session_start();
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
@@ -55,9 +55,9 @@ session_start();
                     <li class="navbar-btn"><a href="contact.php">CONTACT</a></li>
                     <!-- Admin Button -->
                     <li class="dropdown navbar-btn">
-                        <a href="admin/admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
+                        <a href="admin/index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="admin/admin.php">Admin Home Page</a></li>
+                            <li><a href="admin/index.php">Admin Home Page</a></li>
                             <li><a href="#">Create New Admin</a></li>
                             <li><a href="#">Manage About Us Page</a></li>
                             <li><a href="#">Manage News Posts</a></li>
@@ -72,10 +72,21 @@ session_start();
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
-                    <!-- Login Button -->
-                    <li class="navbar-btn"><a href="login.php">Login</a></li>
+
+                    <?php
+
+                    if ( !isset($_SESSION['userEmail']) ) {
+                        echo "<!-- Sign Up Button -->
+<li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
+<!-- Log In Button -->
+<li class='navbar-btn'><a class='login-btn' href='login.php'>Log In</a></li>";
+                    } else {
+                        echo "<!-- Log Out Button -->
+<li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
+                    }
+
+                    ?>
+
                 </ul>
             </div><!-- /.navbar-collapse -->
 
@@ -85,57 +96,62 @@ session_start();
 
 
     <!-- MAIN CONTENT -->
-    <div class="container mainContent">
+    <div class="mainContent">
 
-        <!-- Page Title -->
-        <h2>About Us</h2>
-        <hr />    
+        <div class="container main">
 
-        <div class="row">
+            <!-- Page Title -->
+            <h2>About Us</h2>
+            <hr />
 
-            <div class="col-md-6 col-sm-12">
-                <h4>Location</h4>
+            <div class="row">
 
-                <!-- Google Maps Embed API -->
-                <iframe
-                    class="embed-responsive-item"
-                    width="400"
-                    height="300"
-                    frameborder="0"
-                    style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?q=the%20stoop%2058%20main%20street%20east%20greenwich%20&key=AIzaSyD4Lnsz0jS8TCwXjnv2vuAK0LlFkv-gvu0"
-                    allowfullscreen>
-                </iframe>
+                <div class="col-md-6 col-sm-12">
+                    <h4>Location</h4>
 
-            </div>
+                    <!-- Google Maps Embed API -->
+                    <iframe
+                            class="embed-responsive-item"
+                            width="400"
+                            height="300"
+                            frameborder="0"
+                            style="border: 1"
+                            src="https://www.google.com/maps/embed/v1/place?q=the%20stoop%2058%20main%20street%20east%20greenwich%20&key=AIzaSyD4Lnsz0jS8TCwXjnv2vuAK0LlFkv-gvu0"
+                            allowfullscreen>
+                    </iframe>
 
-            <div class="col-md-3 col-sm-12">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Address</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>58 Main Street</p>
-                        <p>East Greenwich, RI, 02818</p>
+                </div>
+
+                <div class="col-md-3 col-sm-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Address</h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>58 Main Street</p>
+                            <p>East Greenwich, RI, 02818</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-3 col-sm-12">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Hours of Operation</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Monday - Thursday 10am - 8pm</p>
-                        <p>Friday - Saturday 10am - 10pm</p>
-                        <p>Sunday 12am - 6pm</p>
+                <div class="col-md-3 col-sm-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Hours of Operation</h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>Monday - Thursday 10am - 8pm</p>
+                            <p>Friday - Saturday 10am - 10pm</p>
+                            <p>Sunday 12am - 6pm</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div><!-- /.row -->
-    </div><!-- /.container.mainContent -->
+            </div><!-- /.row -->
+
+        </div><!-- /.container.main -->
+
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN CONTENT -->
 
 

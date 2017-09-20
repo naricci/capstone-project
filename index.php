@@ -25,13 +25,13 @@ include 'functions/functions.php';
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/carousel.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/carousel.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -70,10 +70,21 @@ include 'functions/functions.php';
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Sign Up -->
-                    <li class="navbar-btn"><a class="login-btn" href="signup.php">Sign Up</a></li>
-                    <!-- Login Button -->
-                    <li class="navbar-btn"><a class="login-btn" href="login.php">Login</a></li>
+
+                    <?php
+
+                    if ( !isset($_SESSION['userEmail']) ) {
+                        echo "<!-- Sign Up Button -->
+<li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
+<!-- Log In Button -->
+<li class='navbar-btn'><a class='login-btn' href='login.php'>Log In</a></li>";
+                    } else {
+                        echo "<!-- Log Out Button -->
+<li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
+                    }
+
+                    ?>
+
                 </ul>
 
             </div><!-- /.navbar-collapse -->
@@ -82,123 +93,167 @@ include 'functions/functions.php';
     <!-- END OF NAVBAR -->
 
 
-    <!-- CAROUSEL -->
-    <div class="container mainContent">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-            </ol>
+    <!-- MAIN CONTENT -->
+    <div class="mainContent">
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
+        <!-- CAROUSEL -->
+        <div class="container main">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
 
-                <div class="item active">
-                    <img class="img-responsive" src="images/products/IMG_6566.JPG" alt="Glow in the dark pipe">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <h1>Welcome to The Stoop!</h1>
-                            <p>
-                                We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.
-                            </p>
-                            <p>
-                                <a class="btn btn-lg btn-primary" href="signup.php" role="button">Sign up today</a>
-                            </p>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                        <img class="img-responsive" src="images/products/IMG_6566.JPG" alt="Glow in the dark pipe">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-md-block text-left">
+                                <h1>Welcome to The Stoop!</h1>
+                                <p>
+                                    We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.
+                                </p>
+                                <p>
+                                    <a class="btn btn-lg btn-primary" href="signup.php" role="button">Sign up today</a>
+                                </p>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="images/categories/IMG_6602.JPG" alt="Water Pipes on Steps">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-md-block text-left">
+                                <h1>Check out our newest products on the Shop Page!</h1>
+                                <p>
+                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="images/products/IMG_6556.JPG" alt="Two Eye Bowls">
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="images/stairs/IMG_6628.JPG" alt="Lobster Claw">
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="images/stairs/IMG_6620.JPG" alt="Mr. & Mr.s Potato Head Jars">
                     </div>
                 </div>
 
-                <div class="item">
-                    <img class="img-responsive" src="images/categories/IMG_6602.JPG" alt="Water Pipes on Steps">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <h1>Check out our newest products on the Shop Page!</h1>
-                            <p>
-                                <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img class="img-responsive" src="images/products/IMG_6556.JPG" alt="Two Eye Bowls">
-                </div>
-
-                <div class="item">
-                    <img class="img-responsive" src="images/stairs/IMG_6628.JPG" alt="Lobster Claw">
-                </div>
-
-                <div class="item">
-                    <img class="img-responsive" src="images/stairs/IMG_6620.JPG" alt="Mr. & Mr.s Potato Head Jars">
-                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div><!-- /.container -->
-    <!-- END OF CAROUSEL -->
+        </div><!-- /.container -->
+        <!-- END OF CAROUSEL -->
 
 
-    <!-- MARKETING AREA -->
-    <div class="container marketing mainContent">
+        <!-- JUMBOTRON -->
+        <div class="container main">
+            <div class="jumbotron">
 
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-            <div class="col-lg-4">
-                <img class="img-circle" src="images/logos/logo-keppel.png" alt="Shop Logo" width="140" height="140">
-                <h2>About Us</h2>
-                <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="aboutus.php" role="button">View details »</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="img-circle" src="images/store/image2.JPG" alt="Pipes" width="140" height="140">
-                <h2>Gallery</h2>
-                <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="gallery.php" role="button">View details »</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="img-circle" src="images/newspaper.png" alt="Generic placeholder image" width="140" height="140">
-                <h2>News</h2>
-                <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="news.php" role="button">View details »</a></p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+                <?php
 
-        <!-- Next Three columns of text below the carousel -->
-        <div class="row">
-            <div class="col-lg-4">
-                <img class="img-circle" src="images/products/IMG_6607.JPG" alt="Glow in the dark pipe" width="140" height="140">
-                <h2>Shop</h2>
-                <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="shop.php" role="button">View details »</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="img-circle" src="images/map.png" alt="Map of Main Street" width="140" height="140">
-                <h2>Directions</h2>
-                <p>We are a located on the 2nd floor of 58 Main Street in the heart of East Greenwich, RI.  Click here for a map, directions and store hours.</p>
-                <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="img-circle" src="images/form-icon.png" alt="Generic placeholder image" width="140" height="140">
-                <h2>Contact Us</h2>
-                <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                <p><a class="btn btn-secondary" href="contact.php" role="button">View details »</a></p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-    <!-- END OF MARKETING AREA -->
+                if ( isset($_SESSION['userEmail']) ) {
+                    echo "<h1><i>Welcome to The Stoop ". $_SESSION['userFirstName'] . "!</i></h1>";
+                } else {
+                    echo "<h1><i>Welcome to The Stoop!</i></h1>";
+                }
+                ?>
+
+                <p>
+                    We are a Rhode Island Glass Gallery that specializes in providing local New England artists with a platform to sell their glass.
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="aboutus.php" role="button">Learn more</a>
+                </p>
+            </div><!-- /.jumbotron -->
+        </div><!-- /.container -->
+        <!-- END OF JUMBOTRON -->
+
+
+        <!-- MARKETING AREA -->
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+
+                <!-- ABOUT US -->
+                <div class="col-lg-4">
+                    <img class="img-circle" src="images/logos/logo-keppel.png" alt="Shop Logo" width="140" height="140">
+                    <h2>About Us</h2>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p><a class="btn btn-secondary" href="aboutus.php" role="button">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+                <!-- GALLERY -->
+                <div class="col-lg-4">
+                    <img class="img-circle" src="images/store/image2.JPG" alt="Pipes" width="140" height="140">
+                    <h2>Gallery</h2>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p><a class="btn btn-secondary" href="gallery.php" role="button">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+                <!-- NEWS -->
+                <div class="col-lg-4">
+                    <img class="img-circle" src="images/newspaper.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>News</h2>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p><a class="btn btn-secondary" href="news.php" role="button">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+            <!-- Next Three columns of text below the carousel -->
+            <div class="row">
+
+                <!-- SHOP -->
+                <div class="col-lg-4">
+                    <img class="img-circle" src="images/products/IMG_6607.JPG" alt="Glow in the dark pipe" width="140" height="140">
+                    <h2>Shop</h2>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p><a class="btn btn-secondary" href="shop.php" role="button">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+                <!-- DIRECTIONS -->
+                <div class="col-lg-4">
+                    <img class="img-circle" src="images/map.png" alt="Map of Main Street" width="140" height="140">
+                    <h2>Directions</h2>
+                    <p>We are a located on the 2nd floor of 58 Main Street in the heart of East Greenwich, RI.  Click here for a map, directions and store hours.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+                <!-- CONTACT US -->
+                <div class="col-lg-4">
+                    <img class="img-circle" src="images/form-icon.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>Contact Us</h2>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p><a class="btn btn-secondary" href="contact.php" role="button">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+        <!-- END OF MARKETING AREA -->
+
+    </div><!-- /.mainContent -->
+    <!-- END OF MAIN CONTENT -->
 
 
     <!-- FOOTER -->
@@ -223,6 +278,7 @@ include 'functions/functions.php';
         </div><!-- /.container -->
     </footer>
     <!-- END OF FOOTER -->
+
 
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

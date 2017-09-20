@@ -72,13 +72,13 @@ if ( isset($_POST['login']) ) {
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="css/login.css" rel="stylesheet" type="text/css" />
+<!--    <link href="css/login.css" rel="stylesheet" type="text/css" />-->
 </head>
 
 <body>
@@ -112,9 +112,9 @@ if ( isset($_POST['login']) ) {
                     <li class="navbar-btn"><a href="contact.php">CONTACT</a></li>
                     <!-- Admin Button -->
                     <li class="dropdown navbar-btn">
-                        <a href="admin/admin.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
+                        <a href="admin/index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="admin/admin.php">Admin Home Page</a></li>
+                            <li><a href="admin/index.php">Admin Home Page</a></li>
                             <li><a href="#">Create New Admin</a></li>
                             <li><a href="#">Manage About Us Page</a></li>
                             <li><a href="#">Manage News Posts</a></li>
@@ -129,10 +129,21 @@ if ( isset($_POST['login']) ) {
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
-                    <!-- Login Button -->
-                    <li class="navbar-btn active"><a href="login.php">Login <span class="sr-only">(current)</span></a></li>
+
+                    <?php
+
+                    if ( !isset($_SESSION['userEmail']) ) {
+                        echo "<!-- Sign Up Button -->
+<li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
+<!-- Log In Button -->
+<li class='navbar-btn active'><a class='login-btn' href='login.php'>Log In  <span class=\"sr-only\">(current)</span></a></li>";
+                    } else {
+                        echo "<!-- Log Out Button -->
+<li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
+                    }
+
+                    ?>
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
@@ -141,62 +152,64 @@ if ( isset($_POST['login']) ) {
 
 
     <!-- MAIN CONTENT -->
-    <div class="container mainContent">
+    <div class="mainContent">
+        <div class="container main">
 
-        <!-- Page Title -->
-        <h2>User Login</h2>
-        <hr />
+            <!-- Page Title -->
+            <h2>User Login</h2>
+            <hr />
 
-        <fieldset><legend>Login</legend>
+            <fieldset><!--<legend>Login</legend>-->
 
-        <?php
+            <?php
 
-        echo $errors;
-        echo $success;
+            echo $errors;
+            echo $success;
 
-        ?>
+            ?>
 
-        <!-- Login Form -->
-        <form action="" method="post">
+            <!-- Login Form -->
+            <form action="" method="post">
 
-            <!-- Email Row-->
-            <div class="row">
-                <div class="col-md-offset-4 col-md-4">
-                    <div class="form-group">
-                        <label>Email Address:</label>
-                        <input type="email" class="form-control" name="userEmail" value="<?=((isset($userEmail))?$userEmail:'')?>" required maxlength="50" autofocus />
+                <!-- Email Row-->
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-4">
+                        <div class="form-group">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" name="userEmail" value="<?=((isset($userEmail))?$userEmail:'')?>" required maxlength="50" autofocus />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Password Row-->
-            <div class="row">
-                <div class="col-md-offset-4 col-md-4">
-                    <div class="form-group">
-                        <label>Password:</label>
-                        <input type="password" class="form-control" name="userPassword" value="<?=((isset($userPassword))?$userPassword:'')?>" required maxlength="100" />
+                <!-- Password Row-->
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-4">
+                        <div class="form-group">
+                            <label>Password:</label>
+                            <input type="password" class="form-control" name="userPassword" value="<?=((isset($userPassword))?$userPassword:'')?>" required maxlength="100" />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Login Button-->
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 style="float:right; padding-right:20px;"><a href="signup.php" style="text-decoration:none; font-size: 16px;">New? Register Here</a></h3>
-                </div>
-                <div class="col-md-offset-7">
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary" name="login" id="btn-register">
-                            <span class="glyphicon glyphicon-log-in"></span> &nbsp; Log In
-                        </button>
+                <!-- Login Button-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 style="float:right; padding-right:20px;"><a href="signup.php" style="text-decoration:none; font-size: 14px;">New? Register Here</a></h3>
+                    </div>
+                    <div class="col-md-offset-7">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" name="login" id="btn-register">
+                                <span class="glyphicon glyphicon-log-in"></span> &nbsp; Log In
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </form>
+            </form>
 
-        </fieldset>
+            </fieldset>
 
-    </div><!-- /.container.mainContent -->
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN CONTENT -->
 
 

@@ -16,7 +16,7 @@ session_start();
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
@@ -72,30 +72,45 @@ session_start();
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
-                    <!-- Login Button -->
-                    <li class="navbar-btn"><a href="login.php">Login</a></li>
+
+                    <?php
+
+                    if ( !isset($_SESSION['userEmail']) ) {
+                        echo "<!-- Sign Up Button -->
+<li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
+<!-- Log In Button -->
+<li class='navbar-btn'><a class='login-btn' href='login.php'>Log In</a></li>";
+                    } else {
+                        echo "<!-- Log Out Button -->
+<li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
+                    }
+
+                    ?>
+
                 </ul>
+
             </div><!-- /.navbar-collapse -->
+
         </div><!-- /.container -->
     </nav>
     <!-- END OF NAVBAR -->
 
 
     <!-- MAIN CONTENT -->
-    <div class="container mainContent">
+    <div class="mainContent">
+        <div class="container main">
 
-        <!-- Page Title -->
-        <h2>News</h2>
-        <hr />
+            <!-- Page Title -->
+            <h2>News</h2>
+            <hr />
 
-        <!-- Columns are always 50% wide, on mobile and desktop -->
-        <div class="row">
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
 
-        </div><!-- /.row -->
+            </div><!-- /.row -->
 
-    </div><!-- /.container.mainContent -->
+        </div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN CONTENT -->
 
 

@@ -16,7 +16,7 @@ session_start();
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
@@ -72,11 +72,23 @@ session_start();
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
-                    <!-- Login Button -->
-                    <li class="navbar-btn"><a href="login.php">Login</a></li>
+
+                    <?php
+
+                    if ( !isset($_SESSION['userEmail']) ) {
+                        echo "<!-- Sign Up Button -->
+<li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
+<!-- Log In Button -->
+<li class='navbar-btn'><a class='login-btn' href='login.php'>Log In</a></li>";
+                    } else {
+                        echo "<!-- Log Out Button -->
+<li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
+                    }
+
+                    ?>
+
                 </ul>
+
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
@@ -93,39 +105,41 @@ session_start();
     ?>
 
     <!-- MAIN CONTENT -->
-    <div class="container mainContent">
-        <div class="row">
+    <div class="mainContent">
+        <div class="container main">
+            <div class="row">
 
-            <?php include 'shop_panel.php'; ?>
+                <?php include 'shop_panel.php'; ?>
 
-            <!-- Page Title -->
-            <h2>Shop</h2>
-            <hr />
+                <!-- Page Title -->
+                <h2>Shop</h2>
+                <hr />
 
-            <!-- Shop Area -->
-            <div class="col-md-9">
-                <div class="row">
+                <!-- Shop Area -->
+                <div class="col-md-9">
+                    <div class="row">
 
-                <?php foreach ($results as $row): ?>
-                    <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                            <a href="#">
-                                <img src="<?php echo $row['productImage']; ?>">
-                            </a>
-                            <div class="caption">
-                                <h3><?php echo $row['productName']; ?></h3>
-                                <p><?php echo $row['productShortDescription']; ?></p>
-                                <p><a href="#" class="btn btn-primary" role="button">View</a></p>
-                            </div><!-- /.caption -->
-                        </div><!-- /.thumbnail -->
-                    </div><!-- /.col-xs-6.col-md-3 -->
-                <?php endforeach; ?>
+                    <?php foreach ($results as $row): ?>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="<?php echo $row['productImage']; ?>">
+                                </a>
+                                <div class="caption">
+                                    <h3><?php echo $row['productName']; ?></h3>
+                                    <p><?php echo $row['productShortDescription']; ?></p>
+                                    <p><a href="#" class="btn btn-primary" role="button">View</a></p>
+                                </div><!-- /.caption -->
+                            </div><!-- /.thumbnail -->
+                        </div><!-- /.col-xs-6.col-md-3 -->
+                    <?php endforeach; ?>
 
-                </div><!-- /.row -->
-            </div><!-- /.col-md-9 -->
+                    </div><!-- /.row -->
+                </div><!-- /.col-md-9 -->
 
-        </div><!-- /.row -->
-    </</div><!-- /.container.mainContent -->
+            </div><!-- /.row -->
+        </</div><!-- /.container.main -->
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN -->
 
 

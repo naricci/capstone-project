@@ -18,13 +18,13 @@ $feedback = '';
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="css/contactus.css" rel="stylesheet" type="text/css" />
-    <link href="css/login.css" rel="stylesheet" type="text/css" />
+<!--    <link href="css/login.css" rel="stylesheet" type="text/css" />-->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -76,10 +76,21 @@ $feedback = '';
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Sign Up Button -->
-                    <li class="navbar-btn"><a href="signup.php">Sign Up</a></li>
-                    <!-- Login Button -->
-                    <li class="navbar-btn"><a href="login.php">Login</a></li>
+
+                    <?php
+
+                    if ( !isset($_SESSION['userEmail']) ) {
+                        echo "<!-- Sign Up Button -->
+<li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
+<!-- Log In Button -->
+<li class='navbar-btn'><a class='login-btn' href='login.php'>Log In</a></li>";
+                    } else {
+                        echo "<!-- Log Out Button -->
+<li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
+                    }
+
+                    ?>
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
@@ -88,67 +99,69 @@ $feedback = '';
 
 
     <!-- MAIN CONTENT -->
-    <div class="container mainContent">
+    <div class="mainContent">
+        <div class="container main">
 
-        <!-- Page Title -->
-        <h2>Contact</h2>
-        <hr />
+            <!-- Page Title -->
+            <h2>Contact</h2>
+            <hr />
 
-        <!-- Columns are always 50% wide, on mobile and desktop -->
-        <div class="row">
-            <!-- Contact Form Div-->
-            <div class="col-md-4">
-				
-				<h4><b>Contact Us Form</b></h4>
-	  
-	 			<div>Fields marked with <span class="required_star"> * </span> are mandatory.</div>
-				<br />
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+                <!-- Contact Form Div-->
+                <div class="col-md-4">
 
-                <p id="feedback"><?php echo $feedback; ?></p>
+                    <p></p>
+                    <div>Fields marked with <span class="required_star"> * </span> are mandatory.</div>
+                    <br />
 
-				<!-- Contact Form -->
-                <form action="?" method="post"> <!-- id="contactus-form" onsubmit="return validate.check(this)" -->
-                    <div class="form-group">
-                        <label for="name" class="required">Full Name<span class="required_star"> * </span></label>
-                        <input type="text" class="form-control" id="name"  name="name" placeholder="Please enter your Full Name" maxlength="100" required />
-                    </div>
-<!--                    <div class="form-group">-->
-<!--                        <label for="phone">Phone Number</label>-->
-<!--                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Please enter your Phone Number" maxlength="10" />-->
-<!--                    </div>-->
-                    <div class="form-group">
-                        <label for="email" class="required">Email Address<span class="required_star"> * </span></label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your Email Address" maxlength="100" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="required">Message<span class="required_star"> * </span></label>
-                        <textarea type="text" style="height: 100px;" class="form-control" id="message" name="message" placeholder="Please enter your comments here..." required></textarea>
-                    </div>
-<!--					<div class="form-group antispammessage">-->
-<!--	  					To help prevent automated spam, please answer this question-->
-<!--	  					<br /><br />-->
-<!--				  		<div class="antispamquestion">-->
-<!--				   			<span class="required_star"> * </span>-->
-<!--				   			Using only numbers, what is 13 plus 7? &nbsp; -->
-<!--				   			<input type="text" name="antispam" id="antispam" maxlength="2000" style="width:30px" required />-->
-<!--				  		</div>-->
-<!--					</div>-->
-					<br />
-<!--                    <button type="submit" class="btn btn-danger">Send Message</button>-->
-<!--                        <input type="hidden" name="submit" />-->
-                        <input class="btn btn-danger" type="submit" name="submit" value="Send Message" />
-                </form>
-            </div><!-- /.col-md-4 -->
+                    <p id="feedback"><?php echo $feedback; ?></p>
 
-            <!-- Photo on the right -->
-            <div class="col-md-8">
-                <img src="images/store/IMG_6651.JPG" alt="Bong on stairs" class="img-responsive img-thumbnail">
-                <br />
-                <img src="images/store/IMG_6656.JPG" alt="Jars in a case" class="img-responsive img-thumbnail">
-            </div><!-- /.col-md-8 -->
+                    <!-- Contact Form -->
+                    <form action="?" method="post"> <!-- id="contactus-form" onsubmit="return validate.check(this)" -->
+                        <div class="form-group">
+                            <label for="name" class="required">Full Name<span class="required_star"> * </span></label>
+                            <input type="text" class="form-control" id="name"  name="name" placeholder="Please enter your Full Name" maxlength="100" required />
+                        </div>
+    <!--                    <div class="form-group">-->
+    <!--                        <label for="phone">Phone Number</label>-->
+    <!--                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Please enter your Phone Number" maxlength="10" />-->
+    <!--                    </div>-->
+                        <div class="form-group">
+                            <label for="email" class="required">Email Address<span class="required_star"> * </span></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your Email Address" maxlength="100" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="required">Message<span class="required_star"> * </span></label>
+                            <textarea type="text" style="height: 100px;" class="form-control" id="message" name="message" placeholder="Please enter your comments here..." required></textarea>
+                        </div>
+    <!--					<div class="form-group antispammessage">-->
+    <!--	  					To help prevent automated spam, please answer this question-->
+    <!--	  					<br /><br />-->
+    <!--				  		<div class="antispamquestion">-->
+    <!--				   			<span class="required_star"> * </span>-->
+    <!--				   			Using only numbers, what is 13 plus 7? &nbsp; -->
+    <!--				   			<input type="text" name="antispam" id="antispam" maxlength="2000" style="width:30px" required />-->
+    <!--				  		</div>-->
+    <!--					</div>-->
+                        <br />
+    <!--                    <button type="submit" class="btn btn-danger">Send Message</button>-->
+    <!--                        <input type="hidden" name="submit" />-->
+                            <input class="btn btn-primary" type="submit" name="submit" value="Send Message" />
+                    </form>
+                </div><!-- /.col-md-4 -->
 
-        </div><!-- /.row -->
-    </div><!-- /.container.mainContent -->
+                <!-- Photo on the right -->
+                <div class="col-md-8">
+                    <img src="images/store/IMG_6651.JPG" alt="Bong on stairs" class="img-responsive img-thumbnail">
+                    <br />
+                    <img src="images/store/IMG_6656.JPG" alt="Jars in a case" class="img-responsive img-thumbnail">
+                </div><!-- /.col-md-8 -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container.main -->
+
+    </div><!-- /.mainContent -->
     <!-- END OF MAIN CONTENT -->
 
 
