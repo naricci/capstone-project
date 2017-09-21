@@ -16,7 +16,6 @@ session_start();
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
@@ -53,18 +52,6 @@ session_start();
                     <li class="navbar-btn"><a href="shop.php">SHOP</a></li>
                     <!-- Contact Us Button -->
                     <li class="navbar-btn"><a href="contact.php">CONTACT</a></li>
-                    <!-- Admin Button -->
-                    <li class="dropdown navbar-btn">
-                        <a href="admin/index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="admin/index.php">Admin Home Page</a></li>
-                            <li><a href="#">Create New Admin</a></li>
-                            <li><a href="#">Manage About Us Page</a></li>
-                            <li><a href="#">Manage News Posts</a></li>
-                            <li><a href="#">Update Shop Products</a></li>
-                            <li><a href="#">View Product Requests</a></li>
-                        </ul>
-                    </li>
 
                     <!-- Social Media Icons -->
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
@@ -156,10 +143,10 @@ session_start();
 
 
     <!-- FOOTER -->
-    <?php include 'templates/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 
     <!-- JS LINKS -->
-    <?php include "templates/js_links.php"; ?>
+    <?php include "includes/js_links.php"; ?>
 
 </body>
 </html>

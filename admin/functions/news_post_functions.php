@@ -11,6 +11,7 @@
  */
 function addNewsPost($postTitle, $postWriter, $postContent, $postImageName/*, $postAdminID*/) {
     $result = false;
+    //$target = 'uploads/news_posts/';
 
     $db = getDatabase();
 
@@ -23,6 +24,18 @@ function addNewsPost($postTitle, $postWriter, $postContent, $postImageName/*, $p
         ":postImageName" => $postImageName/*,
         ":postAdminID" => $postAdminID*/
     );
+
+//    // Writes the photo to the server
+//    if ( move_uploaded_file($_FILES['postImageName']['tmp_name'], $target) ) {
+//
+//        // Tells you if its all ok
+//        echo "The file ". basename( $_FILES['uploadedfile']['name']). " has been uploaded, and your information has been added to the directory";
+//
+//    } else {
+//
+//        // Gives and error if its not
+//        echo "Sorry, there was a problem uploading your file.";
+//    }
 
     if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
         $result = true;    // Look into this!

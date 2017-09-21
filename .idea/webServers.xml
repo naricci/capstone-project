@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="735f4238-6451-48d8-afc3-67a574cd583e" name="XAMPP Apache (project level)" url="http://localhost">
-        <fileTransfer port="0" mountedRoot="J:\xampp\htdocs" accessType="MOUNT" />
+        <fileTransfer port="0" mountedRoot="E:\xampp\htdocs" accessType="MOUNT" />
       </webServer>
     </option>
   </component>

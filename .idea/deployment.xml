@@ -2,24 +2,10 @@
 <project version="4">
   <component name="PublishConfigData" serverName="XAMPP Apache (project level)">
     <serverData>
-      <paths name="XAMPP Apache">
-        <serverdata>
-          <mappings>
-            <mapping deploy="http://localhost/capstone-project" local="$PROJECT_DIR$" web="/capstone-project" />
-          </mappings>
-        </serverdata>
-      </paths>
       <paths name="XAMPP Apache (project level)">
         <serverdata>
           <mappings>
-            <mapping deploy="capstone-project" local="$PROJECT_DIR$" web="/capstone-project" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="ict.neit.edu">
-        <serverdata>
-          <mappings>
-            <mapping deploy="sftp://ict.neit.edu/001405200/public_html/capstone-project" local="$PROJECT_DIR$" web="/001405200/public_html/capstone-project" />
+            <mapping deploy="capstone" local="$PROJECT_DIR$" web="/capstone" />
           </mappings>
         </serverdata>
       </paths>

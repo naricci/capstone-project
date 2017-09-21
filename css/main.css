@@ -28,6 +28,12 @@ body {
 }
 
 
+/*.btn.btn-primary {*/
+    /*background-color: #34AFA8;*/
+    /*color: white;*/
+/*}*/
+
+
 /****************** Navigation Bar ******************/
 nav {
     font-family: 'Roboto', sans-serif;
@@ -110,6 +116,7 @@ nav {
 
 /****************** Home Page Carousel ******************/
 #myCarousel {
+    color: #000000;
     margin-bottom: 1em;
 }
 
@@ -151,6 +158,12 @@ nav {
 
 .img-circle {
     border: 4px solid #800080;
+}
+
+.btn.btn-secondary.details-btn {
+    background-color: #800080;
+    /*border: 3px solid #34AFA8;*/
+    color: whitesmoke;
 }
 
 

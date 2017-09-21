@@ -30,6 +30,25 @@ function viewAllProducts() {
 
 
 /**
+ * Retrieves ALL ROWS from newsposts Table
+ *
+ * @return array
+ */
+function viewAllNewsPosts() {
+    $db = getDatabase();
+
+    $stmt = $db->prepare("SELECT * FROM newsposts");
+
+    $results = array();
+    if ($stmt->execute() && $stmt->rowCount() > 0) {
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    return $results;
+}
+
+
+/**
  * Function that checks if a user is currently logged in
  *
  * @return bool

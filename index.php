@@ -25,7 +25,6 @@ include 'functions/functions.php';
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
@@ -200,23 +199,23 @@ include 'functions/functions.php';
                     <img class="img-circle" src="images/logos/logo-keppel.png" alt="Shop Logo" width="140" height="140">
                     <h2>About Us</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                    <p><a class="btn btn-secondary" href="aboutus.php" role="button">View details »</a></p>
+                    <p><a class="btn btn-secondary details-btn" href="aboutus.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
 
                 <!-- GALLERY -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/store/image2.JPG" alt="Pipes" width="140" height="140">
+                    <img class="img-circle" src="images/products/IMG_6607.JPG" alt="Glow in the dark pipe" width="140" height="140">
                     <h2>Gallery</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                    <p><a class="btn btn-secondary" href="gallery.php" role="button">View details »</a></p>
+                    <p><a class="btn btn-secondary details-btn" href="gallery.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
 
                 <!-- NEWS -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/newspaper.png" alt="Generic placeholder image" width="140" height="140">
+                    <img class="img-circle" src="images/newspaper.png" alt="Newspaper" width="140" height="140">
                     <h2>News</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                    <p><a class="btn btn-secondary" href="news.php" role="button">View details »</a></p>
+                    <p><a class="btn btn-secondary details-btn" href="news.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
@@ -225,10 +224,10 @@ include 'functions/functions.php';
 
                 <!-- SHOP -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/products/IMG_6607.JPG" alt="Glow in the dark pipe" width="140" height="140">
+                    <img class="img-circle" src="images/store/IMG_6651.JPG" alt="Row of Pipes" width="140" height="140">
                     <h2>Shop</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                    <p><a class="btn btn-secondary" href="shop.php" role="button">View details »</a></p>
+                    <p><a class="btn btn-secondary details-btn" href="shop.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
 
                 <!-- DIRECTIONS -->
@@ -236,15 +235,15 @@ include 'functions/functions.php';
                     <img class="img-circle" src="images/map.png" alt="Map of Main Street" width="140" height="140">
                     <h2>Directions</h2>
                     <p>We are a located on the 2nd floor of 58 Main Street in the heart of East Greenwich, RI.  Click here for a map, directions and store hours.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                    <p><a class="btn btn-secondary details-btn" href="#" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
 
                 <!-- CONTACT US -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/form-icon.png" alt="Generic placeholder image" width="140" height="140">
+                    <img class="img-circle" src="images/form-icon.png" alt="Form" width="140" height="140">
                     <h2>Contact Us</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
-                    <p><a class="btn btn-secondary" href="contact.php" role="button">View details »</a></p>
+                    <p><a class="btn btn-secondary details-btn" href="contact.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
 
             </div><!-- /.row -->
@@ -257,35 +256,11 @@ include 'functions/functions.php';
 
 
     <!-- FOOTER -->
-    <footer class="navbar-static-bottom navbar-inverse">
-        <div class="container">
-            <div class="row">
-                <ul class="nav navbar-nav navbar-left">
-                    <p class="copyrightText"><i>© 2017 The Stoop.</i></p>
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right"><!--style="padding-right: 10px;"-->
-                    <!-- Page Links -->
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="aboutus.php">About Us</a></li>
-                    <li><a href="gallery.php">Gallery</a></li>
-                    <li><a href="news.php">News</a></li>
-                    <li><a href="shop.php">Shop</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="signup.php">Sign Up</a></li>
-                </ul>
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </footer>
-    <!-- END OF FOOTER -->
+    <?php include("includes/footer.php"); ?>
 
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Popper.js -->
-    <script src="bower_components/popper.js/dist/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- JS LINKS -->
+    <?php include("includes/js_links.php"); ?>
     <script src="js/holder.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 

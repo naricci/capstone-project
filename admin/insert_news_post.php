@@ -1,10 +1,10 @@
 <?php
 
-session_start();
-
-if ( !isset($_SESSION['adminEmail']) ) {
-    header("Location : login.php");
-}
+//session_start();
+//
+//if ( !isset($_SESSION['adminEmail']) ) {
+//    header("Location : login.php");
+//}
 
 include 'includes/dbconnect.php';
 include 'functions/utilities.php';
@@ -16,11 +16,17 @@ $success = '';
 
 if ( isPostRequest() ) {
 
+    // Directory where images will be saved
+    $target = "uploads/news_posts/";
+    $target = $target . basename( $_FILES['postImageName']['name']);
+
+    // Grabs the data from the form
     $postTitle = filter_input(INPUT_POST, 'postTitle');
     $postWriter = filter_input(INPUT_POST, 'postWriter');
     //$postDate = filter_input(INPUT_POST, 'postDate');
     $postContent = filter_input(INPUT_POST, 'postContent');
-    $postImageName = filter_input(INPUT_POST, 'postImageName');
+    //$postImageName = filter_input(INPUT_POST, 'postImageName');
+    $postImageName = ($_FILES['postImageName']['name']);
     //$postAdminID = filter_input(INPUT_POST, 'postAdminID');
 
     // Simple form validation
@@ -37,15 +43,27 @@ if ( isPostRequest() ) {
         $errors .= "Please add an Image to the news post.<br />";
     }
     // Image Upload
-    $file_name = date("Y-m-d-H-i-s").sha1($_FILES['postImageName']['name']);
-    $destination = "product_images/" . $file_name;
-    $postImageName = $_FILES['postImageName']['image_tmp_name'];
+//    $file_name = date("Y-m-d-H-i-s").sha1($_FILES['postImageName']['name']);
+//    $destination = "product_images/" . $file_name;
+//    $postImageName = $_FILES['postImageName']['image_tmp_name'];
 
-    if ( move_uploaded_file($postImageName, $destination) ) {
+//    if ( move_uploaded_file($postImageName, $destination) ) {
 
         $confirm = addNewsPost($postTitle, $postWriter, $postContent, $postImageName/*, $postAdminID*/);
 
         if ( $confirm === false ) {
+
+            // Writes the photo to the server
+            if ( move_uploaded_file($_FILES['postImageName']['tmp_name'], $target) ) {
+
+                // Tells you if its all ok
+                echo "The file ". basename( $_FILES['uploadedfile']['name']). " has been uploaded, and your information has been added to the directory";
+
+            } else {
+
+                // Gives and error if its not
+                echo "Sorry, there was a problem uploading your file.";
+            }
 
             $results = 'News Post Added Successfully.';
 
@@ -53,7 +71,7 @@ if ( isPostRequest() ) {
 
             $results = 'News Post NOT Added!';
         }
-    }
+//    }
 
 }
 
@@ -71,7 +89,6 @@ if ( isPostRequest() ) {
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-<!--    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
@@ -109,7 +126,7 @@ if ( isPostRequest() ) {
                         <!-- Confirm whether product data was added or not -->
                         <h3><?php echo $results; ?></h3>
 
-                        <form action="#" method="post">
+                        <form action="#" method="post" enctype="multipart/form-data">
                             <table align="center" width="1000" class="table table-responsive">
 
                                 <tr class="form-group">
@@ -129,7 +146,10 @@ if ( isPostRequest() ) {
 
                                 <tr>
                                     <td align="left"><b>Post Image:</b></td>
-                                    <td><input type="file" name="postImageName" maxlength="100"></td>
+                                    <td>
+                                        <input type="hidden" name="size" value="350000" />
+                                        <input type="file" name="postImageName" maxlength="100">
+                                    </td>
                                 </tr>
 
                                 <tr align="right">
