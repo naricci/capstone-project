@@ -9,20 +9,19 @@
  *
  * @return Boolean
  */
-function addNewsPost($postTitle, $postWriter, $postContent, $postImageName/*, $postAdminID*/) {
+function addNewsPost($postTitle, $postWriter, $postContent, $postImageName) {
     $result = false;
     //$target = 'uploads/news_posts/';
 
     $db = getDatabase();
 
-    $stmt = $db->prepare("INSERT INTO newsposts SET postTitle = :postTitle, postWriter = :postWriter, postDate = NOW(), postContent = :postContent, postImageName = :postImageName/*, postAdminID = :postAdminID*/");
+    $stmt = $db->prepare("INSERT INTO newsposts SET postTitle = :postTitle, postWriter = :postWriter, postDate = NOW(), postContent = :postContent, postImageName = :postImageName");
 
     $binds = array(
         ":postTitle" => $postTitle,
         ":postWriter" => $postWriter,
         ":postContent" => $postContent,
-        ":postImageName" => $postImageName/*,
-        ":postAdminID" => $postAdminID*/
+        ":postImageName" => $postImageName
     );
 
 //    // Writes the photo to the server

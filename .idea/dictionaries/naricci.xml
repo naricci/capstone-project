@@ -9,6 +9,8 @@
       <w>dbconfig</w>
       <w>dbconnect</w>
       <w>dbname</w>
+      <w>exts</w>
+      <w>finfo</w>
       <w>freecontactformheader</w>
       <w>freecontactformmessage</w>
       <w>freecontactformvalidation</w>

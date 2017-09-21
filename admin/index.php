@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 //
 //if ( !isset($_SESSION['adminEmail']) ) {
 //    header("Location : login.php");
@@ -16,7 +16,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Home Page</title>
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto|Lato" rel="stylesheet" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
@@ -59,11 +59,8 @@ session_start();
     <!-- FOOTER -->
     <?php include 'templates/footer.php'; ?>
 
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Popper.js -->
-    <script src="../bower_components/popper.js/dist/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- JS LINK -->
+<?php include 'includes/js_links.php'; ?>
+
 </body>
 </html>
