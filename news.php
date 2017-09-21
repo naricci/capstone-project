@@ -111,7 +111,7 @@
                     <div class="media">
                             <div class="media-left media-top">
                                 <a href="#">
-                                    <img class="media-object" src="<?php echo $row['postImageName']; ?>" alt="...">
+                                    <img class="media-object" src="/admin/uploads/news_posts/<?php echo $row['postImageName']; ?>" alt="...">
                                 </a>
                             </div>
                             <div class="media-body">
