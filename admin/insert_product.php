@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if ( !isset($_SESSION['adminEmail']) ) {
+    header("Location : login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +45,7 @@
 
     $results = '';
 
-    if (isPostRequest()) {
+    if ( isPostRequest() ) {
 
         $productName = filter_input(INPUT_POST, 'productName');
         $productPrice = filter_input(INPUT_POST, 'productPrice');

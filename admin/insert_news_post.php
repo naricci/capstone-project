@@ -1,6 +1,10 @@
 <?php
 
-// session_start();    // uncomment once admin sign in is finished...
+session_start();
+
+if ( !isset($_SESSION['adminEmail']) ) {
+    header("Location : login.php");
+}
 
 include 'includes/dbconnect.php';
 include 'functions/utilities.php';
@@ -96,13 +100,6 @@ if ( isPostRequest() ) {
                     <div class="page-header">
                         <h1>Admin Area <small class="text-primary">Insert News Post</small></h1>
                     </div>
-
-                    <!-- Dismissible Alert -->
-    <!--                <div class="alert alert-warning alert-dismissible" role="alert">-->
-    <!--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
-    <!--                        <span aria-hidden="true">&times;</span>-->
-    <!--                    </button>-->
-    <!--                </div>-->
 
                     <fieldset>
 

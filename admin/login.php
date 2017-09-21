@@ -42,6 +42,8 @@ if ( isset($_POST['login']) ) {
             $_SESSION['adminFirstName'] = $adminData['adminFirstName'];
             $_SESSION['adminLastName'] = $adminData['adminLastName'];
 
+            var_dump($_SESSION);
+
             header("Location: index.php");
 
         } else {
@@ -93,15 +95,11 @@ if ( isset($_POST['login']) ) {
 
                 <!-- Main Admin Area -->
                 <div class="col-md-9">
-<!--                    <h1 align="center">Admin Home <small class="text-primary">Log In</small></h1>-->
-<!--                    <hr />-->
-
-                    <!-- Welcome message for currently logged in Admin -->
-<!--                    <p align="center" class="text-primary">Welcome <small class="text-primary">--><?php ////$SESSION['adminFirstName']; ?><!--</small>!</p>-->
+                <br />
 
                     <!-- Login Form -->
                     <fieldset>
-                        <legend>Admin Log In <small class="text-primary"> Welcome <?php //$SESSION['adminFirstName']; ?></small>!</legend>
+                        <legend>Admin Log In</legend>
 
                         <?php
 
