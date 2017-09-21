@@ -100,10 +100,10 @@ if ( isPostRequest() && count($_FILES) ) {
         // Check MIME Type by yourself.
         $finfo = new finfo(FILEINFO_MIME_TYPE);
         $validExts = array(
-                        'jpg' => 'image/jpg',
-                        'png' => 'image/png',
-                        'gif' => 'image/gif'
-                    );
+            'jpg' => 'image/jpg',
+            'png' => 'image/png',
+            'gif' => 'image/gif'
+        );
         $ext = array_search( $finfo->file($_FILES['postImageName']['tmp_name']), $validExts, true );
 
         if ( false === $ext ) {
@@ -348,7 +348,7 @@ if ( isPostRequest() && count($_FILES) ) {
                                     <td align="left"><b>Post Image:</b></td>
                                     <td>
                                         <input type="hidden" name="size" value="50000000" />
-                                        <input type="file" name="postImageName" maxlength="100">
+                                        <input type="file" name="postImageName">
                                     </td>
                                 </tr>
 
