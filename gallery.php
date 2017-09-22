@@ -91,39 +91,39 @@ session_start();
 
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/store/IMG_6651.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/green-pipe.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/store/IMG_6656.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/pig-jar.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/categories/IMG_6602.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/blue-purple-bubbler.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6597.JPG">
-                </div>
-            </div>
-            <br />
-
-            <div class="row">
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6620.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6625.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/stairs/IMG_6628.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/spoon.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/lobster-claw.JPG">
                 </div>
             </div>
             <br />
 
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6530.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/bug-spoon.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/deadhead-spoon.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/TS1.jpg">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/the-shop.JPG">
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="images/products/eyeball-bong.JPG">
                 </div>
                 <div class="col-md-3">
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6537.JPG">
@@ -132,16 +132,16 @@ session_start();
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6545.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6552.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/glow-in-the-dark-pipe.JPG">
                 </div>
             </div>
             <br />
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6556.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/grinders.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6564.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/the-potatoe-heads.JPG">
                 </div>
                 <div class="col-md-3">
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6566.JPG">
@@ -157,7 +157,7 @@ session_start();
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6571.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6586.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6649.JPG">
                 </div>
                 <div class="col-md-3">
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6597.JPG">
@@ -169,7 +169,7 @@ session_start();
             <br />
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6607.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/products/coral-bong.JPG">
                 </div>
                 <div class="col-md-3">
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6619.JPG">
@@ -191,7 +191,7 @@ session_start();
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6670.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6675.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/stairs/lobster-claw-outside.JPG">
                 </div>
                 <div class="col-md-3">
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6726.JPG">
@@ -204,7 +204,7 @@ session_start();
                     <img class="img-responsive img-thumbnail" src="images/products/IMG_6730.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6733.JPG">
+                    <img class="img-responsive img-thumbnail" src="images/stairs/group-of-water-pipes.JPG">
                 </div>
             </div>
 

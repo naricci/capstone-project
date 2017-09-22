@@ -111,7 +111,7 @@ include 'functions/functions.php';
                 <div class="carousel-inner">
 
                     <div class="item active">
-                        <img class="img-responsive" src="images/products/IMG_6566.JPG" alt="Glow in the dark pipe">
+                        <img class="img-responsive" src="images/products/glow-in-the-dark-pipe.JPG" alt="Glow in the dark pipe">
                         <div class="container">
                             <div class="carousel-caption d-none d-md-block text-left">
                                 <h1>Welcome to The Stoop!</h1>
@@ -126,27 +126,35 @@ include 'functions/functions.php';
                     </div>
 
                     <div class="item">
-                        <img class="img-responsive" src="images/categories/IMG_6602.JPG" alt="Water Pipes on Steps">
-                        <div class="container">
-                            <div class="carousel-caption d-none d-md-block text-left">
-                                <h1>Check out our newest products on the Shop Page!</h1>
-                                <p>
-                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>
-                                </p>
-                            </div>
-                        </div>
+                        <img class="img-responsive" src="images/stairs/group-of-water-pipes.JPG" alt="Water Pipes on Steps">
+<!--                        <div class="container">-->
+<!--                            <div class="carousel-caption d-none d-md-block text-left">-->
+<!--                                <h1>Check out our newest products on the Shop Page!</h1>-->
+<!--                                <p>-->
+<!--                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
 
                     <div class="item">
-                        <img class="img-responsive" src="images/products/IMG_6556.JPG" alt="Two Eye Bowls">
+                        <img class="img-responsive" src="images/products/case-of-bowls2.JPG" alt="Case of Merch">
                     </div>
 
                     <div class="item">
-                        <img class="img-responsive" src="images/stairs/IMG_6628.JPG" alt="Lobster Claw">
+                        <img class="img-responsive" src="images/products/coral-bong.JPG" alt="Coral Pipe">
+<!--                        <div class="container">-->
+<!--                            <div class="carousel-caption d-none d-md-block text-right">-->
+<!--                                <h1 style="color: black;">Check out our newest products on the Shop Page!</h1>-->
+<!--                                <p>-->
+<!--                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
 
                     <div class="item">
-                        <img class="img-responsive" src="images/stairs/IMG_6620.JPG" alt="Mr. & Mr.s Potato Head Jars">
+                        <img class="img-responsive" src="images/products/the-potatoe-heads.JPG" alt="Mr. & Mr.s Potato Head Jars">
                     </div>
                 </div>
 
@@ -204,7 +212,7 @@ include 'functions/functions.php';
 
                 <!-- GALLERY -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/products/IMG_6607.JPG" alt="Glow in the dark pipe" width="140" height="140">
+                    <img class="img-circle" src="images/products/eyeball-bowls.JPG" alt="Glow in the dark pipe" width="140" height="140">
                     <h2>Gallery</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="gallery.php" role="button">View details »</a></p>
@@ -224,7 +232,7 @@ include 'functions/functions.php';
 
                 <!-- SHOP -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/store/IMG_6651.JPG" alt="Row of Pipes" width="140" height="140">
+                    <img class="img-circle" src="images/store/shelf2-more-bongs.JPG" alt="Row of Pipes" width="140" height="140">
                     <h2>Shop</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="shop.php" role="button">View details »</a></p>
