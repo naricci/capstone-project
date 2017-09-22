@@ -167,6 +167,19 @@ nav {
 }
 
 
+/****************** Side Panels *****************/
+.panel-success {
+    border: 2px solid #222;
+}
+
+.panel-success .panel-heading {
+    background-color: #0F0F0F;
+    background-image: linear-gradient(to bottom,#777 0,#333 100%);
+    border-color: #222;
+    color: white;
+}
+
+
 /****************** Footer ******************/
 footer {
     border-top: 5px solid #000000;

@@ -3,7 +3,6 @@
 //session_start();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,6 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-<!--    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Normalize CSS -->
     <link href="bower_components/normalize-css/normalize.css" rel="stylesheet" />
@@ -109,37 +107,26 @@
                     <?php foreach ($results as $row): ?>
                     <!-- News Post -->
                     <div class="media">
-                            <div class="media-left media-top">
-                                <a href="#">
-                                    <img class="media-object" src="/admin/uploads/news_posts/<?php echo $row['postImageName']; ?>" alt="...">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><?php echo $row['postTitle']; ?></h4>
-                                <p>Author: <?php echo $row['postWriter']; ?></p>
-                                <small>Date: <?php echo $row['postDate']; ?></small>
-                                <p><?php echo $row['postContent']; ?></p>
-                            </div>
+                        <!-- Media Top / Image -->
+                        <div class="media-left media-top">
+                            <a href="#">
+                                <img class="media-object" src="<?php echo 'admin/uploads/news_posts/' . $row['postImageName'] . '.' . $row['postImageExt']; ?>" alt="<?php echo $row['postTitle']; ?>" width="140" height="140">
+                            </a>
+                        </div>
+                        <!-- Media Body -->
+                        <div class="media-body">
+                            <h4 class="media-heading"><?php echo $row['postTitle']; ?></h4>
+                            <p>Author: <?php echo $row['postWriter']; ?></p>
+                            <small>Date: <?php echo $row['postDate']; ?></small>
+                            <p><?php echo $row['postContent']; ?></p>
+                        </div>
                     </div><!-- /.media -->
+                    <hr />
 
                     <?php endforeach; ?>
 
                 </div><!-- /.container -->
             </div><!-- /.row -->
-
-            <div class="media">
-                <div class="media-left media-top">
-                    <a href="#">
-                        <img class="media-object" src="<?php echo $row['postImageName']; ?>" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><?php echo $row['postTitle']; ?></h4>
-                    <p>Author: <?php echo $row['postWriter']; ?></p>
-                    <small>Date: <?php echo $row['postDate']; ?></small>
-                    <p><?php echo $row['postContent']; ?></p>
-                </div>
-            </div>
 
         </div><!-- /.container.main -->
     </div><!-- /.mainContent -->

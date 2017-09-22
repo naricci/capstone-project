@@ -9,44 +9,10 @@
 include 'includes/dbconnect.php';
 include 'functions/utilities.php';
 include 'functions/news_post_functions.php';
-// include 'functions/upload_function.php';
 
 $errors = '';
 $results = '';
 $success = '';
-
-//if ( isPostRequest() ) {
-//
-//    // Grabs the data from the form
-//    $postTitle = filter_input(INPUT_POST, 'postTitle');
-//    $postWriter = filter_input(INPUT_POST, 'postWriter');
-//    $postContent = filter_input(INPUT_POST, 'postContent');
-//    // $postImageName = filter_input(INPUT_POST, 'postImageName');
-//    $postImageName = ($_FILES['postImageName']['name']);
-//
-//    // Simple form validation
-//    if ( empty($postTitle) ) {
-//        $errors .= "Please fill in a Title for the news post.<br />";
-//    }
-//    if ( empty($postWriter) ) {
-//        $errors .= "Please add a Writer for the news post.<br />";
-//    }
-//    if ( empty($postContent) ) {
-//        $errors .= "Please add some Content to the news post.<br />";
-//    }
-//    if ( empty($postImageName) ) {
-//        $errors .= "Please add an Image to the news post.<br />";
-//    }
-//
-//    // Calls function to add News Post form data to Database
-//    $confirm = addNewsPost($postTitle, $postWriter, $postContent, $postImageName);
-//
-//    if ( $confirm === true ) {
-//        $results = 'News Post Added Successfully.';
-//    } else {
-//        $results = 'News Post NOT Added!';
-//    }
-//}
 
 if ( isPostRequest() && count($_FILES) ) {
 
@@ -59,16 +25,16 @@ if ( isPostRequest() && count($_FILES) ) {
         $postImageName = ($_FILES['postImageName']['name']);
 
         // Simple form validation
-        if ( empty($postTitle) ) {
+        if ( empty($postTitle || !isset($postTitle)) ) {
             $errors .= "Please fill in a Title for the news post.<br />";
         }
-        if ( empty($postWriter) ) {
+        if ( empty($postWriter || !isset($postWriter)) ) {
             $errors .= "Please add a Writer for the news post.<br />";
         }
-        if ( empty($postContent) ) {
+        if ( empty($postContent || !isset($postContent)) ) {
             $errors .= "Please add some Content to the news post.<br />";
         }
-        if ( empty($postImageName) ) {
+        if ( empty($postImageName || !isset($postImageName)) ) {
             $errors .= "Please add an Image to the news post.<br />";
         }
 
@@ -91,15 +57,16 @@ if ( isPostRequest() && count($_FILES) ) {
                 throw new RuntimeException('Unknown errors.');
         }
 
-        // You should also check file size here.
-//        if ( $_FILES['postImageName']['size'] > 50000000 ) {      // 50 Megabytes
-//            throw new RuntimeException('Exceeded file size limit.');
-//        }
+         // You should also check file size here.
+        if ( $_FILES['postImageName']['size'] > 50000000 ) {      // 50 Megabytes
+            throw new RuntimeException('Exceeded file size limit.');
+        }
 
         // DO NOT TRUST $_FILES['postImageName']['mime'] VALUE !!
         // Check MIME Type by yourself.
         $finfo = new finfo(FILEINFO_MIME_TYPE);
         $validExts = array(
+            'jpg' => 'image/jpeg',
             'jpg' => 'image/jpg',
             'png' => 'image/png',
             'gif' => 'image/gif'
@@ -125,7 +92,7 @@ if ( isPostRequest() && count($_FILES) ) {
         }
 
         // Calls function to add News Post form data to Database
-        $confirm = addNewsPost($postTitle, $postWriter, $postContent, $postImageName);
+        $confirm = addNewsPost($postTitle, $postWriter, $postContent, $postImageName, $ext);
 
         if ( $confirm === true ) {
             $results = 'News Post Added Successfully.';
@@ -163,78 +130,8 @@ if ( isPostRequest() && count($_FILES) ) {
 </head>
 <body>
     <!-- NAVBAR -->
-    <?php include 'templates/navbar.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
-
-    <?php
-
-//    if ( count($_FILES) ) {
-//        try {
-//
-//            // Undefined | Multiple Files | $_FILES Corruption Attack
-//            // If this request falls under any of them, treat it invalid.
-//            if ( !isset($_FILES['postImageName']['error']) or is_array($_FILES['postImageName']['error']) ) {
-//                throw new RuntimeException('Invalid Parameters');
-//            }
-//
-//            // Check $_FILES['postImageName']['error'] value.
-//            switch ( $_FILES['postImageName']['error'] ) {
-//                case UPLOAD_ERR_OK:
-//                    break;
-//                case UPLOAD_ERR_NO_FILE:
-//                    throw new RuntimeException('No file sent.');
-//                case UPLOAD_ERR_INI_SIZE:
-//                case UPLOAD_ERR_FORM_SIZE:
-//                    throw new RuntimeException('Exceeded file size limit.');
-//                default:
-//                    throw new RuntimeException('Unknown errors.');
-//            }
-//
-//            // You should also check file size here.
-//            if ( $_FILES['postImageName']['size'] > 50000 ) {      // 50 Megabytes
-//                throw new RuntimeException('Exceeded file size limit.');
-//            }
-//
-//            // DO NOT TRUST $_FILES['postImageName']['mime'] VALUE !!
-//            // Check MIME Type by yourself.
-//            $finfo = new finfo(FILEINFO_MIME_TYPE);
-//            $validExts = array(
-//                            'jpg' => 'image/jpeg',
-//                            'png' => 'image/png',
-//                            'gif' => 'image/gif'
-//                        );
-//            $ext = array_search( $finfo->file($_FILES['postImageName']['tmp_name']), $validExts, true );
-//
-//
-//            if ( false === $ext ) {
-//                throw new RuntimeException('Invalid file format.  Images can only be jpg, png or gif format.');
-//            }
-//
-//            // You should name it uniquely.
-//            // DO NOT USE $_FILES['postImageName']['name'] WITHOUT ANY VALIDATION !!
-//            // On this example, obtain safe unique name from its binary data.
-//            $postImageName = sha1_file($_FILES['postImageName']['tmp_name']);
-//            $location = sprintf('uploads/news_posts/%s.%s', $postImageName, $ext);
-//
-//            if ( !is_dir('uploads/news_posts') ) {
-//                mkdir('uploads/news_posts');
-//            }
-//
-//            if ( !move_uploaded_file($_FILES['postImageName']['tmp_name'], $location) ) {
-//                throw new RuntimeException('Failed to move uploaded file.');
-//            }
-//
-//            echo 'File is uploaded successfully.';
-//
-//        } catch (RuntimeException $e) {
-//
-//            echo $e->getMessage();
-//        }
-//
-//        // echo '<p>Image ' . $fileName . ' Successfully Uploaded</p>';
-//    }
-
-    ?>
 
     <!-- MAIN CONTENT -->
     <div class="mainContent">
@@ -370,7 +267,7 @@ if ( isPostRequest() && count($_FILES) ) {
 
 
     <!-- FOOTER -->
-    <?php include 'templates/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 
     <!-- JS LINKS -->
     <?php include 'includes/js_links.php'; ?>

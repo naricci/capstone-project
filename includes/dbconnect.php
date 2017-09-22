@@ -20,7 +20,7 @@ function getDatabase() {
         /* If the connection fails we will close the
          * connection by setting the variable to null */
         $db = null;
-        $message = $ex->getMessage();
+        $message = $e->getMessage();
         include 'error.php';
         exit();
     }

@@ -2,14 +2,24 @@
 /**
  * Creates a new row at bottom of the products Table.
  *
+ * @param $productName
+ * @param $productPrice
+ * @param $productQuantity
+ * @param $productCategoryID
+ * @param $productShortDescription
+ * @param $productLongDescription
+ * @param $productImage
+ * @param $productImageExt
+ * @param $productArtist
+ *
  * @return Boolean
  */
-function addProduct($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productImage, $productArtist) {
+function addProduct($productName, $productPrice, $productQuantity, $productCategoryID, $productShortDescription, $productLongDescription, $productImage, $productImageExt, $productArtist) {
     $result = false;
 
     $db = getDatabase();
 
-    $stmt = $db->prepare("INSERT INTO products SET productName = :productName, productPrice = :productPrice, productQuantity = :productQuantity, productCategoryID = :productCategoryID, productShortDescription = :productShortDescription, productLongDescription = :productLongDescription, productImage = :productImage, productArtist = :productArtist");
+    $stmt = $db->prepare("INSERT INTO products SET productName = :productName, productPrice = :productPrice, productQuantity = :productQuantity, productCategoryID = :productCategoryID, productShortDescription = :productShortDescription, productLongDescription = :productLongDescription, productImage = :productImage, productImageExt = :productImageExt, productArtist = :productArtist");
 
     $binds = array(
         ":productName" => $productName,
@@ -19,11 +29,12 @@ function addProduct($productName, $productPrice, $productQuantity, $productCateg
         ":productShortDescription" => $productShortDescription,
         ":productLongDescription" => $productLongDescription,
         ":productImage" => $productImage,
+        ":productImageExt" => $productImageExt,
         ":productArtist" => $productArtist
     );
 
     if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
-        $result = true;    // was $result = true;
+        $result = true;
     }
 
     return $result;

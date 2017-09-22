@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 
 ?>
 
@@ -88,6 +88,8 @@ session_start();
     include 'includes/dbconnect.php';
     include 'functions/functions.php';
 
+    $artist_results = viewAllArtists();
+    $cat_results = viewAllCategories();
     $results = viewAllProducts();
 
     ?>
@@ -111,11 +113,11 @@ session_start();
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="<?php echo $row['productImage']; ?>">
+                                    <img src="<?php echo 'admin/uploads/products/' . $row['productImage'] . '.' . $row['productImageExt']; ?>" alt="<?php echo $row['productName']; ?>">
                                 </a>
                                 <div class="caption">
-                                    <h3><?php echo $row['productName']; ?></h3>
-                                    <p><?php echo $row['productShortDescription']; ?></p>
+                                    <h4><?php echo $row['productName']; ?></h4>
+                                    <p>$<?php echo $row['productPrice']; ?></p>
                                     <p><a href="#" class="btn btn-primary" role="button">View</a></p>
                                 </div><!-- /.caption -->
                             </div><!-- /.thumbnail -->
