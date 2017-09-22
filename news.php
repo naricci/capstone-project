@@ -104,7 +104,7 @@
             <div class="row">
                 <div class="container">
 
-                    <?php foreach ($results as $row): ?>
+                    <?php foreach ( array_reverse($results) as $row ): ?>
                     <!-- News Post -->
                     <div class="media">
                         <!-- Media Top / Image -->

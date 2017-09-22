@@ -67,7 +67,7 @@ if ( isPostRequest() && count($_FILES) ) {
         $finfo = new finfo(FILEINFO_MIME_TYPE);
         $validExts = array(
             'jpg' => 'image/jpeg',
-            'jpg' => 'image/jpg',
+//            'jpg' => 'image/jpg',
             'png' => 'image/png',
             'gif' => 'image/gif'
         );
@@ -112,7 +112,7 @@ if ( isPostRequest() && count($_FILES) ) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Insert New Product</title>
+    <title>Insert News Post</title>
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto" rel="stylesheet" />
     <!-- Font Awesome -->

@@ -110,10 +110,10 @@
                     <div class="row">
 
                     <?php foreach ($results as $row): ?>
-                        <div class="col-xs-6 col-md-3">
+                        <div class="col-xs-6 col-md-4">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="<?php echo 'admin/uploads/products/' . $row['productImage'] . '.' . $row['productImageExt']; ?>" alt="<?php echo $row['productName']; ?>" height="200" width="200">
+                                    <img src="<?php echo 'admin/uploads/products/' . $row['productImage'] . '.' . $row['productImageExt']; ?>" alt="<?php echo $row['productName']; ?>" height="20" width="250">
                                 </a>
                                 <div class="caption">
                                     <h4><?php echo $row['productName']; ?> <small>$<?php echo $row['productPrice']; ?></small></h4>
@@ -128,6 +128,8 @@
                 </div><!-- /.col-md-9 -->
 
             </div><!-- /.row -->
+            <br />
+            <br />
         </</div><!-- /.container.main -->
     </div><!-- /.mainContent -->
     <!-- END OF MAIN -->
