@@ -2,43 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5905f15-730d-4df7-a4e1-cce388fc5311" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/templates/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/templates/navbar.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/dbconnect.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/categories/IMG_6602.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6530.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6552.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6556.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6564.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6586.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6607.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6675.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/IMG_6733.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/products/spoon.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/stairs/IMG_6597.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/stairs/IMG_6620.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/stairs/IMG_6625.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/stairs/IMG_6628.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/store/IMG_6651.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/store/IMG_6656.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/store/image2.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/user/includes/db.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/6f46d61b-8cde-465e-9d0a-8bfbb316ae8a.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/6f46d61b-8cde-465e-9d0a-8bfbb316ae8a.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/naricci.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/naricci.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/functions/news_post_functions.php" afterPath="$PROJECT_DIR$/admin/functions/news_post_functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/functions/product_functions.php" afterPath="$PROJECT_DIR$/admin/functions/product_functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/functions/utilities.php" afterPath="$PROJECT_DIR$/admin/functions/utilities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/includes/dbconnect.php" afterPath="$PROJECT_DIR$/admin/includes/dbconnect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/includes/error.php" afterPath="$PROJECT_DIR$/admin/includes/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/insert_news_post.php" afterPath="$PROJECT_DIR$/admin/insert_news_post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/insert_product.php" afterPath="$PROJECT_DIR$/admin/insert_product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/functions.php" afterPath="$PROJECT_DIR$/functions/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/dbconnect.php" afterPath="$PROJECT_DIR$/includes/dbconnect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/error.php" afterPath="$PROJECT_DIR$/includes/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.php" afterPath="$PROJECT_DIR$/news.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/Capture.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bug-spoon.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/categories/group-of-water-pipes.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/coral-bong-red.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/lobster-claw-outside.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/the-potatoe-heads.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop.php" afterPath="$PROJECT_DIR$/shop.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop_panel.php" afterPath="$PROJECT_DIR$/shop_panel.php" />
     </list>
@@ -87,53 +56,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="insert_news_post.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/insert_news_post.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="83" column="75" lean-forward="false" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
-              <folding>
-                <element signature="e#7#25#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="insert_product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/insert_product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3784">
-              <caret line="171" column="32" lean-forward="true" selection-start-line="170" selection-start-column="0" selection-end-line="171" selection-end-column="32" />
-              <folding>
-                <element signature="e#7#25#0#PHP" expanded="true" />
-                <marker date="1506051968367" expanded="true" signature="7930:7954" ph="SELECT * FRO... categories" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8bb2f0d2a27a5685fa1aa84922afd438ff66f9e5.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/uploads/products/8bb2f0d2a27a5685fa1aa84922afd438ff66f9e5.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="381e88a97fe200c6eebf35cc98cc949cbb348c76.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/uploads/products/381e88a97fe200c6eebf35cc98cc949cbb348c76.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="a13df0ba6971e4390b3f259cc58cb999095e9dbb.JPG" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/uploads/products/a13df0ba6971e4390b3f259cc58cb999095e9dbb.JPG">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="news.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/news.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="349">
@@ -145,13 +68,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="insert_news_post.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/insert_news_post.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="94" column="81" lean-forward="false" selection-start-line="94" selection-start-column="81" selection-end-line="94" selection-end-column="81" />
+              <folding>
+                <element signature="e#7#25#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="shop.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="101" column="50" lean-forward="false" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
+            <state relative-caret-position="591">
+              <caret line="124" column="40" lean-forward="false" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
               <folding>
-                <marker date="1506050764889" expanded="true" signature="4739:4796" ph="..." />
+                <marker date="1506053017772" expanded="true" signature="4764:4821" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert_product.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/insert_product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1914">
+              <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+              <folding>
+                <element signature="e#7#25#0#PHP" expanded="true" />
+                <marker date="1506051968367" expanded="true" signature="7930:7954" ph="SELECT * FRO... categories" />
               </folding>
             </state>
           </provider>
@@ -221,13 +169,13 @@
         <option value="$PROJECT_DIR$/includes/error.php" />
         <option value="$PROJECT_DIR$/admin/includes/dbconnect.php" />
         <option value="$PROJECT_DIR$/admin/includes/error.php" />
-        <option value="$PROJECT_DIR$/shop_panel.php" />
         <option value="$PROJECT_DIR$/admin/insert_news_post.php" />
         <option value="$PROJECT_DIR$/admin/functions/news_post_functions.php" />
         <option value="$PROJECT_DIR$/news.php" />
-        <option value="$PROJECT_DIR$/shop.php" />
         <option value="$PROJECT_DIR$/admin/functions/product_functions.php" />
         <option value="$PROJECT_DIR$/admin/insert_product.php" />
+        <option value="$PROJECT_DIR$/shop.php" />
+        <option value="$PROJECT_DIR$/shop_panel.php" />
       </list>
     </option>
   </component>
@@ -540,12 +488,12 @@
       <workItem from="1505970702833" duration="2197000" />
       <workItem from="1505997954077" duration="478000" />
       <workItem from="1505998547524" duration="7166000" />
-      <workItem from="1506013523315" duration="31471000" />
+      <workItem from="1506013523315" duration="34157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293768000" />
+    <option name="totallyTimeSpent" value="296454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -568,7 +516,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24979524" sideWeight="0.49210733" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980111" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23568282" sideWeight="0.53441894" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23529412" sideWeight="0.53441894" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28337428" sideWeight="0.47434884" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.19660194" sideWeight="0.34911793" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -921,27 +869,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop_panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/uploads/news_posts/283677255d5436357d0d46fded45cdccb1c56102.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="112" column="197" lean-forward="false" selection-start-line="112" selection-start-column="63" selection-end-line="112" selection-end-column="197" />
-          <folding>
-            <marker date="1506050587800" expanded="true" signature="4691:4762" ph="..." />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/functions/product_functions.php">
@@ -975,26 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="101" column="50" lean-forward="false" selection-start-line="101" selection-start-column="50" selection-end-line="101" selection-end-column="50" />
-          <folding>
-            <marker date="1506050764889" expanded="true" signature="4739:4796" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/insert_news_post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="83" column="75" lean-forward="false" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
-          <folding>
-            <element signature="e#7#25#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/a5ae0ccb/6f46d61b-8cde-465e-9d0a-8bfbb316ae8a/thestoop.artists">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1020,18 +930,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/insert_product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3784">
-          <caret line="171" column="32" lean-forward="true" selection-start-line="170" selection-start-column="0" selection-end-line="171" selection-end-column="32" />
-          <folding>
-            <element signature="e#7#25#0#PHP" expanded="true" />
-            <marker date="1506051968367" expanded="true" signature="7930:7954" ph="SELECT * FRO... categories" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/admin/uploads/products/8bb2f0d2a27a5685fa1aa84922afd438ff66f9e5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/uploads/products/8bb2f0d2a27a5685fa1aa84922afd438ff66f9e5.png">
+    <entry file="file://$PROJECT_DIR$/admin/uploads/products/a13df0ba6971e4390b3f259cc58cb999095e9dbb.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1041,9 +945,53 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/uploads/products/a13df0ba6971e4390b3f259cc58cb999095e9dbb.JPG">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/shop_panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/insert_product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1914">
+          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="e#7#25#0#PHP" expanded="true" />
+            <marker date="1506051968367" expanded="true" signature="7930:7954" ph="SELECT * FRO... categories" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="124" column="40" lean-forward="false" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+          <folding>
+            <marker date="1506053017772" expanded="true" signature="4764:4821" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/insert_news_post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="94" column="81" lean-forward="false" selection-start-line="94" selection-start-column="81" selection-end-line="94" selection-end-column="81" />
+          <folding>
+            <element signature="e#7#25#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="112" column="197" lean-forward="false" selection-start-line="112" selection-start-column="63" selection-end-line="112" selection-end-column="197" />
+          <folding>
+            <marker date="1506050587800" expanded="true" signature="4691:4762" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

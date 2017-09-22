@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="hidden-sm hidden-xs col-md-3">
     <br />
 
     <!-- Categories Panel -->

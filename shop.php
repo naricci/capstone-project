@@ -113,11 +113,11 @@
                         <div class="col-xs-6 col-md-3">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="<?php echo 'admin/uploads/products/' . $row['productImage'] . '.' . $row['productImageExt']; ?>" alt="<?php echo $row['productName']; ?>">
+                                    <img src="<?php echo 'admin/uploads/products/' . $row['productImage'] . '.' . $row['productImageExt']; ?>" alt="<?php echo $row['productName']; ?>" height="200" width="200">
                                 </a>
                                 <div class="caption">
-                                    <h4><?php echo $row['productName']; ?></h4>
-                                    <p>$<?php echo $row['productPrice']; ?></p>
+                                    <h4><?php echo $row['productName']; ?> <small>$<?php echo $row['productPrice']; ?></small></h4>
+
                                     <p><a href="#" class="btn btn-primary" role="button">View</a></p>
                                 </div><!-- /.caption -->
                             </div><!-- /.thumbnail -->
