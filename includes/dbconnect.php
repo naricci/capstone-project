@@ -4,11 +4,16 @@
  *
  * @return PDO Object
  */
+require_once __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 function getDatabase() {
     $config = array(
-        'DB_DNS' => 'mysql:host=env[DB_HOST];port=env[DB_PORT];dbname=env[DB_NAME]',
-        'DB_USER' => 'env[DB_USERNAME]',
-        'DB_PASSWORD' => 'env[DP_PASSWORD]'
+        'DB_DNS' => "mysql:host=" + $_ENV['DB_HOST'] + ";port=" + $_ENV['DB_PORT'] + ";dbname=" + $_ENV['DB_NAME'],
+        'DB_USER' => $_ENV['DB_USERNAME'],
+        'DB_PASSWORD' => $_ENV['DP_PASSWORD']
     );
 
     try {

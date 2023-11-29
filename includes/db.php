@@ -1,6 +1,11 @@
 <?php 
 
-$con = mysqli_connect("env[DB_HOST]","env[DB_USERNAME]","","env['DB_NAME']");
+require_once __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$con = mysqli_connect($_ENV['DB_HOST'],$_ENV['DB_USERNAME'], "",$_ENV['DB_NAME']);
 
 if (mysqli_connect_errno())
   {
