@@ -134,7 +134,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-#config vars
+# config vars
 .env
 
+# Composer
+/vendor/
 # End of https://www.gitignore.io/api/linux,macos,windows,phpstorm,visualstudiocode.env
