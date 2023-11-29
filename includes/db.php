@@ -1,6 +1,6 @@
 <?php 
 
-$con = mysqli_connect("localhost","root","","thestoop");
+$con = mysqli_connect("env[DB_HOST]","env[DB_USERNAME]","","env['DB_NAME']");
 
 if (mysqli_connect_errno())
   {

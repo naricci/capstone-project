@@ -6,9 +6,9 @@
  */
 function getDatabase() {
     $config = array(
-        'DB_DNS' => 'mysql:host=localhost;port=3306;dbname=thestoop',
-        'DB_USER' => 'root',
-        'DB_PASSWORD' => ''
+        'DB_DNS' => 'mysql:host=env[DB_HOST];port=env[DB_PORT];dbname=env[DB_NAME]',
+        'DB_USER' => 'env[DB_USERNAME]',
+        'DB_PASSWORD' => 'env[DP_PASSWORD]'
     );
 
     try {
