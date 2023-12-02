@@ -1,10 +1,10 @@
 <?php
 
-//session_start();
-//
-//if ( !isset($_SESSION['adminEmail']) ) {
+// session_start();
+
+// if ( !isset($_SESSION['adminEmail']) ) {
 //    header("Location : login.php");
-//}
+// }
 
 ?>
 
@@ -30,7 +30,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <?php include 'templates/navbar.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
 
     <!-- MAIN CONTENT -->
@@ -57,7 +57,7 @@
 
 
     <!-- FOOTER -->
-    <?php include 'templates/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 
     <!-- JS LINK -->
 <?php include 'includes/js_links.php'; ?>
