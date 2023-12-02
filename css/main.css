@@ -181,7 +181,7 @@ nav {
 
 
 /****************** Footer ******************/
-footer {
+/* footer {
     border-top: 5px solid #000000;
     bottom: 0;
     font-family: 'Roboto', sans-serif;
@@ -189,6 +189,14 @@ footer {
     padding: 1rem;
     position: absolute;
     right: 0;
+} */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #000000;
+    font-family: 'Roboto', sans-serif;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 }
 
 footer.navbar-inverse {

@@ -1,10 +1,10 @@
 <?php
 
-//session_start();
-//
-//if ( !isset($_SESSION['adminEmail']) ) {
+// session_start();
+
+// if ( !isset($_SESSION['adminEmail']) ) {
 //    header("Location : login.php");
-//}
+// }
 
 ?>
 
@@ -27,10 +27,9 @@
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/admin.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
     <!-- NAVBAR -->
-    <?php include 'templates/navbar.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
 
 
     <!-- MAIN CONTENT -->
@@ -47,17 +46,21 @@
                     <hr />
 
                     <!-- Welcome message for currently logged in Admin -->
-                    <p align="center" class="text-primary">Welcome <?php $_SESSION['adminFirstName']; ?>!</p>
+                    <p align="center" class="text-primary"> 
+                        <?php 
+                        if (isset($_SESSION['adminFirstName'])) {
+                            echo 'Welcome' . $_SESSION['adminFirstName'] .'!';
+                        }
+                        ?>
+                    !</p>
                 </div><!-- /.col-md-9 -->
-
             </div><!-- /.row -->
         </div><!-- /.container.main -->
     </div><!-- /.mainContent -->
     <!-- END OF MAIN CONTENT -->
 
-
     <!-- FOOTER -->
-    <?php include 'templates/footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 
     <!-- JS LINK -->
 <?php include 'includes/js_links.php'; ?>

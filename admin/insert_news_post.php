@@ -74,17 +74,17 @@ if ( isPostRequest() && count($_FILES) ) {
         $ext = array_search( $finfo->file($_FILES['postImageName']['tmp_name']), $validExts, true );
 
         if ( false === $ext ) {
-            throw new RuntimeException('Invalid file format.  Images can only be jpg, png or gif format.');
+            throw new RuntimeException('Invalid file format. Images can only be jpg, png or gif format.');
         }
 
         // You should name it uniquely.
         // DO NOT USE $_FILES['postImageName']['name'] WITHOUT ANY VALIDATION !!
         // On this example, obtain safe unique name from its binary data.
         $postImageName = sha1_file($_FILES['postImageName']['tmp_name']);
-        $location = sprintf('uploads/news_posts/%s.%s', $postImageName, $ext);
+        $location = sprintf('http://s3.amazonaws.com/stoop-bucket/uploads/news_posts/%s.%s', $postImageName, $ext);
 
-        if ( !is_dir('uploads/news_posts') ) {
-            mkdir('uploads/news_posts');
+        if ( !is_dir('http://s3.amazonaws.com/stoop-bucket/uploads/news_posts') ) {
+            mkdir('http://s3.amazonaws.com/stoop-bucket/uploads/news_posts');
         }
 
         if ( !move_uploaded_file($_FILES['postImageName']['tmp_name'], $location) ) {
@@ -220,10 +220,10 @@ if ( isPostRequest() && count($_FILES) ) {
 //                                    // DO NOT USE $_FILES['postImageName']['name'] WITHOUT ANY VALIDATION !!
 //                                    // On this example, obtain safe unique name from its binary data.
 //                                    $postImageName = sha1_file($_FILES['postImageName']['tmp_name']);
-//                                    $location = sprintf('uploads/news_posts/%s.%s', $postImageName, $ext);
+//                                    $location = sprintf('http://s3.amazonaws.com/stoop-bucket/uploads/news_posts/%s.%s', $postImageName, $ext);
 //
-//                                    if ( !is_dir('uploads/news_posts') ) {
-//                                        mkdir('uploads/news_posts');
+//                                    if ( !is_dir('http://s3.amazonaws.com/stoop-bucket/uploads/news_posts') ) {
+//                                        mkdir('http://s3.amazonaws.com/stoop-bucket/uploads/news_posts');
 //                                    }
 //
 //                                    if ( !move_uploaded_file($_FILES['postImageName']['tmp_name'], $location) ) {

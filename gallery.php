@@ -91,120 +91,120 @@ session_start();
 
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/green-pipe.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/green-pipe.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/pig-jar.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/pig-jar.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/blue-purple-bubbler.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/blue-purple-bubbler.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/lobster-claw.JPG">
-                </div>
-            </div>
-            <br />
-
-            <div class="row">
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/bug-spoon.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/deadhead-spoon.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/TS1.jpg">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/the-shop.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/lobster-claw.JPG">
                 </div>
             </div>
             <br />
 
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/eyeball-bong.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/bug-spoon.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6537.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/deadhead-spoon.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6545.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/TS1.jpg">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/glow-in-the-dark-pipe.JPG">
-                </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/grinders.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/the-potatoe-heads.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6566.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6568.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/the-shop.JPG">
                 </div>
             </div>
             <br />
 
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6571.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/eyeball-bong.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6649.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6537.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6597.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6545.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6603.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/glow-in-the-dark-pipe.JPG">
                 </div>
             </div>
             <br />
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/coral-bong.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/grinders.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6619.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/the-potatoe-heads.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6625.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6566.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6631.JPG">
-                </div>
-            </div>
-            <br />
-
-            <div class="row">
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6649.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6670.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/stairs/lobster-claw-outside.JPG">
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6726.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6568.JPG">
                 </div>
             </div>
             <br />
 
             <div class="row">
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/products/IMG_6730.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6571.JPG">
                 </div>
                 <div class="col-md-3">
-                    <img class="img-responsive img-thumbnail" src="images/stairs/group-of-water-pipes.JPG">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6649.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6597.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6603.JPG">
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/coral-bong.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6619.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6625.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6631.JPG">
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6649.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6670.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/stairs/lobster-claw-outside.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6726.JPG">
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/products/IMG_6730.JPG">
+                </div>
+                <div class="col-md-3">
+                    <img class="img-responsive img-thumbnail" src="http://s3.amazonaws.com/stoop-bucket/images/stairs/group-of-water-pipes.JPG">
                 </div>
             </div>
 
