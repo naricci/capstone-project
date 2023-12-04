@@ -11,7 +11,7 @@ $dotenv->load();
 
 function getDatabase() {
     $config = array(
-        'DB_DNS' => "mysql:host=" + $_ENV['DB_HOST'] + ";port=" + $_ENV['DB_PORT'] + ";dbname=" + $_ENV['DB_NAME'],
+        'DB_DNS' => $_ENV['DB_DNS'],
         'DB_USER' => $_ENV['DB_USERNAME'],
         'DB_PASSWORD' => $_ENV['DP_PASSWORD']
     );
