@@ -27,7 +27,6 @@
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/admin.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
     <!-- NAVBAR -->
     <?php include 'includes/navbar.php'; ?>
@@ -47,14 +46,18 @@
                     <hr />
 
                     <!-- Welcome message for currently logged in Admin -->
-                    <p align="center" class="text-primary">Welcome <?php $_SESSION['adminFirstName']; ?>!</p>
+                    <p align="center" class="text-primary"> 
+                        <?php 
+                        if (isset($_SESSION['adminFirstName'])) {
+                            echo 'Welcome' . $_SESSION['adminFirstName'] .'!';
+                        }
+                        ?>
+                    !</p>
                 </div><!-- /.col-md-9 -->
-
             </div><!-- /.row -->
         </div><!-- /.container.main -->
     </div><!-- /.mainContent -->
     <!-- END OF MAIN CONTENT -->
-
 
     <!-- FOOTER -->
     <?php include 'includes/footer.php'; ?>

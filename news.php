@@ -110,7 +110,7 @@
                         <!-- Media Top / Image -->
                         <div class="media-left media-top">
                             <a href="#">
-                                <img class="media-object" src="<?php echo 'admin/uploads/news_posts/' . $row['postImageName'] . '.' . $row['postImageExt']; ?>" alt="<?php echo $row['postTitle']; ?>" width="140" height="140">
+                                <img class="media-object" src="<?php echo 'http://s3.amazonaws.com/stoop-bucket/uploads/news_posts/' . $row['postImageName'] . '.' . $row['postImageExt']; ?>" alt="<?php echo $row['postTitle']; ?>" width="140" height="140">
                             </a>
                         </div>
                         <!-- Media Body -->

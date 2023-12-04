@@ -1,11 +1,4 @@
 <?php
-
-// Load ENV variables
-// require_once './vendor/autoload.php';
-
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
-
 /**
  * A method to check if a Post Request has been made.
  *

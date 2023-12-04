@@ -57,10 +57,10 @@ function uploadImage($fieldName){
     // On this example, obtain safe unique name from its binary data.
 
     $fileName =  sha1_file($_FILES[$fieldName]['tmp_name']);
-    $location = sprintf('./uploads/%s.%s', $fileName, $ext);
+    $location = sprintf('http://s3.amazonaws.com/stoop-bucket/uploads/%s.%s', $fileName, $ext);
 
-    if (!is_dir('./uploads')) {
-        mkdir('./uploads');
+    if (!is_dir('http://s3.amazonaws.com/stoop-bucket/uploads')) {
+        mkdir('http://s3.amazonaws.com/stoop-bucket/uploads');
     }
 
     if ( !move_uploaded_file( $_FILES[$fieldName]['tmp_name'], $location) ) {
