@@ -33,6 +33,6 @@
         </form>
 
         <!-- display image
-        <img src="http://s3.amazonaws.com/stoop-bucket/uploads/30420d1a9afb2bcb60335812569af4435a59ce17.jpg" /> -->
+        <img src="uploads/30420d1a9afb2bcb60335812569af4435a59ce17.jpg" /> -->
     </body>
 </html>

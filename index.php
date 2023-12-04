@@ -1,7 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization, Origin');
-header('Access-Control-Allow-Methods:  POST, PUT, GET');
+
 session_start();
 
 include 'functions/functions.php';
@@ -12,11 +10,6 @@ include 'functions/functions.php';
 //
 //echo "Welcome " . $_SESSION['userFirstName'] . "!";
 
-// Load ENV variables
-require_once 'vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +32,12 @@ $dotenv->load();
     <link href="css/carousel.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -53,6 +48,7 @@ $dotenv->load();
                 </button>
                 <a class="navbar-brand page-title navbar-btn" href="index.php">THE STOOP</a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -71,9 +67,11 @@ $dotenv->load();
                     <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
                     <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
                 </ul>
+
                 <ul class="nav navbar-nav navbar-right">
 
                     <?php
+
                     if ( !isset($_SESSION['userEmail']) ) {
                         echo "<!-- Sign Up Button -->
 <li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
@@ -83,15 +81,20 @@ $dotenv->load();
                         echo "<!-- Log Out Button -->
 <li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
                     }
+
                     ?>
 
                 </ul>
+
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
     <!-- END OF NAVBAR -->
+
+
     <!-- MAIN CONTENT -->
     <div class="mainContent">
+
         <!-- CAROUSEL -->
         <div class="container main">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -103,10 +106,12 @@ $dotenv->load();
                     <li data-target="#myCarousel" data-slide-to="3"></li>
                     <li data-target="#myCarousel" data-slide-to="4"></li>
                 </ol>
+
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
+
                     <div class="item active">
-                        <img class="img-responsive" src="http://stoop-bucket/s3.amazonaws.com/images/products/glow-in-the-dark-pipe.JPG" alt="Glow in the dark pipe">
+                        <img class="img-responsive" src="images/products/glow-in-the-dark-pipe.JPG" alt="Glow in the dark pipe">
                         <div class="container">
                             <div class="carousel-caption d-none d-md-block text-left">
                                 <h1>Welcome to The Stoop!</h1>
@@ -119,8 +124,9 @@ $dotenv->load();
                             </div>
                         </div>
                     </div>
+
                     <div class="item">
-                        <img class="img-responsive" src="http://s3.amazonaws.com/stoop-bucket/images/stairs/group-of-water-pipes.JPG" alt="Water Pipes on Steps">
+                        <img class="img-responsive" src="images/stairs/group-of-water-pipes.JPG" alt="Water Pipes on Steps">
 <!--                        <div class="container">-->
 <!--                            <div class="carousel-caption d-none d-md-block text-left">-->
 <!--                                <h1>Check out our newest products on the Shop Page!</h1>-->
@@ -130,11 +136,13 @@ $dotenv->load();
 <!--                            </div>-->
 <!--                        </div>-->
                     </div>
+
                     <div class="item">
-                        <img class="img-responsive" src="http://s3.amazonaws.com/stoop-bucket/images/products/case-of-bowls2.JPG" alt="Case of Merch">
+                        <img class="img-responsive" src="images/products/case-of-bowls2.JPG" alt="Case of Merch">
                     </div>
+
                     <div class="item">
-                        <img class="img-responsive" src="http://s3.amazonaws.com/stoop-bucket/images/products/coral-bong.JPG" alt="Coral Pipe">
+                        <img class="img-responsive" src="images/products/coral-bong.JPG" alt="Coral Pipe">
 <!--                        <div class="container">-->
 <!--                            <div class="carousel-caption d-none d-md-block text-right">-->
 <!--                                <h1 style="color: black;">Check out our newest products on the Shop Page!</h1>-->
@@ -144,10 +152,12 @@ $dotenv->load();
 <!--                            </div>-->
 <!--                        </div>-->
                     </div>
+
                     <div class="item">
-                        <img class="img-responsive" src="http://s3.amazonaws.com/stoop-bucket/images/products/the-potatoe-heads.JPG" alt="Mr. & Mr.s Potato Head Jars">
+                        <img class="img-responsive" src="images/products/the-potatoe-heads.JPG" alt="Mr. & Mr.s Potato Head Jars">
                     </div>
                 </div>
+
                 <!-- Left and right controls -->
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -160,11 +170,14 @@ $dotenv->load();
             </div><!-- /.carousel.slide -->
         </div><!-- /.container.main -->
         <!-- END OF CAROUSEL -->
+
+
         <!-- JUMBOTRON -->
         <div class="container main">
             <div class="jumbotron">
 
                 <?php
+
                 if ( isset($_SESSION['userEmail']) ) {
                     echo "<h1><i>Welcome to The Stoop ". $_SESSION['userFirstName'] . "!</i></h1>";
                 } else {
@@ -181,69 +194,83 @@ $dotenv->load();
             </div><!-- /.jumbotron -->
         </div><!-- /.container.main -->
         <!-- END OF JUMBOTRON -->
+
+
         <!-- MARKETING AREA -->
         <div class="container marketing">
+
             <!-- Three columns of text below the carousel -->
             <div class="row">
+
                 <!-- ABOUT US -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="http://s3.amazonaws.com/stoop-bucket/images/logos/logo-keppel.png" alt="Shop Logo" width="140" height="140">
+                    <img class="img-circle" src="images/logos/logo-keppel.png" alt="Shop Logo" width="140" height="140">
                     <h2>About Us</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="aboutus.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
+
                 <!-- GALLERY -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="http://s3.amazonaws.com/stoop-bucket/images/products/eyeball-bowls.JPG" alt="Glow in the dark pipe" width="140" height="140">
+                    <img class="img-circle" src="images/products/eyeball-bowls.JPG" alt="Glow in the dark pipe" width="140" height="140">
                     <h2>Gallery</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="gallery.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
+
                 <!-- NEWS -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="http://s3.amazonaws.com/stoop-bucket/images/newspaper.png" alt="Newspaper" width="140" height="140">
+                    <img class="img-circle" src="images/newspaper.png" alt="Newspaper" width="140" height="140">
                     <h2>News</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="news.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
+
             <!-- Next Three columns of text below the carousel -->
             <div class="row">
+
                 <!-- SHOP -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="http://s3.amazonaws.com/stoop-bucket/images/store/shelf2-more-bongs.JPG" alt="Row of Pipes" width="140" height="140">
+                    <img class="img-circle" src="images/store/shelf2-more-bongs.JPG" alt="Row of Pipes" width="140" height="140">
                     <h2>Shop</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="shop.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
+
                 <!-- DIRECTIONS -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="http://s3.amazonaws.com/stoop-bucket/images/map.png" alt="Map of Main Street" width="140" height="140">
+                    <img class="img-circle" src="images/map.png" alt="Map of Main Street" width="140" height="140">
                     <h2>Directions</h2>
                     <p>We are a located on the 2nd floor of 58 Main Street in the heart of East Greenwich, RI.  Click here for a map, directions and store hours.</p>
                     <p><a class="btn btn-secondary details-btn" href="#" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
+
                 <!-- CONTACT US -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="http://s3.amazonaws.com/stoop-bucket/images/form-icon.png" alt="Form" width="140" height="140">
+                    <img class="img-circle" src="images/form-icon.png" alt="Form" width="140" height="140">
                     <h2>Contact Us</h2>
                     <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="contact.php" role="button">View details »</a></p>
                 </div><!-- /.col-lg-4 -->
+
             </div><!-- /.row -->
+
         </div><!-- /.container.marketing -->
         <!-- END OF MARKETING AREA -->
-
-        <!-- FOOTER -->
-        <?php include "includes/footer.php"; ?>
 
     </div><!-- /.mainContent -->
     <!-- END OF MAIN CONTENT -->
 
-    <!-- JS LINKS -->
-    <?php include "includes/js_links.php"; ?>
 
+    <!-- FOOTER -->
+    <?php include("includes/footer.php"); ?>
+
+
+    <!-- JS LINKS -->
+    <?php include("includes/js_links.php"); ?>
     <script src="js/holder.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 </html>

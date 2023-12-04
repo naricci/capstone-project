@@ -140,9 +140,9 @@ $feedback = '';
 
                 <!-- Photo on the right -->
                 <div class="col-md-8">
-                    <img src="http://s3.amazonaws.com/stoop-bucket/images/store/shelf2-more-bongs.JPG" alt="Bong on stairs" class="img-responsive img-thumbnail">
+                    <img src="images/store/shelf2-more-bongs.JPG" alt="Bong on stairs" class="img-responsive img-thumbnail">
                     <br />
-                    <img src="http://s3.amazonaws.com/stoop-bucket/images/store/case-jars.JPG" alt="Jars in a case" class="img-responsive img-thumbnail">
+                    <img src="images/store/case-jars.JPG" alt="Jars in a case" class="img-responsive img-thumbnail">
                 </div><!-- /.col-md-8 -->
 
             </div><!-- /.row -->

@@ -88,10 +88,10 @@ if ( isPostRequest() && count($_FILES) ) {
         // DO NOT USE $_FILES['productImage']['name'] WITHOUT ANY VALIDATION !!
         // On this example, obtain safe unique name from its binary data.
         $productImage = sha1_file($_FILES['productImage']['tmp_name']);
-        $location = sprintf('http://s3.amazonaws.com/stoop-bucket/uploads/products/%s.%s', $productImage, $productImageExt);
+        $location = sprintf('uploads/products/%s.%s', $productImage, $productImageExt);
 
-        if ( !is_dir('http://s3.amazonaws.com/stoop-bucket/uploads/products') ) {
-            mkdir('http://s3.amazonaws.com/stoop-bucket/uploads/products');
+        if ( !is_dir('uploads/products') ) {
+            mkdir('uploads/products');
         }
 
         if ( !move_uploaded_file($_FILES['productImage']['tmp_name'], $location) ) {
