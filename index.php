@@ -1,5 +1,7 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization, Origin');
+header('Access-Control-Allow-Methods:  POST, PUT, GET');
 session_start();
 
 include 'functions/functions.php';
@@ -104,7 +106,7 @@ $dotenv->load();
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img class="img-responsive" src="http://s3.amazonaws.com/stoop-bucket/images/products/glow-in-the-dark-pipe.JPG" alt="Glow in the dark pipe">
+                        <img class="img-responsive" src="http://stoop-bucket/s3.amazonaws.com/images/products/glow-in-the-dark-pipe.JPG" alt="Glow in the dark pipe">
                         <div class="container">
                             <div class="carousel-caption d-none d-md-block text-left">
                                 <h1>Welcome to The Stoop!</h1>
