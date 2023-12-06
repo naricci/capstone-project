@@ -1,14 +1,14 @@
 <?php
+// require_once '/vendor/autoload.php';
+
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+
 /**
  * Function to establish a database connection
  *
  * @return PDO Object
  */
-require_once __DIR__ . '/vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
 function getDatabase() {
     $config = array(
         'DB_DNS' => $_ENV['DB_DNS'],

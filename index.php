@@ -3,6 +3,10 @@
 session_start();
 
 include 'functions/functions.php';
+require_once 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 //if ( !isset($_SESSION['userEmail']) ) {
 //    header("Location: login.php");

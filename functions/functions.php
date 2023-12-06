@@ -1,5 +1,4 @@
 <?php
-
 /**
  * A method to check if a Post Request has been made.
  *
@@ -106,12 +105,7 @@ function isLoggedIn() {
  *
  * @return String
  */
-require_once __DIR__ . '/vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-$con = mysqli_connect($_ENV['DB_HOST'],$_ENV['DB_USERNAME'], "",$_ENV['DB_NAME']);
+$con = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], "", $_ENV['DB_NAME']);
 
 if (mysqli_connect_errno()) {
     echo "The connection could not be established: " . mysqli_connect_error();
