@@ -27,3 +27,4 @@ function getDatabase() {
 
     return $db;
 }
+?>
