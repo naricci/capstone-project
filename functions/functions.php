@@ -103,12 +103,18 @@ function isLoggedIn() {
 /**
  * MySQL DB Connection String
  *
- * @return String
+ * @return string
  */
-$con = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], "", $_ENV['DB_NAME']);
+$host = getenv('DB_HOST');
+$username = getenv('DB_USERNAME');
+$password = getenv('DB_PASSWORD');
+$database = getenv('DB_NAME');
+// $con = mysqli_connect("localhost", "root", "", "thestoop");
+$con = mysqli_connect($host, $username, $password, $database);
 
 if (mysqli_connect_errno()) {
-    echo "The connection could not be established: " . mysqli_connect_error();
+    header("Location: ../error.php?err=" . mysqli_connect_error());
+    // echo "The connection could not be established: " . mysqli_connect_error();
 }
 
 

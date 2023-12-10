@@ -1,10 +1,7 @@
-<?php 
-// require_once '/vendor/autoload.php';
+<?php
 
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
-
-$con = mysqli_connect($_ENV['DB_HOST'],$_ENV['DB_USERNAME'], "",$_ENV['DB_NAME']);
+$con = mysqli_connect(getenv('DB_HOST'), getenv('DB_USERNAME'), getenv('DB_PASSWORD'), getenv('DB_NAME'));
+// $con = mysqli_connect('localhost', 'root', '', 'thestoop');
 
 if (mysqli_connect_errno())
 {

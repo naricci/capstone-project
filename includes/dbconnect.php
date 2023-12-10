@@ -1,9 +1,4 @@
 <?php
-// require_once '/vendor/autoload.php';
-
-// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
-
 /**
  * Function to establish a database connection
  *
@@ -11,9 +6,9 @@
  */
 function getDatabase() {
     $config = array(
-        'DB_DNS' => $_ENV['DB_DNS'],
-        'DB_USER' => $_ENV['DB_USERNAME'],
-        'DB_PASSWORD' => $_ENV['DP_PASSWORD']
+        'DB_DNS' => "mysql:host=j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;port=3306;dbname=ajrk77bqeluz3ml3",
+        'DB_USER' => getenv('DB_USERNAME'),
+        'DB_PASSWORD' => getenv('DP_PASSWORD')
     );
 
     try {

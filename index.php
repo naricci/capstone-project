@@ -2,11 +2,17 @@
 
 session_start();
 
-include 'functions/functions.php';
-require_once 'vendor/autoload.php';
+$env = file_get_contents(__DIR__."/.env");
+$lines = explode("\n", $env);
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+foreach ($lines as $line) {
+  preg_match("/([^#]+)\=(.*)/", $line, $matches);
+  if (isset($matches[2])) {
+    putenv(trim($line));
+  }
+}
+
+include 'functions/functions.php';
 
 //if ( !isset($_SESSION['userEmail']) ) {
 //    header("Location: login.php");
