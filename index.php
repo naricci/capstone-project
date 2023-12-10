@@ -189,7 +189,7 @@ include 'functions/functions.php';
                 <?php
 
                 if ( isset($_SESSION['userEmail']) ) {
-                    echo "<h1><i>Welcome to The Stoop ". $_SESSION['userFirstName'] . "!</i></h1>";
+                    echo "<h1><i>Welcome to The Stoop, ". $_SESSION['userFirstName'] . "!</i></h1>";
                 } else {
                     echo "<h1><i>Welcome to The Stoop!</i></h1>";
                 }
