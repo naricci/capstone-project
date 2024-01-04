@@ -2,17 +2,17 @@
 
 session_start();
 
-$env = file_get_contents(__DIR__."/.env");
+$env = file_get_contents(__DIR__ . "/.env");
 $lines = explode("\n", $env);
 
 foreach ($lines as $line) {
-  preg_match("/([^#]+)\=(.*)/", $line, $matches);
-  if (isset($matches[2])) {
-    putenv(trim($line));
-  }
+    preg_match("/([^#]+)\=(.*)/", $line, $matches);
+    if (isset($matches[2])) {
+        putenv(trim($line));
+    }
 }
 
-include 'functions/functions.php';
+require_once 'functions/functions.php';
 
 //if ( !isset($_SESSION['userEmail']) ) {
 //    header("Location: login.php");
@@ -24,6 +24,7 @@ include 'functions/functions.php';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,7 +51,8 @@ include 'functions/functions.php';
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -64,25 +66,26 @@ include 'functions/functions.php';
                 <ul class="nav navbar-nav">
                     <!-- About Us Button -->
                     <li class="navbar-btn"><a href="aboutus.php">ABOUT</a></li>
-                    <!-- Gallery Button -->                  
+                    <!-- Gallery Button -->
                     <li class="navbar-btn"><a href="gallery.php">GALLERY</a></li>
                     <!-- News Button -->
                     <li class="navbar-btn"><a href="news.php">NEWS</a></li>
                     <!-- Shop Button -->
                     <li class="navbar-btn"><a href="shop.php">SHOP</a></li>
-                    <!-- Contact Us Button -->     
+                    <!-- Contact Us Button -->
                     <li class="navbar-btn"><a href="contact.php">CONTACT</a></li>
 
                     <!-- Social Media Icons -->
-                    <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
-                    <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
+                    <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span
+                                class="fa fa-facebook"></span></a></li>
+                    <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span
+                                class="fa fa-instagram"></span></a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
 
                     <?php
-
-                    if ( !isset($_SESSION['userEmail']) ) {
+                    if (!isset($_SESSION['userEmail'])) {
                         echo "<!-- Sign Up Button -->
 <li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
 <!-- Log In Button -->
@@ -91,16 +94,11 @@ include 'functions/functions.php';
                         echo "<!-- Log Out Button -->
 <li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
                     }
-
                     ?>
-
                 </ul>
-
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
+            </div>
+        </div>
     </nav>
-    <!-- END OF NAVBAR -->
-
 
     <!-- MAIN CONTENT -->
     <div class="mainContent">
@@ -121,12 +119,14 @@ include 'functions/functions.php';
                 <div class="carousel-inner">
 
                     <div class="item active">
-                        <img class="img-responsive" src="images/products/glow-in-the-dark-pipe.JPG" alt="Glow in the dark pipe">
+                        <img class="img-responsive" src="images/products/glow-in-the-dark-pipe.JPG"
+                            alt="Glow in the dark pipe">
                         <div class="container">
                             <div class="carousel-caption d-none d-md-block text-left">
                                 <h1>Welcome to The Stoop!</h1>
                                 <p>
-                                    We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.
+                                    We are a Rhode Island Glass Gallery that specializes in providing local New England
+                                    artist with a platform to sell their glass.
                                 </p>
                                 <p>
                                     <a class="btn btn-lg btn-primary" href="signup.php" role="button">Sign up today</a>
@@ -136,15 +136,16 @@ include 'functions/functions.php';
                     </div>
 
                     <div class="item">
-                        <img class="img-responsive" src="images/stairs/group-of-water-pipes.JPG" alt="Water Pipes on Steps">
-<!--                        <div class="container">-->
-<!--                            <div class="carousel-caption d-none d-md-block text-left">-->
-<!--                                <h1>Check out our newest products on the Shop Page!</h1>-->
-<!--                                <p>-->
-<!--                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <img class="img-responsive" src="images/stairs/group-of-water-pipes.JPG"
+                            alt="Water Pipes on Steps">
+                        <!--                        <div class="container">-->
+                        <!--                            <div class="carousel-caption d-none d-md-block text-left">-->
+                        <!--                                <h1>Check out our newest products on the Shop Page!</h1>-->
+                        <!--                                <p>-->
+                        <!--                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>-->
+                        <!--                                </p>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
                     </div>
 
                     <div class="item">
@@ -153,18 +154,19 @@ include 'functions/functions.php';
 
                     <div class="item">
                         <img class="img-responsive" src="images/products/coral-bong.JPG" alt="Coral Pipe">
-<!--                        <div class="container">-->
-<!--                            <div class="carousel-caption d-none d-md-block text-right">-->
-<!--                                <h1 style="color: black;">Check out our newest products on the Shop Page!</h1>-->
-<!--                                <p>-->
-<!--                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>-->
-<!--                                </p>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <!--                        <div class="container">-->
+                        <!--                            <div class="carousel-caption d-none d-md-block text-right">-->
+                        <!--                                <h1 style="color: black;">Check out our newest products on the Shop Page!</h1>-->
+                        <!--                                <p>-->
+                        <!--                                    <a class="btn btn-lg btn-primary" href="shop.php" role="button">Click Here</a>-->
+                        <!--                                </p>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
                     </div>
 
                     <div class="item">
-                        <img class="img-responsive" src="images/products/the-potatoe-heads.JPG" alt="Mr. & Mr.s Potato Head Jars">
+                        <img class="img-responsive" src="images/products/the-potatoe-heads.JPG"
+                            alt="Mr. & Mr.s Potato Head Jars">
                     </div>
                 </div>
 
@@ -177,10 +179,8 @@ include 'functions/functions.php';
                     <span class="glyphicon glyphicon-chevron-right"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div><!-- /.carousel.slide -->
-        </div><!-- /.container.main -->
-        <!-- END OF CAROUSEL -->
-
+            </div>
+        </div>
 
         <!-- JUMBOTRON -->
         <div class="container main">
@@ -188,23 +188,22 @@ include 'functions/functions.php';
 
                 <?php
 
-                if ( isset($_SESSION['userEmail']) ) {
-                    echo "<h1><i>Welcome to The Stoop, ". $_SESSION['userFirstName'] . "!</i></h1>";
+                if (isset($_SESSION['userEmail'])) {
+                    echo "<h1><i>Welcome to The Stoop, " . $_SESSION['userFirstName'] . "!</i></h1>";
                 } else {
                     echo "<h1><i>Welcome to The Stoop!</i></h1>";
                 }
                 ?>
 
                 <p>
-                    We are a Rhode Island Glass Gallery that specializes in providing local New England artists with a platform to sell their glass.
+                    We are a Rhode Island Glass Gallery that specializes in providing local New England artists with a
+                    platform to sell their glass.
                 </p>
                 <p>
                     <a class="btn btn-primary btn-lg" href="aboutus.php" role="button">Learn more</a>
                 </p>
-            </div><!-- /.jumbotron -->
-        </div><!-- /.container.main -->
-        <!-- END OF JUMBOTRON -->
-
+            </div>
+        </div>
 
         <!-- MARKETING AREA -->
         <div class="container marketing">
@@ -214,73 +213,86 @@ include 'functions/functions.php';
 
                 <!-- ABOUT US -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/logos/logo-keppel.png" alt="Shop Logo" width="140" height="140">
+                    <img class="img-circle" loading="lazy" src="images/logos/logo-keppel.png" alt="Shop Logo"
+                        width="140" height="140">
                     <h2>About Us</h2>
-                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a
+                        platform to sell their glass. We are a Rhode Island Glass Gallery that specializes in providing
+                        local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="aboutus.php" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <!-- GALLERY -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/products/eyeball-bowls.JPG" alt="Glow in the dark pipe" width="140" height="140">
+                    <img class="img-circle" loading="lazy" src="images/products/eyeball-bowls.JPG"
+                        alt="Glow in the dark pipe" width="140" height="140">
                     <h2>Gallery</h2>
-                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a
+                        platform to sell their glass. We are a Rhode Island Glass Gallery that specializes in providing
+                        local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="gallery.php" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <!-- NEWS -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/newspaper.png" alt="Newspaper" width="140" height="140">
+                    <img class="img-circle" loading="lazy" src="images/newspaper.png" alt="Newspaper" width="140"
+                        height="140">
                     <h2>News</h2>
-                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a
+                        platform to sell their glass. We are a Rhode Island Glass Gallery that specializes in providing
+                        local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="news.php" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
+                </div>
+            </div>
 
             <!-- Next Three columns of text below the carousel -->
             <div class="row">
 
                 <!-- SHOP -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/store/shelf2-more-bongs.JPG" alt="Row of Pipes" width="140" height="140">
+                    <img class="img-circle" loading="lazy" src="images/store/shelf2-more-bongs.JPG" alt="Row of Pipes"
+                        width="140" height="140">
                     <h2>Shop</h2>
-                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a
+                        platform to sell their glass. We are a Rhode Island Glass Gallery that specializes in providing
+                        local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="shop.php" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <!-- DIRECTIONS -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/map.png" alt="Map of Main Street" width="140" height="140">
+                    <img class="img-circle" loading="lazy" src="images/map.png" alt="Map of Main Street" width="140"
+                        height="140">
                     <h2>Directions</h2>
-                    <p>We are a located on the 2nd floor of 58 Main Street in the heart of East Greenwich, RI.  Click here for a map, directions and store hours.</p>
+                    <p>We are a located on the 2nd floor of 58 Main Street in the heart of East Greenwich, RI. Click
+                        here for a map, directions and store hours.</p>
                     <p><a class="btn btn-secondary details-btn" href="#" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
+                </div>
 
                 <!-- CONTACT US -->
                 <div class="col-lg-4">
-                    <img class="img-circle" src="images/form-icon.png" alt="Form" width="140" height="140">
+                    <img class="img-circle" loading="lazy" src="images/form-icon.png" alt="Form" width="140"
+                        height="140">
                     <h2>Contact Us</h2>
-                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.  We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a platform to sell their glass.</p>
+                    <p>We are a Rhode Island Glass Gallery that specializes in providing local New England artist with a
+                        platform to sell their glass. We are a Rhode Island Glass Gallery that specializes in providing
+                        local New England artist with a platform to sell their glass.</p>
                     <p><a class="btn btn-secondary details-btn" href="contact.php" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
-
-            </div><!-- /.row -->
-
-        </div><!-- /.container.marketing -->
-        <!-- END OF MARKETING AREA -->
-
-    </div><!-- /.mainContent -->
-    <!-- END OF MAIN CONTENT -->
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- FOOTER -->
-    <?php include("includes/footer.php"); ?>
+    <?php require_once "includes/footer.php"; ?>
 
 
     <!-- JS LINKS -->
-    <?php include("includes/js_links.php"); ?>
+    <?php require_once "includes/js_links.php"; ?>
     <script src="js/holder.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
+
 </html>

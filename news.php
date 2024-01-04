@@ -5,6 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +30,8 @@
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -46,22 +48,25 @@
                     <!-- Gallery Button -->
                     <li class="navbar-btn"><a href="gallery.php">GALLERY</a></li>
                     <!-- News Button -->
-                    <li class="navbar-btn active"><a href="news.php">NEWS <span class="sr-only">(current)</span> </a></li>
+                    <li class="navbar-btn active"><a href="news.php">NEWS <span class="sr-only">(current)</span> </a>
+                    </li>
                     <!-- Shop Button -->
                     <li class="navbar-btn"><a href="shop.php">SHOP</a></li>
                     <!-- Contact Us Button -->
                     <li class="navbar-btn"><a href="contact.php">CONTACT</a></li>
 
                     <!-- Social Media Icons -->
-                    <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span class="fa fa-facebook"></span></a></li>
-                    <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span class="fa fa-instagram"></span></a></li>
+                    <li class="navbar-btn"><a href="https://www.facebook.com/thestoopri/"><span
+                                class="fa fa-facebook"></span></a></li>
+                    <li class="navbar-btn"><a href="https://www.instagram.com/stoopglass/"><span
+                                class="fa fa-instagram"></span></a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
 
                     <?php
 
-                    if ( !isset($_SESSION['userEmail']) ) {
+                    if (!isset($_SESSION['userEmail'])) {
                         echo "<!-- Sign Up Button -->
 <li class='navbar-btn'><a class='login-btn' href='signup.php'>Sign Up</a></li>
 <!-- Log In Button -->
@@ -70,17 +75,11 @@
                         echo "<!-- Log Out Button -->
 <li class='navbar-btn'><a class='login-btn' href='logout.php'>Log Out</a></li>";
                     }
-
                     ?>
-
                 </ul>
-
-            </div><!-- /.navbar-collapse -->
-
-        </div><!-- /.container -->
+            </div>
+        </div>
     </nav>
-    <!-- END OF NAVBAR -->
-
 
     <?php
 
@@ -88,9 +87,7 @@
     include 'functions/functions.php';
 
     $results = viewAllNewsPosts();
-
     ?>
-
 
     <!-- MAIN CONTENT -->
     <div class="mainContent">
@@ -104,40 +101,45 @@
             <div class="row">
                 <div class="container">
 
-                    <?php foreach ( array_reverse($results) as $row ): ?>
-                    <!-- News Post -->
-                    <div class="media">
-                        <!-- Media Top / Image -->
-                        <div class="media-left media-top">
-                            <a href="#">
-                                <img class="media-object" src="<?php echo 'admin/uploads/news_posts/' . $row['postImageName'] . '.' . $row['postImageExt']; ?>" alt="<?php echo $row['postTitle']; ?>" width="140" height="140">
-                            </a>
+                    <?php foreach (array_reverse($results) as $row): ?>
+                        <!-- News Post -->
+                        <div class="media">
+                            <!-- Media Top / Image -->
+                            <div class="media-left media-top">
+                                <a href="#">
+                                    <img class="media-object"
+                                        src="<?php echo 'admin/uploads/news_posts/' . $row['postImageName'] .
+                                        '.' . $row['postImageExt']; ?>"
+                                        alt="<?php echo $row['postTitle']; ?>" width="140" height="140">
+                                </a>
+                            </div>
+                            <!-- Media Body -->
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    <?php echo $row['postTitle']; ?>
+                                </h4>
+                                <p>Author:
+                                    <?php echo $row['postWriter']; ?>
+                                </p>
+                                <small>Date:
+                                    <?php echo $row['postDate']; ?>
+                                </small>
+                                <p>
+                                    <?php echo $row['postContent']; ?>
+                                </p>
+                            </div>
                         </div>
-                        <!-- Media Body -->
-                        <div class="media-body">
-                            <h4 class="media-heading"><?php echo $row['postTitle']; ?></h4>
-                            <p>Author: <?php echo $row['postWriter']; ?></p>
-                            <small>Date: <?php echo $row['postDate']; ?></small>
-                            <p><?php echo $row['postContent']; ?></p>
-                        </div>
-                    </div><!-- /.media -->
-                    <hr />
-
+                        <hr />
                     <?php endforeach; ?>
-
-                </div><!-- /.container -->
-            </div><!-- /.row -->
-
-        </div><!-- /.container.main -->
-    </div><!-- /.mainContent -->
-    <!-- END OF MAIN CONTENT -->
-
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <?php include 'includes/footer.php'; ?>
 
     <!-- JS LINKS -->
     <?php include 'includes/js_links.php'; ?>
-
 </body>
 </html>
